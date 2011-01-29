@@ -21,6 +21,7 @@ int YSclient::aysversion(tint* inte)
     printf("YS version: %d\n", inte->val);
     tacknowledge ack;
     ack.id = 9;
+    ack.info = 0;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
@@ -29,6 +30,7 @@ int YSclient::amissileOpt(tint* inte)
     printf("Missile option: %d\n", inte->val);
     tacknowledge ack;
     ack.id = 10;
+    ack.info = 0;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
@@ -37,6 +39,7 @@ int YSclient::aweaponOpt(tint* inte)
     printf("Weapon option: %d\n", inte->val);
     tacknowledge ack;
     ack.id = 11;
+    ack.info = 0;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
@@ -56,6 +59,7 @@ int YSclient::aweather(tweather* weather)
     printf("day: %d\noptions: %d\nvisib: %f\nwind: %f %f %f\n", weather->day, weather->options, weather->visibility, weather->windX, weather->windY, weather->windZ);
     tacknowledge ack;
     ack.id = 4;
+    ack.info = 0;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
@@ -63,6 +67,7 @@ int YSclient::aendairlist()
 {
     tacknowledge ack;
     ack.id = 7;
+    ack.info = 0;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
@@ -101,6 +106,15 @@ int YSclient::adamage(tdamage* damage)
 int YSclient::auserlist(tuserlist* userlist)
 {
     return 1;
+}
+
+int YSclient::aground(tground* ground)
+{
+    printf("Ground %s type: %d iff: %d id:%d\n", ground->name, ground->type, ground->iff, ground->id);
+    tacknowledge ack;
+    ack.id = 1;
+    ack.info = ground->id;
+    return s.sendsYS(packtacknowledge(&ack));
 }
 
 int YSclient::adefault(char* buffer, int size)

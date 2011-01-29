@@ -5,7 +5,7 @@
 void YSclient::connect()
 {
     //int res = s.connects((char *)"127.0.0.1",7915);
-    int res = s.connects((char *)"192.168.1.2",7910);
+    int res = s.connects((char *)"127.0.0.1",7910);
     //int res = s.connects((char *)"192.168.56.1",7915);
     //int res = s.connects((char *)"192.168.1.2",7915);
     //int res = s.connects((char *)"195.146.247.50",7915);

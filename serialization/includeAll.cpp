@@ -10,3 +10,4 @@
 #include "damage.h"
 #include "flight.h"
 #include "userlist.h"
+#include "ground.h"

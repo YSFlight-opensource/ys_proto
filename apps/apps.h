@@ -22,6 +22,7 @@ class Apps
     virtual int aflight(tflight* flight) = 0;
     virtual int adamage(tdamage* damage) = 0;
     virtual int auserlist(tuserlist* userlist) = 0;
+    virtual int aground(tground* ground) = 0;
     virtual int adefault(char* buffer, int size) = 0;
 };
 #endif

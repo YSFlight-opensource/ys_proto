@@ -25,6 +25,7 @@ class YSclient : public Apps
     int aflight(tflight* flight);
     int adamage(tdamage* damage);
     int auserlist(tuserlist* userlist);
+    int aground(tground* ground);
     int adefault(char* buffer, int size);
 };
 #endif

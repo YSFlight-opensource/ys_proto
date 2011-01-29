@@ -8,7 +8,7 @@ char* packtacknowledge(tacknowledge* ack)
 {
     char* buffer = (char*)malloc(16);
     packtheader(12, 6, buffer);
-    memcpy(buffer+8, (char*)ack, 4);
+    memcpy(buffer+8, (char*)ack, 8);
     return buffer;
 }
 
