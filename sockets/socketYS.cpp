@@ -1,18 +1,16 @@
 #include "linux.cpp"
 #include "windows.cpp"
 #include <stdlib.h>
+#include "../serialization/header.h"
 
 class SocketYS: public Socket
 {
 public:
-    char* headbuffer;
-//    char* buffer;
+    theader head;
+    char headbuffer[8];
+    char* buffer;
 
-    SocketYS()
-    {
-        headbuffer = char[8];
-//        buffer = NULL;
-    }
+
 
     int sendsYS(char* buffer, int freebuffer=1)
     {
@@ -27,7 +25,7 @@ public:
 
     int recvsn(char* buffer, int size)
     {
-        int recv_size  = s.recvs(buffer, size);
+        int recv_size  = recvs(buffer, size);
         int recv_size2;
         if (recv_size < 0)
         {
@@ -45,7 +43,7 @@ public:
         return recv_size;
     }
 
-    int recvsYS(char* buffer)
+    int recvsYS()
     {
         int recv_size = recvsn(headbuffer, 8);
         if (recv_size < 0)
@@ -54,21 +52,20 @@ public:
             return recv_size;
         }
 
-        theader head = getheadbuffer(headbuffer);
+        head = unpacktheader(headbuffer);
         printf("\nsize: %d, kind: %d\n", head.size, head.kind);
 //        if (buffer!=NULL)
 //        {
 //            free(buffer);
 //        }
-        char* buffer = (char*)malloc(head.size-4);
-        s.recvsn(buffer, head.size-4);
+        buffer = (char*)malloc(head.size-4);
+        return recvsn(buffer, head.size-4);
         //debugChar(buffer2, head.size-4);
-        int res = receivedmanager(buffer, head);
 
-        if (!res)
-        {
-            printf("Failed to receive\n");
-            break;
-        }
+    }
+
+    void freebuffer()
+    {
+        free(buffer);
     }
 };

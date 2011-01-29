@@ -1,6 +1,6 @@
 #include "ysclient.h"
 #include "../serialization/includeAll.cpp"
-
+#include "../debug.h"
 
 void YSclient::connect()
 {
@@ -18,24 +18,21 @@ void YSclient::connect()
         s.sendsYS(packtlogin(&login),0);
         while (1)
         {
-            char* buffer = (char*)malloc(8);
-            int recv_size = s.recvs(buffer, 8);
-            if (recv_size == 8)
+            int size = s.recvsYS();
+            if (size<0)
             {
-                theader head = getheadbuffer(buffer);
-                printf("\nsize: %d, kind: %d\n", head.size, head.kind);
-                char* buffer2 = (char*)malloc(head.size-4);
-                s.recvs(buffer2, head.size-4);
-                //debugChar(buffer2, head.size-4);
-                int res = receivedmanager(buffer2, head);
-                free(buffer);
-                free(buffer2);
+                perror("Failed to receive data.\n");
+            }
+            else
+            {
+                int res = receivedmanager(s.buffer, s.head);
                 if (!res)
                 {
                     printf("Failed to receive\n");
                     break;
                 }
             }
+            //s.freebuffer();
 
             //printf("res: %d\n", res);
         }
