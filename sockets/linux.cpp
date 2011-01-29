@@ -67,6 +67,13 @@ public:
         if (recv_size != size)
         {
             printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\nWarning only received %d bytes instead of %d\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n", recv_size, size);
+            if (recv_size==0)
+            {// occurs after inactivity -> YS seems to send a void packet
+                int i;
+                printf("Press ENTER\n");
+                scanf("%d",&i);
+                return -1;
+            }
         }
         if (recv_size < 0)
         {
