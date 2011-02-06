@@ -23,6 +23,7 @@ class Apps
     virtual int adamage(tdamage* damage) = 0;
     virtual int auserlist(tuserlist* userlist) = 0;
     virtual int aground(tground* ground) = 0;
+    virtual int aleft(tleft* left, int is_ground) = 0;
     virtual int adefault(char* buffer, int size) = 0;
 };
 #endif

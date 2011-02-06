@@ -26,6 +26,7 @@ class YSclient : public Apps
     int adamage(tdamage* damage);
     int auserlist(tuserlist* userlist);
     int aground(tground* ground);
+    int aleft(tleft* left, int is_ground);
     int adefault(char* buffer, int size);
 };
 #endif

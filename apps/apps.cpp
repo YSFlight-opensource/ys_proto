@@ -5,6 +5,7 @@
 //#include <stdio.h>
 #include "../debug.h"
 #include "../serialization/unpack.h"
+#include <pthread.h>
 
 //TODO: WEATHER
 
@@ -38,6 +39,7 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
         }
         case 5:
         {
+//            // ground or player joined
 //            debugChar(buffer, headbuffer.size);
 //            //debugDec(buffer, headbuffer.size);
 //            debugHex(buffer, headbuffer.size);
@@ -46,11 +48,16 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
 //            while (input[0]!='n')
 //            {
 //                display_unpack(input, buffer);
-//                scanf("%s",input);
+//                if (headbuffer.size == 120)
+//                    strcpy(input, "n");
+//                else
+//                    scanf("%s",input);
+//                    //strcpy(input, "i,i,i,f,f,f,f,f,f,c64,i,i,i,f,i,i,c56");
 //            }
             tground ground;
             unpacktground(buffer, headbuffer.size, &ground);
             carryOn = aground(&ground);
+            break;
         }
         case 11:
         {
@@ -60,15 +67,32 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
             carryOn = aflight(&flight);
             break;
         }
+        case 13:
+        {
+            // has left the flight
+            tleft left;
+            unpacktacknowledge(buffer, headbuffer.size, (tacknowledge*)&left);
+            carryOn = aleft(&left, 0);
+            break;
+        }
         case 16:
         {
             // Finnished to send the aircraft list
             carryOn = aendairlist();
             break;
         }
+        case 19:
+        {
+            //ground left
+            tleft left;
+            unpacktacknowledge(buffer, headbuffer.size, (tacknowledge*)&left);
+            carryOn = aleft(&left, 1);
+            break;
+        }
         case 22:
         {
             // Damages
+            debugHex(buffer, headbuffer.size);
             tdamage damage;
             unpacktdamage(buffer, headbuffer.size, &damage);
             carryOn = adamage(&damage);
@@ -108,7 +132,7 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
         }
         case 36:
         {
-            //User list
+            //User list 37 ???
             tuserlist userlist;
             unpacktuserlist(buffer, headbuffer.size, &userlist);
             carryOn = auserlist(&userlist);

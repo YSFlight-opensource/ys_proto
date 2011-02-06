@@ -13,4 +13,7 @@ char* packtacknowledge(tacknowledge* ack)
 }
 
 
-
+void unpacktacknowledge(char* buffer, int size, tacknowledge* acknowledge)
+{
+    memcpy((char*)acknowledge, buffer, 8);
+}

@@ -19,5 +19,7 @@ struct tground
     int   u1;
     float u2;
     int   u3;
+    int   u4;
+    char  name2[56];
 };
 #endif

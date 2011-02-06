@@ -15,7 +15,16 @@ char* packtground(tground* ground)
 
 void unpacktground(char* buffer, int size, tground* ground)
 {
-    memcpy((char*)ground, buffer, 116);
+    if (size==120)
+    {
+        memcpy((char*)ground, buffer, 116);
+        ground->u4 = 0;
+        strcpy(ground->name2, "");
+    }
+    else
+    {
+        memcpy((char*)ground, buffer, 172);
+    }
 }
 
 

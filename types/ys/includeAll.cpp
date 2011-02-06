@@ -11,3 +11,4 @@
 #include "tdamage.cpp"
 #include "tuserlist.cpp"
 #include "tground.cpp"
+#include "tleft.cpp"

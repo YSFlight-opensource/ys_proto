@@ -18,9 +18,10 @@ public:
         memcpy((char*)&size, buffer, 4);
         //size = ntohl(size);
         printf("size %d\n", size);
-        return sends(buffer, size+4);
+        int res = sends(buffer, size+4);
         if (freebuffer)
             free(buffer);
+        return res;
     }
 
     int recvsn(char* buffer, int size)
@@ -53,7 +54,8 @@ public:
         }
 
         head = unpacktheader(headbuffer);
-        printf("\nsize: %d, kind: %d\n", head.size, head.kind);
+//        if (head.kind != 11)
+//            printf("\nsize: %d, kind: %d\n", head.size, head.kind);
 //        if (buffer!=NULL)
 //        {
 //            free(buffer);
@@ -63,6 +65,8 @@ public:
         //debugChar(buffer2, head.size-4);
 
     }
+
+
 
     void freebuffer()
     {

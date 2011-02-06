@@ -1,6 +1,7 @@
 #include "ysclient.h"
 #include "../serialization/includeAll.cpp"
 #include "../debug.h"
+#include "activity_message.h"
 
 void YSclient::connect()
 {
@@ -16,6 +17,9 @@ void YSclient::connect()
         strcpy(login.username, "doing_tests");
         login.YSversion = 20101211;
         s.sendsYS(packtlogin(&login),0);
+        pthread_t thread_activity_message;
+        pthread_create(&thread_activity_message, NULL, send_activity_message, (void *)&s);
+
         while (1)
         {
             int size = s.recvsYS();
@@ -36,6 +40,8 @@ void YSclient::connect()
 
             //printf("res: %d\n", res);
         }
+        int rest = pthread_cancel(thread_activity_message);
+        printf("Fin thread %d.", rest);
 
     }
 
