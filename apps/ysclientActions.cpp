@@ -18,7 +18,7 @@ int YSclient::amap(tmap* map)
 
 int YSclient::aysversion(tint* inte)
 {
-    printf("YS version: %d\n", inte->val);
+    printf("YSFS version: %d\n", inte->val);
     tacknowledge ack;
     ack.id = 9;
     ack.info = 0;
