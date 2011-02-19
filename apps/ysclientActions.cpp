@@ -18,7 +18,7 @@ int YSclient::amap(tmap* map)
 
 int YSclient::aysversion(tint* inte)
 {
-    printf("YSFS version: %d\n", inte->val);
+    printf("YS version: %d\n", inte->val);
     tacknowledge ack;
     ack.id = 9;
     ack.info = 0;
@@ -99,7 +99,7 @@ int YSclient::aflight(tflight* flight)
 
 int YSclient::adamage(tdamage* damage)
 {
-    printf("Damage: killer: (%d,%d) victim: (%d,%d) power: %d weapon: %d shot: %d, u1: %d, u2: %d\n", damage->killer, damage->killerID, damage->victim, damage->victimID, damage->power, damage->weapon, damage->shot, damage->u1, damage->u2);
+    printf("DAMAGE: killer: (%d,%d)  victim: (%d,%d) power: %d weapon: %d shot: %d, u1: %d, u2: %d\n", damage->killer, damage->killerID, damage->victim, damage->victimID, damage->power, damage->weapon, damage->shot, damage->u1, damage->u2);
     return 1;
 }
 
@@ -110,24 +110,36 @@ int YSclient::auserlist(tuserlist* userlist)
 
 int YSclient::aground(tground* ground)
 {
-    printf("Join %s %s type: %d iff: %d id:%d gro_id: %d flag: %d u1: %d u2: %f u3: %d u4: %d (x,y,z,r1,r2,r3)=(%f,%f,%f,%f,%f,%f)\n", ground->name2, ground->name, ground->type, ground->iff, ground->id, ground->gro_id, ground->flag, ground->u1, ground->u2, ground->u3, ground->u4, ground->x, ground->y, ground->z, ground->r1, ground->r2, ground->r3);
+    //printf("Join %s %s type: %d iff: %d id:%d gro_id: %d flag: %d u1: %d u2: %f u3: %d u4: %d (x,y,z,r1,r2,r3)=(%f,%f,%f,%f,%f,%f)\n", ground->name2, ground->name, ground->type, ground->iff, ground->id, ground->gro_id, ground->flag, ground->u1, ground->u2, ground->u3, ground->u4, ground->x, ground->y, ground->z, ground->r1, ground->r2, ground->r3);
     tacknowledge ack;
     if (ground->type == 65537)
+    {
+        printf("GROUNDJOIN %s %s type: %d iff: %d id:%d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id);
         ack.id = 1;
+    }
     else
+    {
+        printf("PLAYERJOIN %s %s type: %d iff: %d id:%d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id);
         ack.id=0;
+    }
     ack.info = ground->id;
     return s.sendsYS(packtacknowledge(&ack));
 }
 
 int YSclient::aleft(tleft* left, int is_ground=0)
 {
-    printf("%d has left %d.\n", left->id, left->u);
+
     tacknowledge ack;
     if (is_ground)
+    {
         ack.id = 3;
+        printf("GROUNDLEFT: %d has left %d.\n", left->id, left->u);
+    }
     else
+    {
         ack.id = 2;
+        printf("PLAYERLEFT: %d has left %d.\n", left->id, left->u);
+    }
     ack.info = left->id;
     return s.sendsYS(packtacknowledge(&ack));
 }

@@ -92,7 +92,7 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
         case 22:
         {
             // Damages
-            debugHex(buffer, headbuffer.size);
+            //debugHex(buffer, headbuffer.size);
             tdamage damage;
             unpacktdamage(buffer, headbuffer.size, &damage);
             carryOn = adamage(&damage);
