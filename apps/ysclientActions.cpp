@@ -94,6 +94,10 @@ int YSclient::amessage(tmessage* message)
 
 int YSclient::aflight(tflight* flight)
 {
+    //printf("ID: %d x: %f   z: %f   y: %f\n", flight->ID, flight->x, flight->z, flight->y);
+    int d = racers[flight->ID]->check(flight->x, flight->z, flight->y, 20);
+    if (d != 0)
+        printf("check %d \n",  d);
     return 1;
 }
 
@@ -121,6 +125,7 @@ int YSclient::aground(tground* ground)
     {
         printf("PLAYERJOIN %s %s type: %d iff: %d id:%d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id);
         ack.id=0;
+        racers[ground->id] = new Racer(ground->name2, ground->name, 1, cp);
     }
     ack.info = ground->id;
     return s.sendsYS(packtacknowledge(&ack));

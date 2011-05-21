@@ -63,6 +63,9 @@ int Apps::receivedmanager(char* buffer, theader headbuffer)
         {
             // flight data
             tflight flight;
+            //debugHex(buffer, 22);
+            //char input[50] = "i,i,s,f,f,f";
+//            display_unpack(input, buffer);
             unpacktflight(buffer, headbuffer.size, &flight);
             carryOn = aflight(&flight);
             break;

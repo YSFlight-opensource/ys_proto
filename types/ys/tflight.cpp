@@ -1,10 +1,12 @@
 #ifndef TFLIGHT
 #define TFLIGHT
 
+#pragma pack(2)
+
 // kind=11
 struct tflight
 {
-    float stopWatch;
+    int stopWatch; // float ??
     int ID;
     short i1;
     float x;
