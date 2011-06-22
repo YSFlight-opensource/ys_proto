@@ -17,7 +17,7 @@ public:
         int size;
         memcpy((char*)&size, buffer, 4);
         //size = ntohl(size);
-        printf("size %d\n", size);
+        //printf("size %d\n", size);
         int res = sends(buffer, size+4);
         if (freebuffer)
             free(buffer);

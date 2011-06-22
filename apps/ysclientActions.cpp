@@ -1,6 +1,13 @@
 #include "ysclient.h"
 #include "../serialization/includeAll.cpp"
 #include "../debug.h"
+#include <math.h>
+
+#include <time.h>
+
+
+// IDEA ---------
+// ALL PACK FUNCTION IN SERIALIZE  COULD WRITE THE SIZE
 
 int YSclient::alogin(tlogin* login)
 {
@@ -95,9 +102,32 @@ int YSclient::amessage(tmessage* message)
 int YSclient::aflight(tflight* flight)
 {
     //printf("ID: %d x: %f   z: %f   y: %f\n", flight->ID, flight->x, flight->z, flight->y);
-    int d = racers[flight->ID]->check(flight->x, flight->z, flight->y, 20);
+    float speed = 0.19438612860586*sqrt(flight->xSpeed * flight->xSpeed + flight->ySpeed * flight->ySpeed + flight->zSpeed * flight->zSpeed);
+    int d = racers[flight->ID]->check(flight->x, flight->z, flight->y, speed, time (NULL));
+    if (d == -1)
+    {
+            cout  <<racers[flight->ID]->name() << " missed a check-point !" << endl;
+    }
+    else if (d == 2)
+    {
+        cout <<  racers[flight->ID]->name() << " finished the lap " << racers[flight->ID]->lapNumber()-1 << endl;
+    }
+    else if (d == 3)
+    {
+        tmessage* mess = (tmessage*)malloc(sizeof(*mess));
+        mess->u = 0;
+        mess->message = (char*)malloc(500);
+        sprintf (mess->message, "%s finished in %d s ; Top speed %d kt", racers[flight->ID]->name().c_str(), (int)racers[flight->ID]->time(), racers[flight->ID]->topSpeed());
+        s.sendsYS(packtmessage(mess));
+       cout << racers[flight->ID]->name() << " finished the race in " <<  racers[flight->ID]->time() << "s ; Top speed: "<< racers[flight->ID]->topSpeed() << "kt" << endl;
+    }
     if (d != 0)
-        printf("check %d \n",  d);
+    {
+        printf ("check %d at %d\n", d, flight->stopWatch);
+        printf ("speed: %f \n", speed);
+    }
+    //cout << clock() << endl;
+    //cout << flight->stopWatch << endl;
     return 1;
 }
 
@@ -144,6 +174,7 @@ int YSclient::aleft(tleft* left, int is_ground=0)
     {
         ack.id = 2;
         printf("PLAYERLEFT: %d has left %d.\n", left->id, left->u);
+        racers.erase(left->id);
     }
     ack.info = left->id;
     return s.sendsYS(packtacknowledge(&ack));

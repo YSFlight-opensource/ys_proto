@@ -5,9 +5,12 @@
 
 
 
+
+
 YSclient::YSclient()
 {
-     cp = read_file((char*)"cp1.txt");
+     cp = read_file((char*)"midohiol.race");
+     //cout << *cp  << std::endl;
 
 
 }
@@ -15,9 +18,9 @@ YSclient::YSclient()
 void YSclient::connect()
 {
     //int res = s.connects((char *)"127.0.0.1",7915);
-    int res = s.connects((char *)"127.0.0.1",7915);
+    //int res = s.connects((char *)"127.0.0.1",7915);
     //int res = s.connects((char *)"192.168.56.1",7915);
-    //int res = s.connects((char *)"192.168.1.2",7915);
+    int res = s.connects((char *)"192.168.1.2",7915);
     //int res = s.connects((char *)"195.146.247.50",7915);
     if (res)
     {

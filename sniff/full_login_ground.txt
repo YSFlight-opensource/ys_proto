@@ -1,0 +1,3382 @@
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=4242754 TSER=0 WS=7
+
+Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 0, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 0    (relative sequence number)
+    Header length: 40 bytes
+    Flags: 0x02 (SYN)
+    Window size: 5840
+    Checksum: 0x8384 [validation disabled]
+    Options: (20 bytes)
+        Maximum segment size: 1460 bytes
+        TCP SACK Permitted Option: True
+        Timestamps: TSval 4242754, TSecr 0
+        NOP
+        Window scale: 7 (multiply by 128)
+
+No.     Time        Source                Destination           Protocol Info
+      2 0.002176    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=4626387 TSER=4242754 WS=7
+
+Frame 2: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 0, Ack: 1, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 40 bytes
+    Flags: 0x12 (SYN, ACK)
+    Window size: 5792
+    Checksum: 0x3d20 [validation disabled]
+    Options: (20 bytes)
+        Maximum segment size: 1460 bytes
+        TCP SACK Permitted Option: True
+        Timestamps: TSval 4626387, TSecr 4242754
+        NOP
+        Window scale: 7 (multiply by 128)
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+      3 0.002209    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1 Ack=1 Win=5888 Len=0 TSV=4242754 TSER=4626387
+
+Frame 3: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1, Ack: 1, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 5888 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242754, TSecr 4626387
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+      4 0.404459    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1 Ack=1 Win=5888 Len=28 TSV=4242875 TSER=4626387
+
+Frame 4: 94 bytes on wire (752 bits), 94 bytes captured (752 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1, Ack: 1, Len: 28
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 29    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 5888 (scaled)
+    Checksum: 0x1f68 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242875, TSecr 4626387
+    [SEQ/ACK analysis]
+Data (28 bytes)
+
+0000  18 00 00 00 01 00 00 00 6e 61 6d 65 6c 65 73 73   ........nameless
+0010  00 00 00 00 00 00 00 00 5b b8 32 01               ........[.2.
+    Data: 18000000010000006e616d656c6573730000000000000000...
+    [Length: 28]
+
+No.     Time        Source                Destination           Protocol Info
+      5 0.409084    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=1 Ack=29 Win=5888 Len=0 TSV=4626488 TSER=4242875
+
+Frame 5: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1, Ack: 29, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 29    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 5888 (scaled)
+    Checksum: 0x8164 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626488, TSecr 4242875
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+      6 0.439385    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=1 Ack=29 Win=5888 Len=517 TSV=4626496 TSER=4242875
+
+Frame 6: 583 bytes on wire (4664 bits), 583 bytes captured (4664 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1, Ack: 29, Len: 517
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 518    (relative sequence number)]
+    Acknowledgement number: 29    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 5888 (scaled)
+    Checksum: 0x7e60 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626496, TSecr 4242875
+    [SEQ/ACK analysis]
+Data (517 bytes)
+
+0000  08 00 00 00 1d 00 00 00 5b b8 32 01 08 00 00 00   ........[.2.....
+0010  1f 00 00 00 00 00 00 00 08 00 00 00 27 00 00 00   ............'...
+0020  01 00 00 00 08 00 00 00 29 00 00 00 a0 0f 00 00   ........).......
+0030  1a 00 00 00 2b 00 00 00 00 00 00 00 52 41 44 41   ....+.......RADA
+0040  52 41 4c 54 49 20 33 30 34 2e 35 30 6d 00 40 00   RALTI 304.50m.@.
+0050  00 00 04 00 00 00 41 54 53 55 47 49 5f 41 49 52   ......ATSUGI_AIR
+0060  42 41 53 45 00 00 00 00 00 00 20 8d 42 b7 00 00   BASE...... .B...
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 6f 01 00 00 2c 00 00 00 01 20 00 00 41 2d   ..o...,.... ..A-
+00a0  34 5f 53 4b 59 48 41 57 4b 00 41 2d 36 5f 49 4e   4_SKYHAWK.A-6_IN
+00b0  54 52 55 44 45 52 00 41 36 4d 35 5f 5a 45 52 4f   TRUDER.A6M5_ZERO
+00c0  00 41 2d 31 30 41 5f 54 48 55 4e 44 45 52 42 4f   .A-10A_THUNDERBO
+00d0  4c 54 32 00 41 48 2d 31 5f 43 4f 42 52 41 00 41   LT2.AH-1_COBRA.A
+00e0  48 2d 36 34 5f 41 50 41 43 48 45 00 41 49 52 42   H-64_APACHE.AIRB
+00f0  55 53 33 30 30 00 41 49 52 42 55 53 33 32 30 00   US300.AIRBUS320.
+0100  41 4c 50 48 41 4a 45 54 00 41 4d 58 00 41 56 2d   ALPHAJET.AMX.AV-
+0110  38 42 5f 48 41 52 52 49 45 52 00 42 2d 32 5f 53   8B_HARRIER.B-2_S
+0120  50 49 52 49 54 00 42 2d 32 39 5f 53 55 50 45 52   PIRIT.B-29_SUPER
+0130  46 4f 52 54 52 45 53 53 00 42 2d 35 32 5f 53 54   FORTRESS.B-52_ST
+0140  52 41 54 4f 46 4f 52 54 52 45 53 53 00 42 37 33   RATOFORTRESS.B73
+0150  37 00 42 37 34 37 00 42 37 36 37 00 42 37 37 37   7.B747.B767.B777
+0160  00 43 2d 31 33 30 5f 48 45 52 43 55 4c 45 53 00   .C-130_HERCULES.
+0170  43 4f 4e 43 4f 52 44 45 00 44 52 41 4b 45 4e 00   CONCORDE.DRAKEN.
+0180  45 41 2d 36 42 5f 50 52 4f 57 4c 45 52 00 44 49   EA-6B_PROWLER.DI
+0190  41 4d 4f 4e 44 5f 45 43 4c 49 50 53 45 00 45 55   AMOND_ECLIPSE.EU
+01a0  52 4f 46 49 47 48 54 45 52 5f 54 59 50 48 4f 4f   ROFIGHTER_TYPHOO
+01b0  4e 00 45 2d 32 43 5f 48 41 57 4b 45 59 45 00 46   N.E-2C_HAWKEYE.F
+01c0  2d 31 00 46 2d 32 00 46 2d 34 45 4a 5f 50 48 41   -1.F-2.F-4EJ_PHA
+01d0  4e 54 4f 4d 00 46 2d 34 45 5f 50 48 41 4e 54 4f   NTOM.F-4E_PHANTO
+01e0  4d 00 46 2d 35 5f 54 49 47 45 52 32 00 46 2d 31   M.F-5_TIGER2.F-1
+01f0  34 5f 54 4f 4d 43 41 54 00 46 2d 31 35 43 5f 45   4_TOMCAT.F-15C_E
+0200  41 47 4c 45 00                                    AGLE.
+    Data: 080000001d0000005bb83201080000001f00000000000000...
+    [Length: 517]
+
+No.     Time        Source                Destination           Protocol Info
+      7 0.439412    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=29 Ack=518 Win=6912 Len=0 TSV=4242885 TSER=4626496
+
+Frame 7: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 29, Ack: 518, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 29    (relative sequence number)
+    Acknowledgement number: 518    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242885, TSecr 4626496
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+      8 0.455895    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=29 Ack=518 Win=6912 Len=525 TSV=4242890 TSER=4626496
+
+Frame 8: 591 bytes on wire (4728 bits), 591 bytes captured (4728 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 29, Ack: 518, Len: 525
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 29    (relative sequence number)
+    [Next sequence number: 554    (relative sequence number)]
+    Acknowledgement number: 518    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0xde05 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242890, TSecr 4626496
+    [SEQ/ACK analysis]
+Data (525 bytes)
+
+0000  0c 00 00 00 06 00 00 00 09 00 00 00 00 00 00 00   ................
+0010  0c 00 00 00 06 00 00 00 0a 00 00 00 00 00 00 00   ................
+0020  0c 00 00 00 06 00 00 00 0b 00 00 00 00 00 00 00   ................
+0030  1a 00 00 00 2b 00 00 00 00 00 00 00 52 41 44 41   ....+.......RADA
+0040  52 41 4c 54 49 20 33 30 34 2e 35 30 6d 00 40 00   RALTI 304.50m.@.
+0050  00 00 04 00 00 00 41 54 53 55 47 49 5f 41 49 52   ......ATSUGI_AIR
+0060  42 41 53 45 00 00 00 00 00 00 20 8d 42 b7 00 00   BASE...... .B...
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 04 00 00 00 21 00 00 00 6f 01 00 00 2c 00   ......!...o...,.
+00a0  00 00 01 20 00 00 41 2d 34 5f 53 4b 59 48 41 57   ... ..A-4_SKYHAW
+00b0  4b 00 41 2d 36 5f 49 4e 54 52 55 44 45 52 00 41   K.A-6_INTRUDER.A
+00c0  36 4d 35 5f 5a 45 52 4f 00 41 2d 31 30 41 5f 54   6M5_ZERO.A-10A_T
+00d0  48 55 4e 44 45 52 42 4f 4c 54 32 00 41 48 2d 31   HUNDERBOLT2.AH-1
+00e0  5f 43 4f 42 52 41 00 41 48 2d 36 34 5f 41 50 41   _COBRA.AH-64_APA
+00f0  43 48 45 00 41 49 52 42 55 53 33 30 30 00 41 49   CHE.AIRBUS300.AI
+0100  52 42 55 53 33 32 30 00 41 4c 50 48 41 4a 45 54   RBUS320.ALPHAJET
+0110  00 41 4d 58 00 41 56 2d 38 42 5f 48 41 52 52 49   .AMX.AV-8B_HARRI
+0120  45 52 00 42 2d 32 5f 53 50 49 52 49 54 00 42 2d   ER.B-2_SPIRIT.B-
+0130  32 39 5f 53 55 50 45 52 46 4f 52 54 52 45 53 53   29_SUPERFORTRESS
+0140  00 42 2d 35 32 5f 53 54 52 41 54 4f 46 4f 52 54   .B-52_STRATOFORT
+0150  52 45 53 53 00 42 37 33 37 00 42 37 34 37 00 42   RESS.B737.B747.B
+0160  37 36 37 00 42 37 37 37 00 43 2d 31 33 30 5f 48   767.B777.C-130_H
+0170  45 52 43 55 4c 45 53 00 43 4f 4e 43 4f 52 44 45   ERCULES.CONCORDE
+0180  00 44 52 41 4b 45 4e 00 45 41 2d 36 42 5f 50 52   .DRAKEN.EA-6B_PR
+0190  4f 57 4c 45 52 00 44 49 41 4d 4f 4e 44 5f 45 43   OWLER.DIAMOND_EC
+01a0  4c 49 50 53 45 00 45 55 52 4f 46 49 47 48 54 45   LIPSE.EUROFIGHTE
+01b0  52 5f 54 59 50 48 4f 4f 4e 00 45 2d 32 43 5f 48   R_TYPHOON.E-2C_H
+01c0  41 57 4b 45 59 45 00 46 2d 31 00 46 2d 32 00 46   AWKEYE.F-1.F-2.F
+01d0  2d 34 45 4a 5f 50 48 41 4e 54 4f 4d 00 46 2d 34   -4EJ_PHANTOM.F-4
+01e0  45 5f 50 48 41 4e 54 4f 4d 00 46 2d 35 5f 54 49   E_PHANTOM.F-5_TI
+01f0  47 45 52 32 00 46 2d 31 34 5f 54 4f 4d 43 41 54   GER2.F-14_TOMCAT
+0200  00 46 2d 31 35 43 5f 45 41 47 4c 45 00            .F-15C_EAGLE.
+    Data: 0c0000000600000009000000000000000c00000006000000...
+    [Length: 525]
+
+No.     Time        Source                Destination           Protocol Info
+      9 0.472382    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=518 Ack=554 Win=6912 Len=32 TSV=4626505 TSER=4242890
+
+Frame 9: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 518, Ack: 554, Len: 32
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 518    (relative sequence number)
+    [Next sequence number: 550    (relative sequence number)]
+    Acknowledgement number: 554    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x2ebb [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626505, TSecr 4242890
+    [SEQ/ACK analysis]
+Data (32 bytes)
+
+0000  1c 00 00 00 21 00 00 00 01 00 00 00 e1 00 00 00   ....!...........
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 2f 46   ............../F
+    Data: 1c0000002100000001000000e10000000000000000000000...
+    [Length: 32]
+
+No.     Time        Source                Destination           Protocol Info
+     10 0.519474    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=554 Ack=550 Win=6912 Len=0 TSV=4242910 TSER=4626505
+
+Frame 10: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 554, Ack: 550, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 554    (relative sequence number)
+    Acknowledgement number: 550    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242910, TSecr 4626505
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     11 0.742114    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=554 Ack=550 Win=6912 Len=16 TSV=4242976 TSER=4626505
+
+Frame 11: 82 bytes on wire (656 bits), 82 bytes captured (656 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 554, Ack: 550, Len: 16
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 554    (relative sequence number)
+    [Next sequence number: 570    (relative sequence number)]
+    Acknowledgement number: 550    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x669c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4242976, TSecr 4626505
+    [SEQ/ACK analysis]
+Data (16 bytes)
+
+0000  0c 00 00 00 06 00 00 00 04 00 00 00 00 00 00 00   ................
+    Data: 0c000000060000000400000000000000
+    [Length: 16]
+
+No.     Time        Source                Destination           Protocol Info
+     12 0.785784    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=550 Ack=570 Win=6912 Len=0 TSV=4626583 TSER=4242976
+
+Frame 12: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 550, Ack: 570, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 550    (relative sequence number)
+    Acknowledgement number: 570    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x7c56 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626583, TSecr 4242976
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     13 0.980381    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=550 Ack=570 Win=6912 Len=495 TSV=4626631 TSER=4242976
+
+Frame 13: 561 bytes on wire (4488 bits), 561 bytes captured (4488 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 550, Ack: 570, Len: 495
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 550    (relative sequence number)
+    [Next sequence number: 1045    (relative sequence number)]
+    Acknowledgement number: 570    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0xc8d0 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626631, TSecr 4242976
+    [SEQ/ACK analysis]
+Data (495 bytes)
+
+0000  eb 01 00 00 2c 00 00 00 01 20 00 00 46 2d 31 35   ....,.... ..F-15
+0010  44 5f 45 41 47 4c 45 00 46 2d 31 35 44 4a 5f 45   D_EAGLE.F-15DJ_E
+0020  41 47 4c 45 00 46 2d 31 35 44 4a 5f 45 41 47 4c   AGLE.F-15DJ_EAGL
+0030  45 5f 4d 41 44 41 52 41 00 46 2d 31 35 44 4a 5f   E_MADARA.F-15DJ_
+0040  45 41 47 4c 45 5f 43 48 41 49 52 4f 00 46 2d 31   EAGLE_CHAIRO.F-1
+0050  35 44 4a 5f 45 41 47 4c 45 5f 4b 55 52 4f 00 46   5DJ_EAGLE_KURO.F
+0060  2d 31 35 44 4a 5f 45 41 47 4c 45 5f 4d 49 44 4f   -15DJ_EAGLE_MIDO
+0070  52 49 00 46 2d 31 35 44 4a 5f 45 41 47 4c 45 5f   RI.F-15DJ_EAGLE_
+0080  4e 41 4b 41 41 4f 00 46 2d 31 35 44 4a 5f 45 41   NAKAAO.F-15DJ_EA
+0090  47 4c 45 5f 53 4f 54 4f 41 4f 00 46 2d 31 35 44   GLE_SOTOAO.F-15D
+00a0  4a 5f 45 41 47 4c 45 5f 53 4f 54 4f 4d 49 44 4f   J_EAGLE_SOTOMIDO
+00b0  52 49 00 46 2d 31 35 4a 5f 45 41 47 4c 45 00 46   RI.F-15J_EAGLE.F
+00c0  2d 31 36 43 5f 46 49 47 48 54 49 4e 47 46 41 4c   -16C_FIGHTINGFAL
+00d0  43 4f 4e 00 46 2d 31 36 43 5f 54 48 55 4e 44 45   CON.F-16C_THUNDE
+00e0  52 42 49 52 44 53 00 46 2d 31 38 43 5f 48 4f 52   RBIRDS.F-18C_HOR
+00f0  4e 45 54 00 46 2d 31 38 45 5f 53 55 50 45 52 48   NET.F-18E_SUPERH
+0100  4f 52 4e 45 54 00 46 2d 31 38 43 5f 42 4c 55 45   ORNET.F-18C_BLUE
+0110  41 4e 47 45 4c 53 00 46 2d 32 32 5f 52 41 50 54   ANGELS.F-22_RAPT
+0120  4f 52 00 46 2d 38 36 5f 42 4c 55 45 49 4d 50 55   OR.F-86_BLUEIMPU
+0130  4c 53 45 00 46 2d 31 30 30 44 5f 53 55 50 45 52   LSE.F-100D_SUPER
+0140  53 41 42 52 45 00 46 2d 31 30 34 5f 53 54 41 52   SABRE.F-104_STAR
+0150  46 49 47 48 54 45 52 00 46 2d 31 31 37 41 5f 4e   FIGHTER.F-117A_N
+0160  49 47 48 54 48 41 57 4b 00 46 4f 43 4b 45 5f 57   IGHTHAWK.FOCKE_W
+0170  55 4c 46 5f 46 57 31 39 30 00 47 52 49 50 45 4e   ULF_FW190.GRIPEN
+0180  00 47 34 4d 5f 54 59 50 45 31 42 4f 4d 42 45 52   .G4M_TYPE1BOMBER
+0190  00 48 41 57 4b 00 48 55 52 52 49 43 41 4e 45 00   .HAWK.HURRICANE.
+01a0  48 41 57 4b 5f 52 45 44 41 52 52 4f 57 53 00 4b   HAWK_REDARROWS.K
+01b0  46 49 52 00 4c 41 4e 43 41 53 54 45 52 00 4d 55   FIR.LANCASTER.MU
+01c0  2d 32 53 00 4d 49 47 2d 31 35 5f 46 41 47 4f 54   -2S.MIG-15_FAGOT
+01d0  00 4d 49 47 2d 32 31 5f 46 49 53 48 42 45 44 00   .MIG-21_FISHBED.
+01e0  4d 49 47 2d 32 33 5f 46 4c 4f 47 47 45 52 00      MIG-23_FLOGGER.
+    Data: eb0100002c00000001200000462d3135445f4541474c4500...
+    [Length: 495]
+
+No.     Time        Source                Destination           Protocol Info
+     14 0.980414    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=570 Ack=1045 Win=8064 Len=0 TSV=4243048 TSER=4626631
+
+Frame 14: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 570, Ack: 1045, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 570    (relative sequence number)
+    Acknowledgement number: 1045    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 8064 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243048, TSecr 4626631
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     15 1.001287    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=570 Ack=1045 Win=8064 Len=495 TSV=4243054 TSER=4626631
+
+Frame 15: 561 bytes on wire (4488 bits), 561 bytes captured (4488 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 570, Ack: 1045, Len: 495
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 570    (relative sequence number)
+    [Next sequence number: 1065    (relative sequence number)]
+    Acknowledgement number: 1045    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 8064 (scaled)
+    Checksum: 0xc68a [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243054, TSecr 4626631
+    [SEQ/ACK analysis]
+Data (495 bytes)
+
+0000  eb 01 00 00 2c 00 00 00 01 20 00 00 46 2d 31 35   ....,.... ..F-15
+0010  44 5f 45 41 47 4c 45 00 46 2d 31 35 44 4a 5f 45   D_EAGLE.F-15DJ_E
+0020  41 47 4c 45 00 46 2d 31 35 44 4a 5f 45 41 47 4c   AGLE.F-15DJ_EAGL
+0030  45 5f 4d 41 44 41 52 41 00 46 2d 31 35 44 4a 5f   E_MADARA.F-15DJ_
+0040  45 41 47 4c 45 5f 43 48 41 49 52 4f 00 46 2d 31   EAGLE_CHAIRO.F-1
+0050  35 44 4a 5f 45 41 47 4c 45 5f 4b 55 52 4f 00 46   5DJ_EAGLE_KURO.F
+0060  2d 31 35 44 4a 5f 45 41 47 4c 45 5f 4d 49 44 4f   -15DJ_EAGLE_MIDO
+0070  52 49 00 46 2d 31 35 44 4a 5f 45 41 47 4c 45 5f   RI.F-15DJ_EAGLE_
+0080  4e 41 4b 41 41 4f 00 46 2d 31 35 44 4a 5f 45 41   NAKAAO.F-15DJ_EA
+0090  47 4c 45 5f 53 4f 54 4f 41 4f 00 46 2d 31 35 44   GLE_SOTOAO.F-15D
+00a0  4a 5f 45 41 47 4c 45 5f 53 4f 54 4f 4d 49 44 4f   J_EAGLE_SOTOMIDO
+00b0  52 49 00 46 2d 31 35 4a 5f 45 41 47 4c 45 00 46   RI.F-15J_EAGLE.F
+00c0  2d 31 36 43 5f 46 49 47 48 54 49 4e 47 46 41 4c   -16C_FIGHTINGFAL
+00d0  43 4f 4e 00 46 2d 31 36 43 5f 54 48 55 4e 44 45   CON.F-16C_THUNDE
+00e0  52 42 49 52 44 53 00 46 2d 31 38 43 5f 48 4f 52   RBIRDS.F-18C_HOR
+00f0  4e 45 54 00 46 2d 31 38 45 5f 53 55 50 45 52 48   NET.F-18E_SUPERH
+0100  4f 52 4e 45 54 00 46 2d 31 38 43 5f 42 4c 55 45   ORNET.F-18C_BLUE
+0110  41 4e 47 45 4c 53 00 46 2d 32 32 5f 52 41 50 54   ANGELS.F-22_RAPT
+0120  4f 52 00 46 2d 38 36 5f 42 4c 55 45 49 4d 50 55   OR.F-86_BLUEIMPU
+0130  4c 53 45 00 46 2d 31 30 30 44 5f 53 55 50 45 52   LSE.F-100D_SUPER
+0140  53 41 42 52 45 00 46 2d 31 30 34 5f 53 54 41 52   SABRE.F-104_STAR
+0150  46 49 47 48 54 45 52 00 46 2d 31 31 37 41 5f 4e   FIGHTER.F-117A_N
+0160  49 47 48 54 48 41 57 4b 00 46 4f 43 4b 45 5f 57   IGHTHAWK.FOCKE_W
+0170  55 4c 46 5f 46 57 31 39 30 00 47 52 49 50 45 4e   ULF_FW190.GRIPEN
+0180  00 47 34 4d 5f 54 59 50 45 31 42 4f 4d 42 45 52   .G4M_TYPE1BOMBER
+0190  00 48 41 57 4b 00 48 55 52 52 49 43 41 4e 45 00   .HAWK.HURRICANE.
+01a0  48 41 57 4b 5f 52 45 44 41 52 52 4f 57 53 00 4b   HAWK_REDARROWS.K
+01b0  46 49 52 00 4c 41 4e 43 41 53 54 45 52 00 4d 55   FIR.LANCASTER.MU
+01c0  2d 32 53 00 4d 49 47 2d 31 35 5f 46 41 47 4f 54   -2S.MIG-15_FAGOT
+01d0  00 4d 49 47 2d 32 31 5f 46 49 53 48 42 45 44 00   .MIG-21_FISHBED.
+01e0  4d 49 47 2d 32 33 5f 46 4c 4f 47 47 45 52 00      MIG-23_FLOGGER.
+    Data: eb0100002c00000001200000462d3135445f4541474c4500...
+    [Length: 495]
+
+No.     Time        Source                Destination           Protocol Info
+     16 1.005765    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=1045 Ack=1065 Win=7936 Len=0 TSV=4626638 TSER=4243054
+
+Frame 16: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1045, Ack: 1065, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1045    (relative sequence number)
+    Acknowledgement number: 1065    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 7936 (scaled)
+    Checksum: 0x77eb [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626638, TSecr 4243054
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     17 1.484895    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=1045 Ack=1065 Win=7936 Len=294 TSV=4626757 TSER=4243054
+
+Frame 17: 360 bytes on wire (2880 bits), 360 bytes captured (2880 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1045, Ack: 1065, Len: 294
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1045    (relative sequence number)
+    [Next sequence number: 1339    (relative sequence number)]
+    Acknowledgement number: 1065    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 7936 (scaled)
+    Checksum: 0x7c43 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626757, TSecr 4243054
+    [SEQ/ACK analysis]
+Data (294 bytes)
+
+0000  22 01 00 00 2c 00 00 00 01 17 00 00 4d 49 47 2d   "...,.......MIG-
+0010  32 39 5f 46 55 4c 43 52 55 4d 00 4d 49 52 41 47   29_FULCRUM.MIRAG
+0020  45 32 30 30 30 00 50 2d 35 31 5f 4d 55 53 54 41   E2000.P-51_MUSTA
+0030  4e 47 00 50 49 50 45 52 5f 41 52 43 48 45 52 28   NG.PIPER_ARCHER(
+0040  57 41 53 48 49 4e 2d 41 49 52 5f 4d 41 52 4b 49   WASHIN-AIR_MARKI
+0050  4e 47 29 00 52 41 46 41 4c 45 00 53 2d 33 5f 56   NG).RAFALE.S-3_V
+0060  49 4b 49 4e 47 00 53 50 49 54 46 49 52 45 00 53   IKING.SPITFIRE.S
+0070  55 2d 32 32 5f 46 49 54 54 45 52 00 53 55 2d 32   U-22_FITTER.SU-2
+0080  34 5f 46 45 4e 43 45 52 00 53 55 2d 32 35 5f 46   4_FENCER.SU-25_F
+0090  52 4f 47 46 4f 4f 54 00 53 55 2d 32 37 5f 46 4c   ROGFOOT.SU-27_FL
+00a0  41 4e 4b 45 52 00 54 2d 32 5f 42 4c 55 45 49 4d   ANKER.T-2_BLUEIM
+00b0  50 55 4c 53 45 00 54 2d 34 5f 42 4c 55 45 49 4d   PULSE.T-4_BLUEIM
+00c0  50 55 4c 53 45 00 54 2d 34 30 30 00 54 4f 52 4e   PULSE.T-400.TORN
+00d0  41 44 4f 00 54 55 2d 31 36 30 5f 42 4c 41 43 4b   ADO.TU-160_BLACK
+00e0  4a 41 43 4b 00 55 2d 31 32 35 00 55 2d 31 32 35   JACK.U-125.U-125
+00f0  41 00 55 48 2d 36 30 5f 42 4c 41 43 4b 48 41 57   A.UH-60_BLACKHAW
+0100  4b 00 55 48 2d 36 30 4a 5f 42 4c 41 43 4b 48 41   K.UH-60J_BLACKHA
+0110  57 4b 00 56 2d 31 30 37 00 56 49 47 47 45 4e 00   WK.V-107.VIGGEN.
+0120  59 53 2d 31 31 00                                 YS-11.
+    Data: 220100002c000000011700004d49472d32395f46554c4352...
+    [Length: 294]
+
+No.     Time        Source                Destination           Protocol Info
+     18 1.507275    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1065 Ack=1339 Win=9088 Len=294 TSV=4243206 TSER=4626757
+
+Frame 18: 360 bytes on wire (2880 bits), 360 bytes captured (2880 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1065, Ack: 1339, Len: 294
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1065    (relative sequence number)
+    [Next sequence number: 1359    (relative sequence number)]
+    Acknowledgement number: 1339    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x7a7c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243206, TSecr 4626757
+    [SEQ/ACK analysis]
+Data (294 bytes)
+
+0000  22 01 00 00 2c 00 00 00 01 17 00 00 4d 49 47 2d   "...,.......MIG-
+0010  32 39 5f 46 55 4c 43 52 55 4d 00 4d 49 52 41 47   29_FULCRUM.MIRAG
+0020  45 32 30 30 30 00 50 2d 35 31 5f 4d 55 53 54 41   E2000.P-51_MUSTA
+0030  4e 47 00 50 49 50 45 52 5f 41 52 43 48 45 52 28   NG.PIPER_ARCHER(
+0040  57 41 53 48 49 4e 2d 41 49 52 5f 4d 41 52 4b 49   WASHIN-AIR_MARKI
+0050  4e 47 29 00 52 41 46 41 4c 45 00 53 2d 33 5f 56   NG).RAFALE.S-3_V
+0060  49 4b 49 4e 47 00 53 50 49 54 46 49 52 45 00 53   IKING.SPITFIRE.S
+0070  55 2d 32 32 5f 46 49 54 54 45 52 00 53 55 2d 32   U-22_FITTER.SU-2
+0080  34 5f 46 45 4e 43 45 52 00 53 55 2d 32 35 5f 46   4_FENCER.SU-25_F
+0090  52 4f 47 46 4f 4f 54 00 53 55 2d 32 37 5f 46 4c   ROGFOOT.SU-27_FL
+00a0  41 4e 4b 45 52 00 54 2d 32 5f 42 4c 55 45 49 4d   ANKER.T-2_BLUEIM
+00b0  50 55 4c 53 45 00 54 2d 34 5f 42 4c 55 45 49 4d   PULSE.T-4_BLUEIM
+00c0  50 55 4c 53 45 00 54 2d 34 30 30 00 54 4f 52 4e   PULSE.T-400.TORN
+00d0  41 44 4f 00 54 55 2d 31 36 30 5f 42 4c 41 43 4b   ADO.TU-160_BLACK
+00e0  4a 41 43 4b 00 55 2d 31 32 35 00 55 2d 31 32 35   JACK.U-125.U-125
+00f0  41 00 55 48 2d 36 30 5f 42 4c 41 43 4b 48 41 57   A.UH-60_BLACKHAW
+0100  4b 00 55 48 2d 36 30 4a 5f 42 4c 41 43 4b 48 41   K.UH-60J_BLACKHA
+0110  57 4b 00 56 2d 31 30 37 00 56 49 47 47 45 4e 00   WK.V-107.VIGGEN.
+0120  59 53 2d 31 31 00                                 YS-11.
+    Data: 220100002c000000011700004d49472d32395f46554c4352...
+    [Length: 294]
+
+No.     Time        Source                Destination           Protocol Info
+     19 1.510945    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=1339 Ack=1359 Win=9088 Len=0 TSV=4626764 TSER=4243206
+
+Frame 19: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1339, Ack: 1359, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1339    (relative sequence number)
+    Acknowledgement number: 1359    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x7480 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626764, TSecr 4243206
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     20 2.001050    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=1339 Ack=1359 Win=9088 Len=8 TSV=4626886 TSER=4243206
+
+Frame 20: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1339, Ack: 1359, Len: 8
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1339    (relative sequence number)
+    [Next sequence number: 1347    (relative sequence number)]
+    Acknowledgement number: 1359    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x5ff6 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626886, TSecr 4243206
+    [SEQ/ACK analysis]
+Data (8 bytes)
+
+0000  04 00 00 00 10 00 00 00                           ........
+    Data: 0400000010000000
+    [Length: 8]
+
+No.     Time        Source                Destination           Protocol Info
+     21 2.013551    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1359 Ack=1347 Win=9088 Len=16 TSV=4243358 TSER=4626886
+
+Frame 21: 82 bytes on wire (656 bits), 82 bytes captured (656 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1359, Ack: 1347, Len: 16
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1359    (relative sequence number)
+    [Next sequence number: 1375    (relative sequence number)]
+    Acknowledgement number: 1347    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x5a4e [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243358, TSecr 4626886
+    [SEQ/ACK analysis]
+Data (16 bytes)
+
+0000  0c 00 00 00 06 00 00 00 07 00 00 00 00 00 00 00   ................
+    Data: 0c000000060000000700000000000000
+    [Length: 16]
+
+No.     Time        Source                Destination           Protocol Info
+     22 2.020751    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=1347 Ack=1375 Win=9088 Len=0 TSV=4626891 TSER=4243358
+
+Frame 22: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1347, Ack: 1375, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1347    (relative sequence number)
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x7351 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4626891, TSecr 4243358
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     23 2.727659    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=1347 Ack=1375 Win=9088 Len=300 TSV=4627068 TSER=4243358
+
+Frame 23: 366 bytes on wire (2928 bits), 366 bytes captured (2928 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1347, Ack: 1375, Len: 300
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1347    (relative sequence number)
+    [Next sequence number: 1647    (relative sequence number)]
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x5cb3 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627068, TSecr 4243358
+    [SEQ/ACK analysis]
+Data (300 bytes)
+
+0000  2c 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00   ,... ...........
+0010  2a 2a 20 4c 6f 67 2d 6f 6e 20 70 72 6f 63 65 73   ** Log-on proces
+0020  73 20 63 6f 6d 70 6c 65 74 65 64 20 2a 2a 00 00   s completed **..
+0030  f8 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00   .... ...........
+0040  2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   ----------------
+0050  2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   ----------------
+0060  2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 0a 57 65 6c   ------------.Wel
+0070  63 6f 6d 65 20 74 6f 20 74 68 65 20 32 34 31 20   come to the 241 
+0080  53 65 72 76 65 72 0a 2d 2d 2d 2d 2d 2d 2d 2d 2d   Server.---------
+0090  2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   ----------------
+00a0  2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   ----------------
+00b0  2d 2d 2d 0a 0a 0a 54 72 61 69 6e 69 6e 67 20 69   ---...Training i
+00c0  6e 73 74 72 75 63 74 69 6f 6e 73 20 69 6e 20 74   nstructions in t
+00d0  68 65 20 32 34 31 73 74 20 66 6f 72 75 6d 0a 54   he 241st forum.T
+00e0  61 6b 65 20 63 61 72 65 2c 20 63 72 61 73 68 65   ake care, crashe
+00f0  73 20 61 72 65 20 72 65 63 6f 72 64 65 64 2c 20   s are recorded, 
+0100  0a 61 6e 64 20 70 65 6e 61 6c 74 69 65 73 20 61   .and penalties a
+0110  72 65 20 67 69 76 65 6e 20 66 6f 72 20 6c 6f 73   re given for los
+0120  74 20 61 69 72 63 72 61 66 74 21 00               t aircraft!.
+    Data: 2c0000002000000000000000000000002a2a204c6f672d6f...
+    [Length: 300]
+
+No.     Time        Source                Destination           Protocol Info
+     24 2.766136    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1375 Ack=1647 Win=10240 Len=0 TSV=4243584 TSER=4627068
+
+Frame 24: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1375, Ack: 1647, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1375    (relative sequence number)
+    Acknowledgement number: 1647    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 10240 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243584, TSecr 4627068
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     25 2.780244    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=1647 Ack=1375 Win=9088 Len=136 TSV=4627080 TSER=4243584
+
+Frame 25: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1647, Ack: 1375, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1647    (relative sequence number)
+    [Next sequence number: 1783    (relative sequence number)]
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x680c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627080, TSecr 4243584
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 b8 9e 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  0b d7 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   ........,.......
+0030  b8 9e 8f 46 e0 01 01 00 02 00 01 00 b3 53 a2 44   ...F.........S.D
+0040  00 00 00 00 74 8a 04 44 e1 85 00 00 00 00 00 00   ....t..D........
+0050  00 00 00 00 7d 00 fc ff 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  b8 9e 8f 46 e3 01 01 00 02 00 01 00 14 9d 8e 44   ...F...........D
+0070  00 00 00 00 92 83 93 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000b89e8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     26 2.780301    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1375 Ack=1783 Win=11264 Len=0 TSV=4243588 TSER=4627080
+
+Frame 26: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1375, Ack: 1783, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1375    (relative sequence number)
+    Acknowledgement number: 1783    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 11264 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243588, TSecr 4627080
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     27 3.034625    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=1783 Ack=1375 Win=9088 Len=1448 TSV=4627144 TSER=4243588
+
+Frame 27: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 1783, Ack: 1375, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 1783    (relative sequence number)
+    [Next sequence number: 3231    (relative sequence number)]
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x7591 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627144, TSecr 4243588
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  78 00 00 00 05 00 00 00 01 00 01 00 02 00 01 00   x...............
+0010  00 00 00 00 ae c7 de c3 00 00 00 00 33 f3 52 44   ............3.RD
+0020  77 4f 3f 40 00 00 00 00 00 00 00 80 48 47 30 31   wO?@........HG01
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 80 00 00 66 66 9f 42 78 00 00 00   ........ff.Bx...
+0080  05 00 00 00 01 00 01 00 85 00 01 00 00 00 00 00   ................
+0090  cd ec ed c3 00 00 00 00 9a e9 28 44 c0 49 3f 40   ..........(D.I?@
+00a0  00 00 00 00 00 00 00 80 48 47 30 32 00 00 00 00   ........HG02....
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 80 00 00 85 eb 3b 42 78 00 00 00 05 00 00 00   ......;Bx.......
+0100  01 00 01 00 88 00 01 00 00 00 00 00 7b 74 f9 c3   ............{t..
+0110  00 00 00 00 33 33 f9 43 c0 49 3f 40 00 00 00 00   ....33.C.I?@....
+0120  00 00 00 80 48 47 30 33 00 00 00 00 00 00 00 00   ....HG03........
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+0170  66 66 b3 42 78 00 00 00 05 00 00 00 01 00 01 00   ff.Bx...........
+0180  8b 00 01 00 00 00 00 00 a4 e0 04 c4 00 00 00 00   ................
+0190  cd 0c 94 43 77 4f 3f 40 00 00 00 00 00 00 00 80   ...CwO?@........
+01a0  48 47 30 34 00 00 00 00 00 00 00 00 00 00 00 00   HG04............
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 80 00 00 85 eb 5b 42   ..............[B
+01f0  78 00 00 00 05 00 00 00 01 00 01 00 8e 00 01 00   x...............
+0200  00 00 00 00 85 1b 00 c4 00 00 00 00 00 80 b1 43   ...............C
+0210  c0 93 30 be 00 00 00 00 00 00 00 80 41 54 53 55   ..0.........ATSU
+0220  47 49 5f 54 4f 57 45 52 00 00 00 00 00 00 00 00   GI_TOWER........
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 80 00 00 14 ae 27 42 78 00 00 00   ..........'Bx...
+0270  05 00 00 00 01 00 01 00 91 00 01 00 00 00 00 00   ................
+0280  29 4c 0b c4 00 00 00 00 ae 47 20 43 c0 49 3f 40   )L.......G C.I?@
+0290  00 00 00 00 00 00 00 80 48 47 30 35 00 00 00 00   ........HG05....
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 80 00 00 85 eb 5b 42 78 00 00 00 05 00 00 00   ......[Bx.......
+02f0  01 00 01 00 94 00 01 00 00 00 00 00 33 d3 10 c4   ............3...
+0300  00 00 00 00 ae 47 e3 41 c0 49 3f 40 00 00 00 00   .....G.A.I?@....
+0310  00 00 00 80 48 47 30 34 00 00 00 00 00 00 00 00   ....HG04........
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+0360  85 eb 5b 42 78 00 00 00 05 00 00 00 01 00 01 00   ..[Bx...........
+0370  97 00 01 00 00 00 00 00 8f 62 91 43 00 00 00 00   .........b.C....
+0380  cd 4c 5a c3 10 98 44 be 00 00 00 00 00 00 00 80   .LZ...D.........
+0390  48 47 30 36 00 00 00 00 00 00 00 00 00 00 00 00   HG06............
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 80 00 00 52 b8 50 42   ............R.PB
+03e0  78 00 00 00 05 00 00 00 01 00 01 00 9a 00 01 00   x...............
+03f0  00 00 00 00 d7 43 9c 43 00 00 00 00 7b 14 ec c1   .....C.C....{...
+0400  a3 2f 08 be 00 00 00 00 00 00 00 80 48 47 30 37   ./..........HG07
+0410  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 80 00 00 ae 47 df 41 78 00 00 00   .........G.Ax...
+0460  05 00 00 00 01 00 01 00 9d 00 01 00 00 00 00 00   ................
+0470  48 81 98 43 00 00 00 00 9a 19 93 c2 a3 2f 08 be   H..C........./..
+0480  00 00 00 00 00 00 00 80 48 47 30 37 00 00 00 00   ........HG07....
+0490  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 80 00 00 ae 47 df 41 78 00 00 00 05 00 00 00   .....G.Ax.......
+04e0  01 00 01 00 a0 00 01 00 00 00 00 00 00 c0 a3 43   ...............C
+04f0  00 00 00 00 48 e1 73 42 a3 2f 08 be 00 00 00 00   ....H.sB./......
+0500  00 00 00 80 48 47 30 37 00 00 00 00 00 00 00 00   ....HG07........
+0510  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0520  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0530  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+0550  ae 47 df 41 78 00 00 00 05 00 00 00 01 00 01 00   .G.Ax...........
+0560  a3 00 01 00 00 00 00 00 71 fd 9f 43 00 00 00 00   ........q..C....
+0570  a4 70 87 41 a3 2f 08 be 00 00 00 00 00 00 00 80   .p.A./..........
+0580  48 47 30 37 00 00 00 00 00 00 00 00 00 00 00 00   HG07............
+0590  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+05a0  00 00 00 00 00 00 00 00                           ........
+    Data: 7800000005000000010001000200010000000000aec7dec3...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     28 3.034660    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1375 Ack=3231 Win=14208 Len=0 TSV=4243664 TSER=4627144
+
+Frame 28: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1375, Ack: 3231, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1375    (relative sequence number)
+    Acknowledgement number: 3231    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 14208 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243664, TSecr 4627144
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     29 3.039054    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1375 Ack=3231 Win=14208 Len=176 TSV=4243665 TSER=4627144
+
+Frame 29: 242 bytes on wire (1936 bits), 242 bytes captured (1936 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1375, Ack: 3231, Len: 176
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1375    (relative sequence number)
+    [Next sequence number: 1551    (relative sequence number)]
+    Acknowledgement number: 3231    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 14208 (scaled)
+    Checksum: 0xd1de [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243665, TSecr 4627144
+    [SEQ/ACK analysis]
+Data (176 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 02 00 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 85 00 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 88 00 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 8b 00 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 8e 00 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 91 00 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 94 00 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 97 00 01 00   ................
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 9a 00 01 00   ................
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 9d 00 01 00   ................
+00a0  0c 00 00 00 06 00 00 00 01 00 00 00 a0 00 01 00   ................
+    Data: 0c0000000600000001000000020001000c00000006000000...
+    [Length: 176]
+
+No.     Time        Source                Destination           Protocol Info
+     30 3.047578    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=3231 Ack=1375 Win=9088 Len=1448 TSV=4627144 TSER=4243588
+
+Frame 30: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 3231, Ack: 1375, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 3231    (relative sequence number)
+    [Next sequence number: 4679    (relative sequence number)]
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0xba04 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627144, TSecr 4243588
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 80 00 00 ae 47 df 41 78 00 00 00 05 00 00 00   .....G.Ax.......
+0030  01 00 01 00 a6 00 01 00 00 00 00 00 9a 11 b4 c4   ................
+0040  00 00 00 00 29 d0 f6 c5 db 0f c9 bf 00 00 00 00   ....)...........
+0050  00 00 00 80 53 46 43 5f 41 4c 50 48 41 00 00 00   ....SFC_ALPHA...
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  ae c7 8b 42 78 00 00 00 05 00 00 00 01 00 01 00   ...Bx...........
+00b0  a9 00 01 00 00 00 00 00 7b d4 b3 c4 00 00 00 00   ........{.......
+00c0  66 3a fb c5 99 89 c6 bf 00 00 00 00 00 00 00 80   f:..............
+00d0  53 46 43 5f 4f 4d 45 47 41 00 00 00 00 00 00 00   SFC_OMEGA.......
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 d7 a3 9c 42   ...............B
+0120  78 00 00 00 05 00 00 00 01 00 01 00 ac 00 01 00   x...............
+0130  00 00 00 00 1f 5d b9 c4 00 00 00 00 f6 50 fd c5   .....].......P..
+0140  0f 09 c4 bf 00 00 00 00 00 00 00 80 53 46 43 5f   ............SFC_
+0150  43 4c 55 42 00 00 00 00 00 00 00 00 00 00 00 00   CLUB............
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0190  00 00 00 00 00 00 00 00 66 66 f6 41 78 00 00 00   ........ff.Ax...
+01a0  05 00 00 00 01 00 01 00 af 00 01 00 00 00 00 00   ................
+01b0  3d 92 e9 c4 00 00 00 00 1f 85 ee c5 db 0f c9 bf   =...............
+01c0  00 00 00 00 00 00 00 80 53 46 43 5f 43 4c 55 42   ........SFC_CLUB
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0200  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0210  00 00 00 00 66 66 f6 41 78 00 00 00 05 00 00 00   ....ff.Ax.......
+0220  01 00 01 00 b2 00 01 00 00 00 00 00 66 66 dd c4   ............ff..
+0230  00 00 00 00 1f 85 ee c5 db 0f c9 bf 00 00 00 00   ................
+0240  00 00 00 80 53 46 43 5f 43 4c 55 42 00 00 00 00   ....SFC_CLUB....
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0270  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0280  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0290  66 66 f6 41 78 00 00 00 05 00 00 00 01 00 01 00   ff.Ax...........
+02a0  b5 00 01 00 00 00 00 00 9a b1 cc c4 00 00 00 00   ................
+02b0  cd 40 ec c5 db 0f c9 bf 00 00 00 00 00 00 00 80   .@..............
+02c0  53 46 43 5f 47 41 4d 4d 41 00 00 00 00 00 00 00   SFC_GAMMA.......
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0300  00 00 00 00 00 00 00 00 00 00 00 00 b8 1e 4a 42   ..............JB
+0310  78 00 00 00 05 00 00 00 01 00 01 00 b8 00 01 00   x...............
+0320  00 00 00 00 33 43 cb c4 00 00 00 00 c3 3b f3 c5   ....3C.......;..
+0330  a6 16 ce 3f 00 00 00 00 00 00 00 80 53 46 43 5f   ...?........SFC_
+0340  4c 41 4d 42 44 41 00 00 00 00 00 00 00 00 00 00   LAMBDA..........
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0370  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0380  00 00 00 00 00 00 00 00 48 e1 68 42 78 00 00 00   ........H.hBx...
+0390  05 00 00 00 01 00 01 00 bb 00 01 00 00 00 00 00   ................
+03a0  9a 31 c1 c4 00 00 00 00 66 f2 f7 c5 65 90 cb bf   .1......f...e...
+03b0  00 00 00 00 00 00 00 80 53 46 43 5f 4d 45 44 49   ........SFC_MEDI
+03c0  41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   A...............
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0400  00 00 00 00 f6 28 a5 42 78 00 00 00 05 00 00 00   .....(.Bx.......
+0410  01 00 01 00 be 00 01 00 00 00 00 00 ec f1 d1 c4   ................
+0420  00 00 00 00 b8 46 f6 c5 65 90 cb bf 00 00 00 00   .....F..e.......
+0430  00 00 00 80 53 46 43 5f 4f 31 00 00 00 00 00 00   ....SFC_O1......
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0460  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0470  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0480  33 33 5b 42 78 00 00 00 05 00 00 00 01 00 01 00   33[Bx...........
+0490  c1 00 01 00 00 00 00 00 14 06 cb c4 00 00 00 00   ................
+04a0  b8 46 f6 c5 db 0f c9 bf 00 00 00 00 00 00 00 80   .F..............
+04b0  53 46 43 5f 4f 32 00 00 00 00 00 00 00 00 00 00   SFC_O2..........
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04f0  00 00 00 00 00 00 00 00 00 00 00 00 33 33 34 42   ............334B
+0500  78 00 00 00 05 00 00 00 01 00 01 00 c4 00 01 00   x...............
+0510  00 00 00 00 cd b4 d1 c4 00 00 00 00 1f db f9 c5   ................
+0520  db 0f c9 bf 00 00 00 00 00 00 00 80 53 46 43 5f   ............SFC_
+0530  4f 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00   O1..............
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0550  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0560  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0570  00 00 00 00 00 00 00 00 33 33 5b 42 78 00 00 00   ........33[Bx...
+0580  05 00 00 00 01 00 01 00 c7 00 01 00 00 00 00 00   ................
+0590  f6 c8 ca c4 00 00 00 00 1f db f9 c5 65 90 cb bf   ............e...
+05a0  00 00 00 00 00 00 00 80                           ........
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     31 3.069355    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=4679 Ack=1375 Win=9088 Len=1072 TSV=4627149 TSER=4243664
+
+Frame 31: 1138 bytes on wire (9104 bits), 1138 bytes captured (9104 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 4679, Ack: 1375, Len: 1072
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 4679    (relative sequence number)
+    [Next sequence number: 5751    (relative sequence number)]
+    Acknowledgement number: 1375    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 9088 (scaled)
+    Checksum: 0x78bf [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627149, TSecr 4243664
+    [SEQ/ACK analysis]
+Data (1072 bytes)
+
+0000  53 46 43 5f 4f 32 00 00 00 00 00 00 00 00 00 00   SFC_O2..........
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 33 33 34 42   ............334B
+0050  78 00 00 00 05 00 00 00 01 00 01 00 ca 00 01 00   x...............
+0060  00 00 00 00 33 e3 cd c4 00 00 00 00 c3 39 ff c5   ....3........9..
+0070  db 0f c9 bf 00 00 00 00 00 00 00 80 53 46 43 5f   ............SFC_
+0080  53 49 47 4d 41 00 00 00 00 00 00 00 00 00 00 00   SIGMA...........
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00c0  00 00 00 00 00 00 00 00 14 ae 48 42 78 00 00 00   ..........HBx...
+00d0  05 00 00 00 01 00 01 00 cd 00 01 00 00 00 00 00   ................
+00e0  a4 60 e8 c4 00 00 00 00 e1 20 f4 c5 fb 07 bf bf   .`....... ......
+00f0  00 00 00 00 00 00 00 80 53 46 43 5f 54 41 55 00   ........SFC_TAU.
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0120  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 66 66 47 42 78 00 00 00 05 00 00 00   ....ffGBx.......
+0150  01 00 01 00 d0 00 01 00 00 00 00 00 85 ef 13 45   ...............E
+0160  00 00 00 00 9a ab 89 c6 16 d3 d2 3f 00 00 00 00   ...........?....
+0170  00 00 00 80 42 52 49 44 47 45 33 00 00 00 00 00   ....BRIDGE3.....
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0190  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  3d ba 09 44 78 00 00 00 05 00 00 00 01 00 01 00   =..Dx...........
+01d0  d3 00 01 00 00 00 00 00 3d b4 7f 46 00 00 00 00   ........=..F....
+01e0  cd 8c 63 43 00 00 00 80 00 00 00 00 00 00 00 80   ..cC............
+01f0  42 55 49 4c 44 33 30 00 00 00 00 00 00 00 00 00   BUILD30.........
+0200  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0210  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0220  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0230  00 00 00 00 00 00 00 00 00 00 00 00 8f 02 0c 43   ...............C
+0240  78 00 00 00 05 00 00 00 01 00 01 00 d6 00 01 00   x...............
+0250  00 00 00 00 7b 22 81 46 00 00 00 00 a4 70 52 43   ....{".F.....pRC
+0260  00 00 00 80 00 00 00 00 00 00 00 80 42 55 49 4c   ............BUIL
+0270  44 33 30 00 00 00 00 00 00 00 00 00 00 00 00 00   D30.............
+0280  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0290  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 8f 02 0c 43 78 00 00 00   ...........Cx...
+02c0  05 00 00 00 01 00 01 00 d9 00 01 00 00 00 00 00   ................
+02d0  66 fd 81 46 00 00 00 00 0a d7 95 c1 00 00 00 80   f..F............
+02e0  00 00 00 00 00 00 00 80 42 55 49 4c 44 33 30 00   ........BUILD30.
+02f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0300  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0310  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 8f 02 0c 43 78 00 00 00 05 00 00 00   .......Cx.......
+0340  01 00 01 00 dc 00 01 00 00 00 00 00 85 1e 80 46   ...............F
+0350  00 00 00 00 00 00 1d c2 00 00 00 80 00 00 00 00   ................
+0360  00 00 00 80 42 55 49 4c 44 36 30 00 00 00 00 00   ....BUILD60.....
+0370  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0380  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0390  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  85 0b 86 43 78 00 00 00 05 00 00 00 01 00 01 00   ...Cx...........
+03c0  df 00 01 00 00 00 00 00 a4 1b 81 46 00 00 00 00   ...........F....
+03d0  00 00 1d c2 00 00 00 80 00 00 00 00 00 00 00 80   ................
+03e0  42 55 49 4c 44 36 30 00 00 00 00 00 00 00 00 00   BUILD60.........
+03f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0400  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0410  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0420  00 00 00 00 00 00 00 00 00 00 00 00 85 0b 86 43   ...............C
+    Data: 5346435f4f32000000000000000000000000000000000000...
+    [Length: 1072]
+
+No.     Time        Source                Destination           Protocol Info
+     32 3.069375    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1551 Ack=5751 Win=19968 Len=0 TSV=4243674 TSER=4627144
+
+Frame 32: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1551, Ack: 5751, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1551    (relative sequence number)
+    Acknowledgement number: 5751    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 19968 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243674, TSecr 4627144
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     33 3.084061    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=5751 Ack=1551 Win=10112 Len=0 TSV=4627157 TSER=4243665
+
+Frame 33: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 5751, Ack: 1551, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 5751    (relative sequence number)
+    Acknowledgement number: 1551    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 10112 (scaled)
+    Checksum: 0x5f28 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627157, TSecr 4243665
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     34 3.084082    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1551 Ack=5751 Win=19968 Len=192 TSV=4243679 TSER=4627157
+
+Frame 34: 258 bytes on wire (2064 bits), 258 bytes captured (2064 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1551, Ack: 5751, Len: 192
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1551    (relative sequence number)
+    [Next sequence number: 1743    (relative sequence number)]
+    Acknowledgement number: 5751    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 19968 (scaled)
+    Checksum: 0x03fc [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243679, TSecr 4627157
+    [SEQ/ACK analysis]
+Data (192 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 a3 00 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 a6 00 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 a9 00 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 ac 00 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 af 00 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 b2 00 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 b5 00 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 b8 00 01 00   ................
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 bb 00 01 00   ................
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 be 00 01 00   ................
+00a0  0c 00 00 00 06 00 00 00 01 00 00 00 c1 00 01 00   ................
+00b0  0c 00 00 00 06 00 00 00 01 00 00 00 c4 00 01 00   ................
+    Data: 0c0000000600000001000000a30001000c00000006000000...
+    [Length: 192]
+
+No.     Time        Source                Destination           Protocol Info
+     35 3.096820    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=5751 Ack=1743 Win=11264 Len=0 TSV=4627160 TSER=4243679
+
+Frame 35: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 5751, Ack: 1743, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 5751    (relative sequence number)
+    Acknowledgement number: 1743    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 11264 (scaled)
+    Checksum: 0x5e4e [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627160, TSecr 4243679
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     36 3.096839    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1743 Ack=5751 Win=19968 Len=144 TSV=4243683 TSER=4627160
+
+Frame 36: 210 bytes on wire (1680 bits), 210 bytes captured (1680 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1743, Ack: 5751, Len: 144
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1743    (relative sequence number)
+    [Next sequence number: 1887    (relative sequence number)]
+    Acknowledgement number: 5751    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 19968 (scaled)
+    Checksum: 0x3e66 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243683, TSecr 4627160
+    [SEQ/ACK analysis]
+Data (144 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 c7 00 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 ca 00 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 cd 00 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 d0 00 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 d3 00 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 d6 00 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 d9 00 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 dc 00 01 00   ................
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 df 00 01 00   ................
+    Data: 0c0000000600000001000000c70001000c00000006000000...
+    [Length: 144]
+
+No.     Time        Source                Destination           Protocol Info
+     37 3.105839    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=5751 Ack=1887 Win=12288 Len=0 TSV=4627163 TSER=4243683
+
+Frame 37: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 5751, Ack: 1887, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 5751    (relative sequence number)
+    Acknowledgement number: 1887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 12288 (scaled)
+    Checksum: 0x5daf [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627163, TSecr 4243683
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     38 3.209819    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=5751 Ack=1887 Win=12288 Len=136 TSV=4627189 TSER=4243683
+
+Frame 38: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 5751, Ack: 1887, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 5751    (relative sequence number)
+    [Next sequence number: 5887    (relative sequence number)]
+    Acknowledgement number: 1887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 12288 (scaled)
+    Checksum: 0xace7 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627189, TSecr 4243683
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 fb 9f 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  5d ff 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   ].......,.......
+0030  fb 9f 8f 46 e0 01 01 00 02 00 01 00 e7 77 a2 44   ...F.........w.D
+0040  00 00 00 00 ae 97 02 44 e0 85 00 00 00 00 00 00   .......D........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  fb 9f 8f 46 e3 01 01 00 02 00 01 00 f7 69 8e 44   ...F.........i.D
+0070  00 00 00 00 cf 8c 92 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000fb9f8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     39 3.249495    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1887 Ack=5887 Win=22784 Len=0 TSV=4243729 TSER=4627189
+
+Frame 39: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1887, Ack: 5887, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1887    (relative sequence number)
+    Acknowledgement number: 5887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 22784 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243729, TSecr 4627189
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     40 3.549179    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=5887 Ack=1887 Win=12288 Len=1448 TSV=4627272 TSER=4243729
+
+Frame 40: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 5887, Ack: 1887, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 5887    (relative sequence number)
+    [Next sequence number: 7335    (relative sequence number)]
+    Acknowledgement number: 1887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 12288 (scaled)
+    Checksum: 0x8b62 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627272, TSecr 4243729
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  78 00 00 00 05 00 00 00 01 00 01 00 e2 00 01 00   x...............
+0010  00 00 00 00 ae 98 7f 46 00 00 00 00 00 c0 44 c3   .......F......D.
+0020  00 00 00 80 00 00 00 00 00 00 00 80 53 48 4f 50   ............SHOP
+0030  50 49 4e 47 31 00 00 00 00 00 00 00 00 00 00 00   PING1...........
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 1f 05 9f 42 78 00 00 00   ...........Bx...
+0080  05 00 00 00 01 00 01 00 e5 00 01 00 00 00 00 00   ................
+0090  d7 8b 82 46 00 00 00 00 48 61 33 43 00 00 00 80   ...F....Ha3C....
+00a0  00 00 00 00 00 00 00 80 53 48 4f 50 50 49 4e 47   ........SHOPPING
+00b0  32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   2...............
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 0a 57 83 42 78 00 00 00 05 00 00 00   .....W.Bx.......
+0100  01 00 01 00 e8 00 01 00 01 00 00 00 f6 33 1a c7   .............3..
+0110  00 00 00 00 d2 06 d5 c6 00 00 00 80 00 00 00 00   ................
+0120  00 00 00 80 42 55 49 4c 44 33 30 00 00 00 00 00   ....BUILD30.....
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  8f 02 0c 43 78 00 00 00 05 00 00 00 01 00 01 00   ...Cx...........
+0180  eb 00 01 00 01 00 00 00 29 0e 1b c7 00 00 00 00   ........).......
+0190  9a 29 d5 c6 00 00 00 80 00 00 00 00 00 00 00 80   .)..............
+01a0  42 55 49 4c 44 33 30 00 00 00 00 00 00 00 00 00   BUILD30.........
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 8f 02 0c 43   ...............C
+01f0  78 00 00 00 05 00 00 00 01 00 01 00 ee 00 01 00   x...............
+0200  01 00 00 00 c3 89 1a c7 00 00 00 00 8a 62 d6 c6   .............b..
+0210  00 00 00 80 00 00 00 00 00 00 00 80 42 55 49 4c   ............BUIL
+0220  44 39 30 00 00 00 00 00 00 00 00 00 00 00 00 00   D90.............
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 00 00 00 d7 a3 a6 43 78 00 00 00   ...........Cx...
+0270  05 00 00 00 01 00 01 00 f1 00 01 00 01 00 00 00   ................
+0280  29 9b 1a c7 00 00 00 00 6c f7 d3 c6 50 49 c5 bf   ).......l...PI..
+0290  00 00 00 00 00 00 00 80 48 47 30 33 00 00 00 00   ........HG03....
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 66 66 b3 42 78 00 00 00 05 00 00 00   ....ff.Bx.......
+02f0  01 00 01 00 f4 00 01 00 01 00 00 00 ec 2d 1b c7   .............-..
+0300  00 00 00 00 52 9c d6 c6 00 00 00 80 00 00 00 00   ....R...........
+0310  00 00 00 80 48 47 30 35 00 00 00 00 00 00 00 00   ....HG05........
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  85 eb 5b 42 78 00 00 00 05 00 00 00 01 00 01 00   ..[Bx...........
+0370  f7 00 01 00 01 00 00 00 78 db 19 c7 00 00 00 00   ........x.......
+0380  80 2a d6 c6 00 00 00 80 00 00 00 00 00 00 00 80   .*..............
+0390  48 47 30 37 00 00 00 00 00 00 00 00 00 00 00 00   HG07............
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 ae 47 df 41   .............G.A
+03e0  78 00 00 00 05 00 00 00 01 00 01 00 fa 00 01 00   x...............
+03f0  01 00 00 00 cf 72 1b c7 00 00 00 00 3d 63 d4 c6   .....r......=c..
+0400  00 00 00 80 00 00 00 00 00 00 00 80 48 47 30 34   ............HG04
+0410  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 85 eb 5b 42 b0 00 00 00   ..........[B....
+0460  05 00 00 00 01 00 01 00 fd 00 01 00 00 00 00 00   ................
+0470  0a 17 08 c3 00 00 00 00 ec 61 83 c4 22 bf 3d 40   .........a..".=@
+0480  00 00 00 00 00 00 00 80 49 4c 53 00 00 00 00 00   ........ILS.....
+0490  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00   ................
+04d0  00 00 00 00 00 00 b0 40 00 00 00 00 00 00 00 00   .......@........
+04e0  30 31 2d 41 54 53 55 47 49 00 00 00 00 00 00 00   01-ATSUGI.......
+04f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0500  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0510  b0 00 00 00 05 00 00 00 01 00 01 00 00 01 01 00   ................
+0520  00 00 00 00 f6 e8 05 43 00 00 00 00 f6 a0 82 44   .......C.......D
+0530  cc dd 34 be 00 00 00 00 00 00 00 80 49 4c 53 00   ..4.........ILS.
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0550  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0560  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0570  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0580  01 00 00 00 00 00 00 00 00 00 b0 40 00 00 00 00   ...........@....
+0590  00 00 00 00 31 39 2d 41 54 53 55 47 49 00 00 00   ....19-ATSUGI...
+05a0  00 00 00 00 00 00 00 00                           ........
+    Data: 780000000500000001000100e200010000000000ae987f46...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     41 3.549210    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1887 Ack=7335 Win=25728 Len=0 TSV=4243818 TSER=4627272
+
+Frame 41: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1887, Ack: 7335, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1887    (relative sequence number)
+    Acknowledgement number: 7335    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 25728 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243818, TSecr 4627272
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     42 3.562503    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=7335 Ack=1887 Win=12288 Len=1448 TSV=4627272 TSER=4243729
+
+Frame 42: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 7335, Ack: 1887, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 7335    (relative sequence number)
+    [Next sequence number: 8783    (relative sequence number)]
+    Acknowledgement number: 1887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 12288 (scaled)
+    Checksum: 0xa3dc [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627272, TSecr 4243729
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 78 00 00 00   ............x...
+0020  05 00 00 00 01 00 01 00 03 01 01 00 01 00 00 00   ................
+0030  b6 23 1d c7 00 00 00 00 29 c4 cc c6 00 00 00 80   .#......).......
+0040  00 00 00 00 00 00 00 80 41 41 41 00 00 00 00 00   ........AAA.....
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 70 41 78 00 00 00 05 00 00 00   ......pAx.......
+00a0  01 00 01 00 06 01 01 00 01 00 00 00 d4 10 18 c7   ................
+00b0  00 00 00 00 9a 76 dc c6 00 00 00 80 00 00 00 00   .....v..........
+00c0  00 00 00 80 41 41 41 00 00 00 00 00 00 00 00 00   ....AAA.........
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 70 41 78 00 00 00 05 00 00 00 01 00 01 00   ..pAx...........
+0120  09 01 01 00 01 00 00 00 f3 c1 16 c7 00 00 00 00   ................
+0130  fb 29 d0 c6 00 00 00 80 00 00 00 00 00 00 00 80   .)..............
+0140  41 41 41 00 00 00 00 00 00 00 00 00 00 00 00 00   AAA.............
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 70 41   ..............pA
+0190  78 00 00 00 05 00 00 00 01 00 01 00 0c 01 01 00   x...............
+01a0  01 00 00 00 c3 be 1f c7 00 00 00 00 57 a8 d6 c6   ............W...
+01b0  00 00 00 80 00 00 00 00 00 00 00 80 41 41 41 00   ............AAA.
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0200  00 00 00 00 00 00 00 00 00 00 70 41 78 00 00 00   ..........pAx...
+0210  05 00 00 00 01 00 01 00 0f 01 01 00 01 00 00 00   ................
+0220  f1 86 1c c7 00 00 00 00 43 d5 dc c6 00 00 00 80   ........C.......
+0230  00 00 00 00 00 00 00 80 41 41 41 00 00 00 00 00   ........AAA.....
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0270  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0280  00 00 00 00 00 00 70 41 78 00 00 00 05 00 00 00   ......pAx.......
+0290  01 00 01 00 12 01 01 00 01 00 00 00 9c 19 17 c7   ................
+02a0  00 00 00 00 85 8d cf c6 00 00 00 80 00 00 00 00   ................
+02b0  00 00 00 80 53 41 4d 00 00 00 00 00 00 00 00 00   ....SAM.........
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0300  00 00 70 41 78 00 00 00 05 00 00 00 01 00 01 00   ..pAx...........
+0310  15 01 01 00 01 00 00 00 8a 44 1c c7 00 00 00 00   .........D......
+0320  d2 ba cc c6 00 00 00 80 00 00 00 00 00 00 00 80   ................
+0330  53 41 4d 00 00 00 00 00 00 00 00 00 00 00 00 00   SAM.............
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0370  00 00 00 00 00 00 00 00 00 00 00 00 00 00 70 41   ..............pA
+0380  78 00 00 00 05 00 00 00 01 00 01 00 18 01 01 00   x...............
+0390  01 00 00 00 dc b7 1f c7 00 00 00 00 80 45 d5 c6   .............E..
+03a0  00 00 00 80 00 00 00 00 00 00 00 80 53 41 4d 00   ............SAM.
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03f0  00 00 00 00 00 00 00 00 00 00 70 41 78 00 00 00   ..........pAx...
+0400  05 00 00 00 01 00 01 00 1b 01 01 00 01 00 00 00   ................
+0410  6e 19 1c c7 00 00 00 00 ec d3 dc c6 00 00 00 80   n...............
+0420  00 00 00 00 00 00 00 80 53 41 4d 00 00 00 00 00   ........SAM.....
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0460  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0470  00 00 00 00 00 00 70 41 78 00 00 00 05 00 00 00   ......pAx.......
+0480  01 00 01 00 1e 01 01 00 01 00 00 00 8f 45 17 c7   .............E..
+0490  00 00 00 00 5c 50 dc c6 00 00 00 80 00 00 00 00   ....\P..........
+04a0  00 00 00 80 53 41 4d 00 00 00 00 00 00 00 00 00   ....SAM.........
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04f0  00 00 70 41 78 00 00 00 05 00 00 00 01 00 01 00   ..pAx...........
+0500  21 01 01 00 01 00 00 00 80 4c 1c c7 00 00 00 00   !........L......
+0510  c8 ec b4 c6 00 00 00 80 00 00 00 00 00 00 00 80   ................
+0520  53 41 4d 00 00 00 00 00 00 00 00 00 00 00 00 00   SAM.............
+0530  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0550  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0560  00 00 00 00 00 00 00 00 00 00 00 00 00 00 70 41   ..............pA
+0570  78 00 00 00 05 00 00 00 01 00 01 00 24 01 01 00   x...........$...
+0580  01 00 00 00 5a e7 0c c7 00 00 00 00 94 5c b7 c6   ....Z........\..
+0590  00 00 00 80 00 00 00 00 00 00 00 80 53 41 4d 00   ............SAM.
+05a0  00 00 00 00 00 00 00 00                           ........
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     43 3.562521    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=1887 Ack=8783 Win=28672 Len=0 TSV=4243822 TSER=4627272
+
+Frame 43: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1887, Ack: 8783, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1887    (relative sequence number)
+    Acknowledgement number: 8783    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 28672 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243822, TSecr 4627272
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     44 3.576358    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=1887 Ack=8783 Win=28672 Len=352 TSV=4243827 TSER=4627272
+
+Frame 44: 418 bytes on wire (3344 bits), 418 bytes captured (3344 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 1887, Ack: 8783, Len: 352
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 1887    (relative sequence number)
+    [Next sequence number: 2239    (relative sequence number)]
+    Acknowledgement number: 8783    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 28672 (scaled)
+    Checksum: 0x75da [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243827, TSecr 4627272
+    [SEQ/ACK analysis]
+Data (352 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 e2 00 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 e5 00 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 e8 00 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 eb 00 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 ee 00 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 f1 00 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 f4 00 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 f7 00 01 00   ................
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 fa 00 01 00   ................
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 fd 00 01 00   ................
+00a0  0c 00 00 00 06 00 00 00 01 00 00 00 00 01 01 00   ................
+00b0  0c 00 00 00 06 00 00 00 01 00 00 00 03 01 01 00   ................
+00c0  0c 00 00 00 06 00 00 00 01 00 00 00 06 01 01 00   ................
+00d0  0c 00 00 00 06 00 00 00 01 00 00 00 09 01 01 00   ................
+00e0  0c 00 00 00 06 00 00 00 01 00 00 00 0c 01 01 00   ................
+00f0  0c 00 00 00 06 00 00 00 01 00 00 00 0f 01 01 00   ................
+0100  0c 00 00 00 06 00 00 00 01 00 00 00 12 01 01 00   ................
+0110  0c 00 00 00 06 00 00 00 01 00 00 00 15 01 01 00   ................
+0120  0c 00 00 00 06 00 00 00 01 00 00 00 18 01 01 00   ................
+0130  0c 00 00 00 06 00 00 00 01 00 00 00 1b 01 01 00   ................
+0140  0c 00 00 00 06 00 00 00 01 00 00 00 1e 01 01 00   ................
+0150  0c 00 00 00 06 00 00 00 01 00 00 00 21 01 01 00   ............!...
+    Data: 0c0000000600000001000000e20001000c00000006000000...
+    [Length: 352]
+
+No.     Time        Source                Destination           Protocol Info
+     45 3.585661    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=8783 Ack=1887 Win=12288 Len=1240 TSV=4627272 TSER=4243729
+
+Frame 45: 1306 bytes on wire (10448 bits), 1306 bytes captured (10448 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 8783, Ack: 1887, Len: 1240
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 8783    (relative sequence number)
+    [Next sequence number: 10023    (relative sequence number)]
+    Acknowledgement number: 1887    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 12288 (scaled)
+    Checksum: 0xdda4 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627272, TSecr 4243729
+    [SEQ/ACK analysis]
+Data (1240 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 70 41 78 00 00 00 05 00 00 00 01 00 01 00   ..pAx...........
+0050  27 01 01 00 01 00 00 00 21 67 07 c7 00 00 00 00   '.......!g......
+0060  c3 8a c9 c6 00 00 00 80 00 00 00 00 00 00 00 80   ................
+0070  53 41 4d 00 00 00 00 00 00 00 00 00 00 00 00 00   SAM.............
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 70 41   ..............pA
+00c0  78 00 00 00 05 00 00 00 01 00 01 00 2a 01 01 00   x...........*...
+00d0  01 00 00 00 36 11 0a c7 00 00 00 00 33 5f e6 c6   ....6.......3_..
+00e0  00 00 00 80 00 00 00 00 00 00 00 80 53 41 4d 00   ............SAM.
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0120  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0130  00 00 00 00 00 00 00 00 00 00 70 41 78 00 00 00   ..........pAx...
+0140  05 00 00 00 01 00 01 00 2d 01 01 00 01 00 00 00   ........-.......
+0150  73 c5 0f c7 00 00 00 00 94 22 a0 c6 00 00 00 80   s........"......
+0160  00 00 00 00 00 00 00 80 41 41 41 00 00 00 00 00   ........AAA.....
+0170  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0190  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 70 41 78 00 00 00 05 00 00 00   ......pAx.......
+01c0  01 00 01 00 30 01 01 00 01 00 00 00 b3 81 fd c6   ....0...........
+01d0  00 00 00 00 2e 4d d4 c6 00 00 00 80 00 00 00 00   .....M..........
+01e0  00 00 00 80 41 41 41 00 00 00 00 00 00 00 00 00   ....AAA.........
+01f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0200  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0210  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0220  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0230  00 00 70 41 b0 00 00 00 05 00 00 00 01 00 01 00   ..pA............
+0240  33 01 01 00 00 00 00 00 85 9f 54 45 00 00 00 00   3.........TE....
+0250  dc 00 15 c7 e8 56 cf 3f 00 00 00 00 00 00 00 80   .....V.?........
+0260  41 49 52 43 52 41 46 54 43 41 52 52 49 45 52 00   AIRCRAFTCARRIER.
+0270  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0280  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0290  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02a0  00 00 00 00 02 00 00 00 00 00 00 00 f6 28 a5 43   .............(.C
+02b0  00 00 00 00 00 00 00 00 43 41 52 52 49 45 52 31   ........CARRIER1
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 00 00 00 00 78 00 00 00 05 00 00 00   ........x.......
+02f0  01 00 01 00 36 01 01 00 00 00 00 00 f6 c0 29 45   ....6.........)E
+0300  00 00 00 00 cd f8 06 c5 99 89 c6 3f 00 00 00 00   ...........?....
+0310  00 00 00 80 48 41 4e 47 45 52 34 00 00 00 00 00   ....HANGER4.....
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  48 61 c7 42 78 00 00 00 05 00 00 00 01 00 01 00   Ha.Bx...........
+0370  39 01 01 00 00 00 00 00 d7 5b fd 44 0a d7 a3 3c   9........[.D...<
+0380  ae f7 06 c5 db 0f c9 3f 00 00 00 00 00 00 00 80   .......?........
+0390  54 55 4e 4e 45 4c 31 00 00 00 00 00 00 00 00 00   TUNNEL1.........
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 3d ca 8c 43   ............=..C
+03e0  78 00 00 00 05 00 00 00 01 00 01 00 3c 01 01 00   x...........<...
+03f0  00 00 00 00 7b 80 1b 45 0a d7 a3 3c 29 30 24 c5   ....{..E...<)0$.
+0400  00 00 00 80 00 00 00 00 00 00 00 80 54 55 4e 4e   ............TUNN
+0410  45 4c 31 00 00 00 00 00 00 00 00 00 00 00 00 00   EL1.............
+0420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 3d ca 8c 43 78 00 00 00   ........=..Cx...
+0460  05 00 00 00 01 00 01 00 3f 01 01 00 00 00 00 00   ........?.......
+0470  ae d1 fb c5 00 00 00 00 cd 20 63 c6 27 d4 87 3e   ......... c.'..>
+0480  00 00 00 00 00 00 00 80 42 52 49 44 47 45 31 00   ........BRIDGE1.
+0490  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 00 00 00 85 0b 80 43                           .......C
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 1240]
+
+No.     Time        Source                Destination           Protocol Info
+     46 3.594591    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=10023 Ack=2239 Win=13312 Len=0 TSV=4627285 TSER=4243827
+
+Frame 46: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 10023, Ack: 2239, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 10023    (relative sequence number)
+    Acknowledgement number: 2239    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 13312 (scaled)
+    Checksum: 0x4a8d [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627285, TSecr 4243827
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     47 3.603490    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=2239 Ack=10023 Win=31488 Len=160 TSV=4243835 TSER=4627272
+
+Frame 47: 226 bytes on wire (1808 bits), 226 bytes captured (1808 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2239, Ack: 10023, Len: 160
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2239    (relative sequence number)
+    [Next sequence number: 2399    (relative sequence number)]
+    Acknowledgement number: 10023    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 31488 (scaled)
+    Checksum: 0x924f [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243835, TSecr 4627272
+    [SEQ/ACK analysis]
+Data (160 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 24 01 01 00   ............$...
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 27 01 01 00   ............'...
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 2a 01 01 00   ............*...
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 2d 01 01 00   ............-...
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 30 01 01 00   ............0...
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 33 01 01 00   ............3...
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 36 01 01 00   ............6...
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 39 01 01 00   ............9...
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 3c 01 01 00   ............<...
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 3f 01 01 00   ............?...
+    Data: 0c0000000600000001000000240101000c00000006000000...
+    [Length: 160]
+
+No.     Time        Source                Destination           Protocol Info
+     48 3.605901    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=10023 Ack=2399 Win=14464 Len=0 TSV=4627288 TSER=4243835
+
+Frame 48: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 10023, Ack: 2399, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 10023    (relative sequence number)
+    Acknowledgement number: 2399    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 14464 (scaled)
+    Checksum: 0x49d9 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627288, TSecr 4243835
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     49 3.846042    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=10023 Ack=2399 Win=14464 Len=136 TSV=4627345 TSER=4243835
+
+Frame 49: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 10023, Ack: 2399, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 10023    (relative sequence number)
+    [Next sequence number: 10159    (relative sequence number)]
+    Acknowledgement number: 2399    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 14464 (scaled)
+    Checksum: 0x9fb3 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627345, TSecr 4243835
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 38 a1 8f 46 dd 01 01 00   $.......8..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  0a 27 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   .'......,.......
+0030  38 a1 8f 46 e0 01 01 00 02 00 01 00 83 9b a2 44   8..F...........D
+0040  00 00 00 00 d2 ac 00 44 df 85 00 00 00 00 00 00   .......D........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  38 a1 8f 46 e3 01 01 00 02 00 01 00 a9 37 8e 44   8..F.........7.D
+0070  00 00 00 00 f7 99 91 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 240000001500000038a18f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     50 3.882797    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2399 Ack=10159 Win=34432 Len=0 TSV=4243919 TSER=4627345
+
+Frame 50: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2399, Ack: 10159, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2399    (relative sequence number)
+    Acknowledgement number: 10159    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 34432 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4243919, TSecr 4627345
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     51 4.868390    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=10159 Ack=2399 Win=14464 Len=1448 TSV=4627576 TSER=4243919
+
+Frame 51: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 10159, Ack: 2399, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 10159    (relative sequence number)
+    [Next sequence number: 11607    (relative sequence number)]
+    Acknowledgement number: 2399    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 14464 (scaled)
+    Checksum: 0xe862 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627576, TSecr 4243919
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  78 00 00 00 05 00 00 00 01 00 01 00 42 01 01 00   x...........B...
+0010  00 00 00 00 14 ee ec c5 00 00 00 00 ec 5d 01 c5   .............]..
+0020  96 ff 27 3f 00 00 00 00 00 00 00 80 42 52 49 44   ..'?........BRID
+0030  47 45 31 00 00 00 00 00 00 00 00 00 00 00 00 00   GE1.............
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 85 0b 80 43 78 00 00 00   ...........Cx...
+0080  05 00 00 00 01 00 01 00 c5 01 01 00 00 00 00 00   ................
+0090  cd 74 f3 44 00 00 00 00 71 86 50 c6 c6 b8 b2 bf   .t.D....q.P.....
+00a0  00 00 00 00 00 00 00 80 53 54 41 54 49 4f 4e 00   ........STATION.
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 3d 0a 3d 42 78 00 00 00 05 00 00 00   ....=.=Bx.......
+0100  01 00 01 00 c8 01 01 00 00 00 00 00 8f 3a c0 44   .............:.D
+0110  00 00 00 00 c3 d1 cb c5 00 00 00 80 00 00 00 00   ................
+0120  00 00 00 80 53 54 41 54 49 4f 4e 00 00 00 00 00   ....STATION.....
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  3d 0a 3d 42 78 00 00 00 05 00 00 00 01 00 01 00   =.=Bx...........
+0180  cb 01 01 00 00 00 00 00 c3 95 66 44 00 00 00 00   ..........fD....
+0190  14 da 2a 45 1c 36 a6 3e 00 00 00 00 00 00 00 80   ..*E.6.>........
+01a0  53 54 41 54 49 4f 4e 00 00 00 00 00 00 00 00 00   STATION.........
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 3d 0a 3d 42   ............=.=B
+01f0  78 00 00 00 05 00 00 00 01 00 01 00 ce 01 01 00   x...............
+0200  00 00 00 00 cd 64 a5 c4 00 00 00 00 ae ff b2 45   .....d.........E
+0210  26 5c ad 3e 00 00 00 00 00 00 00 80 53 54 41 54   &\.>........STAT
+0220  49 4f 4e 00 00 00 00 00 00 00 00 00 00 00 00 00   ION.............
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 00 00 00 3d 0a 3d 42 78 00 00 00   ........=.=Bx...
+0270  05 00 00 00 01 00 01 00 d1 01 01 00 00 00 00 00   ................
+0280  0a 49 70 46 00 00 00 00 00 38 8b 44 00 00 00 80   .IpF.....8.D....
+0290  00 00 00 00 00 00 00 80 53 54 41 54 49 4f 4e 00   ........STATION.
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 3d 0a 3d 42 78 00 00 00 05 00 00 00   ....=.=Bx.......
+02f0  01 00 01 00 d4 01 01 00 00 00 00 00 d7 9c 71 46   ..............qF
+0300  cd cc cc 3e 5c d7 88 44 00 00 00 80 00 00 00 00   ...>\..D........
+0310  00 00 00 80 54 45 52 4d 49 4e 41 4c 00 00 00 00   ....TERMINAL....
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  0a 57 d4 42 78 00 00 00 05 00 00 00 01 00 01 00   .W.Bx...........
+0370  d7 01 01 00 00 00 00 00 bd 9b d7 c6 00 00 00 00   ................
+0380  1a 56 b6 c6 5a 77 d6 be 00 00 00 00 00 00 00 80   .V..Zw..........
+0390  53 54 41 54 49 4f 4e 00 00 00 00 00 00 00 00 00   STATION.........
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 3d 0a 3d 42   ............=.=B
+03e0  78 00 00 00 05 00 00 00 01 00 01 00 da 01 01 00   x...............
+03f0  00 00 00 00 00 00 9c c3 00 00 00 00 00 c0 9d 44   ...............D
+0400  00 00 00 80 00 00 00 00 00 00 00 80 52 41 44 41   ............RADA
+0410  52 42 41 53 45 00 00 00 00 00 00 00 00 00 00 00   RBASE...........
+0420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 00 00 f0 41 78 00 00 00   ...........Ax...
+0460  05 00 00 00 01 00 01 00 dd 01 01 00 00 00 00 00   ................
+0470  00 00 9c c3 c3 f5 a8 be f6 90 9d 44 a4 e1 a6 3f   ...........D...?
+0480  00 00 00 00 00 00 00 00 52 41 44 41 52 00 00 00   ........RADAR...
+0490  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 00 00 00 00 00 f0 41 78 00 00 00 05 00 00 00   .......Ax.......
+04e0  01 00 01 00 e0 01 01 00 00 00 00 00 26 a8 a2 44   ............&..D
+04f0  00 00 00 00 4a fd ff 43 2b d7 3f c0 00 00 00 00   ....J..C+.?.....
+0500  00 00 00 80 54 52 55 43 4b 00 00 00 00 00 00 00   ....TRUCK.......
+0510  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0520  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0530  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0550  00 00 10 41 78 00 00 00 05 00 00 00 01 00 01 00   ...Ax...........
+0560  e3 01 01 00 00 00 00 00 d0 25 8e 44 00 00 00 00   .........%.D....
+0570  cb 43 91 44 68 fd 3b 40 00 00 00 00 00 00 00 80   .C.Dh.;@........
+0580  54 52 55 43 4b 00 00 00 00 00 00 00 00 00 00 00   TRUCK...........
+0590  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+05a0  00 00 00 00 00 00 00 00                           ........
+    Data: 780000000500000001000100420101000000000014eeecc5...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     52 4.868425    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2399 Ack=11607 Win=37376 Len=0 TSV=4244214 TSER=4627576
+
+Frame 52: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2399, Ack: 11607, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2399    (relative sequence number)
+    Acknowledgement number: 11607    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 37376 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244214, TSecr 4627576
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     53 4.881927    192.168.1.2           192.168.1.3           TCP      [TCP Previous segment lost] 7910 > 45393 [ACK] Seq=12447 Ack=2399 Win=14464 Len=1448 TSV=4627605 TSER=4244214
+
+Frame 53: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 12447, Ack: 2399, Len: 1448
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 12447    (relative sequence number)
+    [Next sequence number: 13895    (relative sequence number)]
+    Acknowledgement number: 2399    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 14464 (scaled)
+    Checksum: 0xb0a3 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627605, TSecr 4244214
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  24 00 00 00 15 00 00 00 7b a2 8f 46 dd 01 01 00   $.......{..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  5c 4f 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   \O......,.......
+0030  7b a2 8f 46 e0 01 01 00 02 00 01 00 b2 bf a2 44   {..F...........D
+0040  00 00 00 00 16 74 fd 43 df 85 00 00 00 00 00 00   .....t.C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  7b a2 8f 46 e3 01 01 00 02 00 01 00 8c 04 8e 44   {..F...........D
+0070  00 00 00 00 34 a3 90 44 ad 77 00 00 00 00 00 00   ....4..D.w......
+0080  00 00 00 00 7d 00 00 00 78 00 00 00 05 00 00 00   ....}...x.......
+0090  01 00 01 00 42 01 01 00 00 00 00 00 14 ee ec c5   ....B...........
+00a0  00 00 00 00 ec 5d 01 c5 96 ff 27 3f 00 00 00 00   .....]....'?....
+00b0  00 00 00 80 42 52 49 44 47 45 31 00 00 00 00 00   ....BRIDGE1.....
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  85 0b 80 43 78 00 00 00 05 00 00 00 01 00 01 00   ...Cx...........
+0110  c5 01 01 00 00 00 00 00 cd 74 f3 44 00 00 00 00   .........t.D....
+0120  71 86 50 c6 c6 b8 b2 bf 00 00 00 00 00 00 00 80   q.P.............
+0130  53 54 41 54 49 4f 4e 00 00 00 00 00 00 00 00 00   STATION.........
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  00 00 00 00 00 00 00 00 00 00 00 00 3d 0a 3d 42   ............=.=B
+0180  78 00 00 00 05 00 00 00 01 00 01 00 c8 01 01 00   x...............
+0190  00 00 00 00 8f 3a c0 44 00 00 00 00 c3 d1 cb c5   .....:.D........
+01a0  00 00 00 80 00 00 00 00 00 00 00 80 53 54 41 54   ............STAT
+01b0  49 4f 4e 00 00 00 00 00 00 00 00 00 00 00 00 00   ION.............
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01f0  00 00 00 00 00 00 00 00 3d 0a 3d 42 78 00 00 00   ........=.=Bx...
+0200  05 00 00 00 01 00 01 00 cb 01 01 00 00 00 00 00   ................
+0210  c3 95 66 44 00 00 00 00 14 da 2a 45 1c 36 a6 3e   ..fD......*E.6.>
+0220  00 00 00 00 00 00 00 80 53 54 41 54 49 4f 4e 00   ........STATION.
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0260  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0270  00 00 00 00 3d 0a 3d 42 78 00 00 00 05 00 00 00   ....=.=Bx.......
+0280  01 00 01 00 ce 01 01 00 00 00 00 00 cd 64 a5 c4   .............d..
+0290  00 00 00 00 ae ff b2 45 26 5c ad 3e 00 00 00 00   .......E&\.>....
+02a0  00 00 00 80 53 54 41 54 49 4f 4e 00 00 00 00 00   ....STATION.....
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02f0  3d 0a 3d 42 78 00 00 00 05 00 00 00 01 00 01 00   =.=Bx...........
+0300  d1 01 01 00 00 00 00 00 0a 49 70 46 00 00 00 00   .........IpF....
+0310  00 38 8b 44 00 00 00 80 00 00 00 00 00 00 00 80   .8.D............
+0320  53 54 41 54 49 4f 4e 00 00 00 00 00 00 00 00 00   STATION.........
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0350  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0360  00 00 00 00 00 00 00 00 00 00 00 00 3d 0a 3d 42   ............=.=B
+0370  78 00 00 00 05 00 00 00 01 00 01 00 d4 01 01 00   x...............
+0380  00 00 00 00 d7 9c 71 46 cd cc cc 3e 5c d7 88 44   ......qF...>\..D
+0390  00 00 00 80 00 00 00 00 00 00 00 80 54 45 52 4d   ............TERM
+03a0  49 4e 41 4c 00 00 00 00 00 00 00 00 00 00 00 00   INAL............
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03e0  00 00 00 00 00 00 00 00 0a 57 d4 42 78 00 00 00   .........W.Bx...
+03f0  05 00 00 00 01 00 01 00 d7 01 01 00 00 00 00 00   ................
+0400  bd 9b d7 c6 00 00 00 00 1a 56 b6 c6 5a 77 d6 be   .........V..Zw..
+0410  00 00 00 00 00 00 00 80 53 54 41 54 49 4f 4e 00   ........STATION.
+0420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0440  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0450  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0460  00 00 00 00 3d 0a 3d 42 78 00 00 00 05 00 00 00   ....=.=Bx.......
+0470  01 00 01 00 da 01 01 00 00 00 00 00 00 00 9c c3   ................
+0480  00 00 00 00 00 c0 9d 44 00 00 00 80 00 00 00 00   .......D........
+0490  00 00 00 80 52 41 44 41 52 42 41 53 45 00 00 00   ....RADARBASE...
+04a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+04e0  00 00 f0 41 78 00 00 00 05 00 00 00 01 00 01 00   ...Ax...........
+04f0  dd 01 01 00 00 00 00 00 00 00 9c c3 c3 f5 a8 be   ................
+0500  f6 90 9d 44 24 b6 06 40 00 00 00 00 00 00 00 00   ...D$..@........
+0510  52 41 44 41 52 00 00 00 00 00 00 00 00 00 00 00   RADAR...........
+0520  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0530  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0540  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0550  00 00 00 00 00 00 00 00 00 00 00 00 00 00 f0 41   ...............A
+0560  78 00 00 00 05 00 00 00 01 00 01 00 e0 01 01 00   x...............
+0570  00 00 00 00 71 c5 a2 44 00 00 00 00 bf d5 fc 43   ....q..D.......C
+0580  30 d7 3f c0 00 00 00 00 00 00 00 80 54 52 55 43   0.?.........TRUC
+0590  4b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   K...............
+05a0  00 00 00 00 00 00 00 00                           ........
+    Data: 24000000150000007ba28f46dd0101000500010000009cc3...
+    [Length: 1448]
+
+No.     Time        Source                Destination           Protocol Info
+     54 4.881946    192.168.1.3           192.168.1.2           TCP      [TCP Dup ACK 52#1] 45393 > 7910 [ACK] Seq=2399 Ack=11607 Win=37376 Len=0 TSV=4244218 TSER=4627576 SLE=12447 SRE=13895
+
+Frame 54: 78 bytes on wire (624 bits), 78 bytes captured (624 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2399, Ack: 11607, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2399    (relative sequence number)
+    Acknowledgement number: 11607    (relative ack number)
+    Header length: 44 bytes
+    Flags: 0x10 (ACK)
+    Window size: 37376 (scaled)
+    Checksum: 0x8388 [validation disabled]
+    Options: (24 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244218, TSecr 4627576
+        NOP
+        NOP
+        SACK: 12447-13895
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     55 4.893926    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=2399 Ack=11607 Win=37376 Len=176 TSV=4244222 TSER=4627576 SLE=12447 SRE=13895
+
+Frame 55: 254 bytes on wire (2032 bits), 254 bytes captured (2032 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2399, Ack: 11607, Len: 176
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2399    (relative sequence number)
+    [Next sequence number: 2575    (relative sequence number)]
+    Acknowledgement number: 11607    (relative ack number)
+    Header length: 44 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 37376 (scaled)
+    Checksum: 0xcd1a [validation disabled]
+    Options: (24 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244222, TSecr 4627576
+        NOP
+        NOP
+        SACK: 12447-13895
+    [SEQ/ACK analysis]
+Data (176 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 42 01 01 00   ............B...
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 c5 01 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 c8 01 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 cb 01 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 ce 01 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 d1 01 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 d4 01 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 d7 01 01 00   ................
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 da 01 01 00   ................
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 dd 01 01 00   ................
+00a0  0c 00 00 00 06 00 00 00 01 00 00 00 e0 01 01 00   ................
+    Data: 0c0000000600000001000000420101000c00000006000000...
+    [Length: 176]
+
+No.     Time        Source                Destination           Protocol Info
+     56 4.903371    192.168.1.2           192.168.1.3           TCP      [TCP Retransmission] 7910 > 45393 [PSH, ACK] Seq=11607 Ack=2399 Win=14464 Len=840 TSV=4627608 TSER=4244218
+
+Frame 56: 906 bytes on wire (7248 bits), 906 bytes captured (7248 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 11607, Ack: 2399, Len: 840
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 11607    (relative sequence number)
+    [Next sequence number: 12447    (relative sequence number)]
+    Acknowledgement number: 2399    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 14464 (scaled)
+    Checksum: 0x368b [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627608, TSecr 4244218
+    [SEQ/ACK analysis]
+Data (840 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 10 41 b0 00 00 00 05 00 00 00   .......A........
+0030  01 00 01 00 e6 01 01 00 00 00 00 00 48 a1 ce 43   ............H..C
+0040  48 e1 ca 41 00 f0 39 c4 00 00 00 80 00 00 00 00   H..A..9.........
+0050  00 00 00 80 56 4f 52 00 00 00 00 00 00 00 00 00   ....VOR.........
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+00a0  00 00 e0 40 00 00 00 00 00 00 00 00 41 54 53 55   ...@........ATSU
+00b0  47 49 00 00 00 00 00 00 00 00 00 00 00 00 00 00   GI..............
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 78 00 00 00   ............x...
+00e0  05 00 00 00 01 00 01 00 e9 01 01 00 00 00 00 00   ................
+00f0  7b f4 c6 c3 0a d7 23 bc 66 f6 5b 44 9a 25 d9 bf   {.....#.f.[D.%..
+0100  00 00 00 00 00 00 00 80 46 55 45 4c 5f 54 52 55   ........FUEL_TRU
+0110  43 4b 00 00 00 00 00 00 00 00 00 00 00 00 00 00   CK..............
+0120  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 80 00 00 00 00 10 41 78 00 00 00 05 00 00 00   .......Ax.......
+0160  01 00 01 00 ec 01 01 00 00 00 00 00 ec d1 cb c3   ................
+0170  0a d7 23 bc ec 21 48 44 9a 25 d9 bf 00 00 00 00   ..#..!HD.%......
+0180  00 00 00 80 46 55 45 4c 5f 54 52 55 43 4b 00 00   ....FUEL_TRUCK..
+0190  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+01d0  00 00 10 41 78 00 00 00 05 00 00 00 01 00 01 00   ...Ax...........
+01e0  ef 01 01 00 00 00 00 00 3d 4a d2 c3 0a d7 23 bc   ........=J....#.
+01f0  7b 24 2e 44 9a 25 d9 bf 00 00 00 00 00 00 00 80   {$.D.%..........
+0200  46 55 45 4c 5f 54 52 55 43 4b 00 00 00 00 00 00   FUEL_TRUCK......
+0210  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0220  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 80 00 00 00 00 10 41   ...............A
+0250  78 00 00 00 05 00 00 00 01 00 01 00 f2 01 01 00   x...............
+0260  00 00 00 00 33 d3 df c3 0a d7 23 bc cd 1c 0c 44   ....3.....#....D
+0270  9a 25 d9 bf 00 00 00 00 00 00 00 80 46 55 45 4c   .%..........FUEL
+0280  5f 54 52 55 43 4b 00 00 00 00 00 00 00 00 00 00   _TRUCK..........
+0290  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 80 00 00 00 00 10 41 78 00 00 00   ...........Ax...
+02d0  05 00 00 00 01 00 01 00 f5 01 01 00 00 00 00 00   ................
+02e0  33 53 88 43 0a d7 23 bc d7 a3 2c c3 c6 b8 b2 3f   3S.C..#...,....?
+02f0  00 00 00 00 00 00 00 80 46 55 45 4c 5f 54 52 55   ........FUEL_TRU
+0300  43 4b 00 00 00 00 00 00 00 00 00 00 00 00 00 00   CK..............
+0310  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 80 00 00 00 00 10 41                           .......A
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 840]
+
+No.     Time        Source                Destination           Protocol Info
+     57 4.903392    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2575 Ack=13895 Win=40192 Len=0 TSV=4244225 TSER=4627608
+
+Frame 57: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2575, Ack: 13895, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2575    (relative sequence number)
+    Acknowledgement number: 13895    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 40192 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244225, TSecr 4627608
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     58 4.906705    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=13895 Ack=2575 Win=15488 Len=0 TSV=4627613 TSER=4244222
+
+Frame 58: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 13895, Ack: 2575, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 13895    (relative sequence number)
+    Acknowledgement number: 2575    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 15488 (scaled)
+    Checksum: 0x3739 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627613, TSecr 4244222
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     59 4.920366    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=2575 Ack=13895 Win=40192 Len=272 TSV=4244230 TSER=4627613
+
+Frame 59: 338 bytes on wire (2704 bits), 338 bytes captured (2704 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2575, Ack: 13895, Len: 272
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2575    (relative sequence number)
+    [Next sequence number: 2847    (relative sequence number)]
+    Acknowledgement number: 13895    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 40192 (scaled)
+    Checksum: 0xd237 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244230, TSecr 4627613
+    [SEQ/ACK analysis]
+Data (272 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 e3 01 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 e6 01 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 e9 01 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 ec 01 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 ef 01 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 f2 01 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 f5 01 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 42 01 01 00   ............B...
+0080  0c 00 00 00 06 00 00 00 01 00 00 00 c5 01 01 00   ................
+0090  0c 00 00 00 06 00 00 00 01 00 00 00 c8 01 01 00   ................
+00a0  0c 00 00 00 06 00 00 00 01 00 00 00 cb 01 01 00   ................
+00b0  0c 00 00 00 06 00 00 00 01 00 00 00 ce 01 01 00   ................
+00c0  0c 00 00 00 06 00 00 00 01 00 00 00 d1 01 01 00   ................
+00d0  0c 00 00 00 06 00 00 00 01 00 00 00 d4 01 01 00   ................
+00e0  0c 00 00 00 06 00 00 00 01 00 00 00 d7 01 01 00   ................
+00f0  0c 00 00 00 06 00 00 00 01 00 00 00 da 01 01 00   ................
+0100  0c 00 00 00 06 00 00 00 01 00 00 00 dd 01 01 00   ................
+    Data: 0c0000000600000001000000e30101000c00000006000000...
+    [Length: 272]
+
+No.     Time        Source                Destination           Protocol Info
+     60 4.933291    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=13895 Ack=2575 Win=15488 Len=976 TSV=4627615 TSER=4244225
+
+Frame 60: 1042 bytes on wire (8336 bits), 1042 bytes captured (8336 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 13895, Ack: 2575, Len: 976
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 13895    (relative sequence number)
+    [Next sequence number: 14871    (relative sequence number)]
+    Acknowledgement number: 2575    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 15488 (scaled)
+    Checksum: 0x88b4 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627615, TSecr 4244225
+    [SEQ/ACK analysis]
+Data (976 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 10 41 78 00 00 00 05 00 00 00 01 00 01 00   ...Ax...........
+0040  e3 01 01 00 00 00 00 00 6f fc 8d 44 00 00 00 00   ........o..D....
+0050  09 7c 90 44 68 fd 3b 40 00 00 00 00 00 00 00 80   .|.Dh.;@........
+0060  54 52 55 43 4b 00 00 00 00 00 00 00 00 00 00 00   TRUCK...........
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 41   ...............A
+00b0  b0 00 00 00 05 00 00 00 01 00 01 00 e6 01 01 00   ................
+00c0  00 00 00 00 48 a1 ce 43 48 e1 ca 41 00 f0 39 c4   ....H..CH..A..9.
+00d0  00 00 00 80 00 00 00 00 00 00 00 80 56 4f 52 00   ............VOR.
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0120  00 00 00 00 00 80 00 00 00 00 e0 40 00 00 00 00   ...........@....
+0130  00 00 00 00 41 54 53 55 47 49 00 00 00 00 00 00   ....ATSUGI......
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 78 00 00 00 05 00 00 00 01 00 01 00   ....x...........
+0170  e9 01 01 00 00 00 00 00 7b f4 c6 c3 0a d7 23 bc   ........{.....#.
+0180  66 f6 5b 44 9a 25 d9 bf 00 00 00 00 00 00 00 80   f.[D.%..........
+0190  46 55 45 4c 5f 54 52 55 43 4b 00 00 00 00 00 00   FUEL_TRUCK......
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 80 00 00 00 00 10 41   ...............A
+01e0  78 00 00 00 05 00 00 00 01 00 01 00 ec 01 01 00   x...............
+01f0  00 00 00 00 ec d1 cb c3 0a d7 23 bc ec 21 48 44   ..........#..!HD
+0200  9a 25 d9 bf 00 00 00 00 00 00 00 80 46 55 45 4c   .%..........FUEL
+0210  5f 54 52 55 43 4b 00 00 00 00 00 00 00 00 00 00   _TRUCK..........
+0220  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0240  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0250  00 00 00 00 00 80 00 00 00 00 10 41 78 00 00 00   ...........Ax...
+0260  05 00 00 00 01 00 01 00 ef 01 01 00 00 00 00 00   ................
+0270  3d 4a d2 c3 0a d7 23 bc 7b 24 2e 44 9a 25 d9 bf   =J....#.{$.D.%..
+0280  00 00 00 00 00 00 00 80 46 55 45 4c 5f 54 52 55   ........FUEL_TRU
+0290  43 4b 00 00 00 00 00 00 00 00 00 00 00 00 00 00   CK..............
+02a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+02d0  00 80 00 00 00 00 10 41 78 00 00 00 05 00 00 00   .......Ax.......
+02e0  01 00 01 00 f2 01 01 00 00 00 00 00 33 d3 df c3   ............3...
+02f0  0a d7 23 bc cd 1c 0c 44 9a 25 d9 bf 00 00 00 00   ..#....D.%......
+0300  00 00 00 80 46 55 45 4c 5f 54 52 55 43 4b 00 00   ....FUEL_TRUCK..
+0310  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0320  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0330  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0340  00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00   ................
+0350  00 00 10 41 78 00 00 00 05 00 00 00 01 00 01 00   ...Ax...........
+0360  f5 01 01 00 00 00 00 00 33 53 88 43 0a d7 23 bc   ........3S.C..#.
+0370  d7 a3 2c c3 c6 b8 b2 3f 00 00 00 00 00 00 00 80   ..,....?........
+0380  46 55 45 4c 5f 54 52 55 43 4b 00 00 00 00 00 00   FUEL_TRUCK......
+0390  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+03c0  00 00 00 00 00 00 00 00 00 80 00 00 00 00 10 41   ...............A
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 976]
+
+No.     Time        Source                Destination           Protocol Info
+     61 4.972797    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2847 Ack=14871 Win=43136 Len=0 TSV=4244246 TSER=4627615
+
+Frame 61: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2847, Ack: 14871, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2847    (relative sequence number)
+    Acknowledgement number: 14871    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 43136 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244246, TSecr 4627615
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     62 4.974699    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=14871 Ack=2847 Win=16512 Len=0 TSV=4627630 TSER=4244230
+
+Frame 62: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 14871, Ack: 2847, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 14871    (relative sequence number)
+    Acknowledgement number: 2847    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 16512 (scaled)
+    Checksum: 0x3238 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627630, TSecr 4244230
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     63 4.974737    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [PSH, ACK] Seq=2847 Ack=14871 Win=43136 Len=128 TSV=4244246 TSER=4627630
+
+Frame 63: 194 bytes on wire (1552 bits), 194 bytes captured (1552 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2847, Ack: 14871, Len: 128
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2847    (relative sequence number)
+    [Next sequence number: 2975    (relative sequence number)]
+    Acknowledgement number: 14871    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 43136 (scaled)
+    Checksum: 0x3cc0 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244246, TSecr 4627630
+    [SEQ/ACK analysis]
+Data (128 bytes)
+
+0000  0c 00 00 00 06 00 00 00 01 00 00 00 e0 01 01 00   ................
+0010  0c 00 00 00 06 00 00 00 01 00 00 00 e3 01 01 00   ................
+0020  0c 00 00 00 06 00 00 00 01 00 00 00 e6 01 01 00   ................
+0030  0c 00 00 00 06 00 00 00 01 00 00 00 e9 01 01 00   ................
+0040  0c 00 00 00 06 00 00 00 01 00 00 00 ec 01 01 00   ................
+0050  0c 00 00 00 06 00 00 00 01 00 00 00 ef 01 01 00   ................
+0060  0c 00 00 00 06 00 00 00 01 00 00 00 f2 01 01 00   ................
+0070  0c 00 00 00 06 00 00 00 01 00 00 00 f5 01 01 00   ................
+    Data: 0c0000000600000001000000e00101000c00000006000000...
+    [Length: 128]
+
+No.     Time        Source                Destination           Protocol Info
+     64 5.031193    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [ACK] Seq=14871 Ack=2975 Win=17664 Len=0 TSV=4627644 TSER=4244246
+
+Frame 64: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 14871, Ack: 2975, Len: 0
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 14871    (relative sequence number)
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x3191 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627644, TSecr 4244246
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     65 5.076943    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=14871 Ack=2975 Win=17664 Len=136 TSV=4627654 TSER=4244246
+
+Frame 65: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 14871, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 14871    (relative sequence number)
+    [Next sequence number: 15007    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x7645 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627654, TSecr 4244246
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 b3 a3 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  66 76 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   fv......,.......
+0030  b3 a3 8f 46 e0 01 01 00 02 00 01 00 bb e2 a2 44   ...F...........D
+0040  00 00 00 00 33 ae f9 43 df 85 00 00 00 00 00 00   ....3..C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  b3 a3 8f 46 e3 01 01 00 02 00 01 00 0e d3 8d 44   ...F...........D
+0070  00 00 00 00 46 b4 8f 44 ad 77 00 00 00 00 00 00   ....F..D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000b3a38f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     66 5.076965    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15007 Win=45952 Len=0 TSV=4244277 TSER=4627654
+
+Frame 66: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15007, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15007    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 45952 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244277, TSecr 4627654
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     67 5.686913    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15007 Ack=2975 Win=17664 Len=136 TSV=4627807 TSER=4244277
+
+Frame 67: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15007, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15007    (relative sequence number)
+    [Next sequence number: 15143    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x089e [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627807, TSecr 4244277
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 ec a4 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  71 9d 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   q.......,.......
+0030  ec a4 8f 46 e0 01 01 00 02 00 01 00 c4 05 a3 44   ...F...........D
+0040  00 00 00 00 50 e8 f5 43 df 85 00 00 00 00 00 00   ....P..C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  ec a4 8f 46 e3 01 01 00 02 00 01 00 90 a1 8d 44   ...F...........D
+0070  00 00 00 00 59 c5 8e 44 ad 77 00 00 00 00 00 00   ....Y..D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000eca48f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     68 5.686934    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15143 Win=48896 Len=0 TSV=4244460 TSER=4627807
+
+Frame 68: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15143, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15143    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 48896 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244460, TSecr 4627807
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     69 6.294767    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15143 Ack=2975 Win=17664 Len=136 TSV=4627960 TSER=4244460
+
+Frame 69: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15143, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15143    (relative sequence number)
+    [Next sequence number: 15279    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x9f5e [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4627960, TSecr 4244460
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 24 a6 8f 46 dd 01 01 00   $.......$..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  7b c4 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   {.......,.......
+0030  24 a6 8f 46 e0 01 01 00 02 00 01 00 cd 28 a3 44   $..F.........(.D
+0040  00 00 00 00 6d 22 f2 43 df 85 00 00 00 00 00 00   ....m".C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  24 a6 8f 46 e3 01 01 00 02 00 01 00 12 70 8d 44   $..F.........p.D
+0070  00 00 00 00 6b d6 8d 44 ad 77 00 00 00 00 00 00   ....k..D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 240000001500000024a68f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     70 6.294799    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15279 Win=51840 Len=0 TSV=4244642 TSER=4627960
+
+Frame 70: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15279, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15279    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 51840 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244642, TSecr 4627960
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     71 6.922114    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15279 Ack=2975 Win=17664 Len=136 TSV=4628113 TSER=4244642
+
+Frame 71: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15279, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15279    (relative sequence number)
+    [Next sequence number: 15415    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x3320 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628113, TSecr 4244642
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 5c a7 8f 46 dd 01 01 00   $.......\..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  86 eb 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   ........,.......
+0030  5c a7 8f 46 e0 01 01 00 02 00 01 00 d6 4b a3 44   \..F.........K.D
+0040  00 00 00 00 8a 5c ee 43 df 85 00 00 00 00 00 00   .....\.C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  5c a7 8f 46 e3 01 01 00 02 00 01 00 95 3e 8d 44   \..F.........>.D
+0070  00 00 00 00 7e e7 8c 44 ad 77 00 00 00 00 00 00   ....~..D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 24000000150000005ca78f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     72 6.922142    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15415 Win=54656 Len=0 TSV=4244830 TSER=4628113
+
+Frame 72: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15415, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15415    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 54656 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4244830, TSecr 4628113
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     73 7.518376    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15415 Ack=2975 Win=17664 Len=136 TSV=4628266 TSER=4244830
+
+Frame 73: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15415, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15415    (relative sequence number)
+    [Next sequence number: 15551    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x12ef [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628266, TSecr 4244830
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 9a a8 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  33 13 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   3.......,.......
+0030  9a a8 8f 46 e0 01 01 00 02 00 01 00 72 6f a3 44   ...F........ro.D
+0040  00 00 00 00 d2 86 ea 43 df 85 00 00 00 00 00 00   .......C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  9a a8 8f 46 e3 01 01 00 02 00 01 00 47 0c 8d 44   ...F........G..D
+0070  00 00 00 00 a5 f4 8b 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 24000000150000009aa88f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     74 7.518427    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15551 Win=57600 Len=0 TSV=4245009 TSER=4628266
+
+Frame 74: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15551, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15551    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 57600 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245009, TSecr 4628266
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     75 8.359648    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15551 Ack=2975 Win=17664 Len=136 TSV=4628476 TSER=4245009
+
+Frame 75: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15551, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15551    (relative sequence number)
+    [Next sequence number: 15687    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0xa87a [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628476, TSecr 4245009
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 d2 a9 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  3d 3a 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   =:......,.......
+0030  d2 a9 8f 46 e0 01 01 00 02 00 01 00 7b 92 a3 44   ...F........{..D
+0040  00 00 00 00 ef c0 e6 43 df 85 00 00 00 00 00 00   .......C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  d2 a9 8f 46 e3 01 01 00 02 00 01 00 c9 da 8c 44   ...F...........D
+0070  00 00 00 00 b8 05 8b 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000d2a98f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     76 8.359681    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15687 Win=60544 Len=0 TSV=4245262 TSER=4628476
+
+Frame 76: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15687, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15687    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 60544 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245262, TSecr 4628476
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     77 8.743463    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15687 Ack=2975 Win=17664 Len=136 TSV=4628572 TSER=4245262
+
+Frame 77: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15687, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15687    (relative sequence number)
+    [Next sequence number: 15823    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x3e2e [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628572, TSecr 4245262
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 0a ab 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  47 61 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   Ga......,.......
+0030  0a ab 8f 46 e0 01 01 00 02 00 01 00 84 b5 a3 44   ...F...........D
+0040  00 00 00 00 0c fb e2 43 df 85 00 00 00 00 00 00   .......C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  0a ab 8f 46 e3 01 01 00 02 00 01 00 4c a9 8c 44   ...F........L..D
+0070  00 00 00 00 ca 16 8a 44 ad 77 00 00 00 00 00 00   .......D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 24000000150000000aab8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     78 8.743494    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15823 Win=62464 Len=0 TSV=4245377 TSER=4628572
+
+Frame 78: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15823, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15823    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 62464 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245377, TSecr 4628572
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     79 9.354904    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15823 Ack=2975 Win=17664 Len=136 TSV=4628725 TSER=4245377
+
+Frame 79: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15823, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15823    (relative sequence number)
+    [Next sequence number: 15959    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0xd032 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628725, TSecr 4245377
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 43 ac 8f 46 dd 01 01 00   $.......C..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  52 88 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   R.......,.......
+0030  43 ac 8f 46 e0 01 01 00 02 00 01 00 8d d8 a3 44   C..F...........D
+0040  00 00 00 00 29 35 df 43 df 85 00 00 00 00 00 00   ....)5.C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  43 ac 8f 46 e3 01 01 00 02 00 01 00 ce 77 8c 44   C..F.........w.D
+0070  00 00 00 00 dd 27 89 44 ad 77 00 00 00 00 00 00   .....'.D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 240000001500000043ac8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     80 9.354938    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=15959 Win=62464 Len=0 TSV=4245560 TSER=4628725
+
+Frame 80: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 15959, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 15959    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 62464 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245560, TSecr 4628725
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     81 9.966284    192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=15959 Ack=2975 Win=17664 Len=136 TSV=4628878 TSER=4245560
+
+Frame 81: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 15959, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 15959    (relative sequence number)
+    [Next sequence number: 16095    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x66f3 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4628878, TSecr 4245560
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 7b ad 8f 46 dd 01 01 00   $.......{..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  5d af 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   ].......,.......
+0030  7b ad 8f 46 e0 01 01 00 02 00 01 00 95 fb a3 44   {..F...........D
+0040  00 00 00 00 46 6f db 43 df 85 00 00 00 00 00 00   ....Fo.C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  7b ad 8f 46 e3 01 01 00 02 00 01 00 50 46 8c 44   {..F........PF.D
+0070  00 00 00 00 ef 38 88 44 ad 77 00 00 00 00 00 00   .....8.D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 24000000150000007bad8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     82 9.966313    192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=16095 Win=62464 Len=0 TSV=4245744 TSER=4628878
+
+Frame 82: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 16095, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 16095    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 62464 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245744, TSecr 4628878
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     83 10.580477   192.168.1.2           192.168.1.3           TCP      7910 > 45393 [PSH, ACK] Seq=16095 Ack=2975 Win=17664 Len=136 TSV=4629031 TSER=4245744
+
+Frame 83: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 16095, Ack: 2975, Len: 136
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 16095    (relative sequence number)
+    [Next sequence number: 16231    (relative sequence number)]
+    Acknowledgement number: 2975    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x47c6 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4629031, TSecr 4245744
+    [SEQ/ACK analysis]
+Data (136 bytes)
+
+0000  24 00 00 00 15 00 00 00 b8 ae 8f 46 dd 01 01 00   $..........F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  0b d7 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   ........,.......
+0030  b8 ae 8f 46 e0 01 01 00 02 00 01 00 31 1f a4 44   ...F........1..D
+0040  00 00 00 00 8d 99 d7 43 df 85 00 00 00 00 00 00   .......C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  b8 ae 8f 46 e3 01 01 00 02 00 01 00 02 14 8c 44   ...F...........D
+0070  00 00 00 00 17 46 87 44 ad 77 00 00 00 00 00 00   .....F.D.w......
+0080  00 00 00 00 7d 00 00 00                           ....}...
+    Data: 2400000015000000b8ae8f46dd0101000500010000009cc3...
+    [Length: 136]
+
+No.     Time        Source                Destination           Protocol Info
+     84 10.580500   192.168.1.3           192.168.1.2           TCP      45393 > 7910 [ACK] Seq=2975 Ack=16231 Win=62464 Len=0 TSV=4245928 TSER=4629031
+
+Frame 84: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 16231, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 16231    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 62464 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4245928, TSecr 4629031
+    [SEQ/ACK analysis]
+
+No.     Time        Source                Destination           Protocol Info
+     85 13.834288   192.168.1.3           192.168.1.2           TCP      45393 > 7910 [FIN, ACK] Seq=2975 Ack=16231 Win=63360 Len=0 TSV=4246904 TSER=4629031
+
+Frame 85: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2975, Ack: 16231, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2975    (relative sequence number)
+    Acknowledgement number: 16231    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x11 (FIN, ACK)
+    Window size: 63360 (scaled)
+    Checksum: 0x837c [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4246904, TSecr 4629031
+
+No.     Time        Source                Destination           Protocol Info
+     86 13.891253   192.168.1.2           192.168.1.3           TCP      [TCP Previous segment lost] 7910 > 45393 [FIN, PSH, ACK] Seq=16367 Ack=2976 Win=17664 Len=544 TSV=4629849 TSER=4246904
+
+Frame 86: 610 bytes on wire (4880 bits), 610 bytes captured (4880 bits)
+Ethernet II, Src: Elitegro_f8:d7:51 (00:19:21:f8:d7:51), Dst: Usi_14:7f:23 (e0:2a:82:14:7f:23)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.3 (192.168.1.3)
+Transmission Control Protocol, Src Port: 7910 (7910), Dst Port: 45393 (45393), Seq: 16367, Ack: 2976, Len: 544
+    Source port: 7910 (7910)
+    Destination port: 45393 (45393)
+    [Stream index: 0]
+    Sequence number: 16367    (relative sequence number)
+    [Next sequence number: 16911    (relative sequence number)]
+    Acknowledgement number: 2976    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x19 (FIN, PSH, ACK)
+    Window size: 17664 (scaled)
+    Checksum: 0x3d44 [validation disabled]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 4629849, TSecr 4246904
+    [SEQ/ACK analysis]
+Data (544 bytes)
+
+0000  24 00 00 00 15 00 00 00 29 b1 8f 46 dd 01 01 00   $.......)..F....
+0010  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0020  1e 25 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   .%......,.......
+0030  29 b1 8f 46 e0 01 01 00 02 00 01 00 43 65 a4 44   )..F........Ce.D
+0040  00 00 00 00 c7 0d d0 43 df 85 00 00 00 00 00 00   .......C........
+0050  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0060  29 b1 8f 46 e3 01 01 00 02 00 01 00 07 b1 8b 44   )..F...........D
+0070  00 00 00 00 3c 68 85 44 ad 77 00 00 00 00 00 00   ....<h.D.w......
+0080  00 00 00 00 7d 00 00 00 24 00 00 00 15 00 00 00   ....}...$.......
+0090  61 b2 8f 46 dd 01 01 00 05 00 01 00 00 00 9c c3   a..F............
+00a0  c3 f5 a8 be f6 90 9d 44 28 4c 00 00 00 00 00 00   .......D(L......
+00b0  2c 00 00 00 15 00 00 00 61 b2 8f 46 e0 01 01 00   ,.......a..F....
+00c0  02 00 01 00 4c 88 a4 44 00 00 00 00 e4 47 cc 43   ....L..D.....G.C
+00d0  df 85 00 00 00 00 00 00 00 00 00 00 7d 00 00 00   ............}...
+00e0  2c 00 00 00 15 00 00 00 61 b2 8f 46 e3 01 01 00   ,.......a..F....
+00f0  02 00 01 00 89 7f 8b 44 00 00 00 00 4e 79 84 44   .......D....Ny.D
+0100  ad 77 00 00 00 00 00 00 00 00 00 00 7d 00 00 00   .w..........}...
+0110  24 00 00 00 15 00 00 00 9a b3 8f 46 dd 01 01 00   $..........F....
+0120  05 00 01 00 00 00 9c c3 c3 f5 a8 be f6 90 9d 44   ...............D
+0130  33 73 00 00 00 00 00 00 2c 00 00 00 15 00 00 00   3s......,.......
+0140  9a b3 8f 46 e0 01 01 00 02 00 01 00 55 ab a4 44   ...F........U..D
+0150  00 00 00 00 01 82 c8 43 df 85 00 00 00 00 00 00   .......C........
+0160  00 00 00 00 7d 00 00 00 2c 00 00 00 15 00 00 00   ....}...,.......
+0170  9a b3 8f 46 e3 01 01 00 02 00 01 00 0b 4e 8b 44   ...F.........N.D
+0180  00 00 00 00 60 8a 83 44 ad 77 00 00 00 00 00 00   ....`..D.w......
+0190  00 00 00 00 7d 00 00 00 24 00 00 00 15 00 00 00   ....}...$.......
+01a0  d7 b4 8f 46 dd 01 01 00 05 00 01 00 00 00 9c c3   ...F............
+01b0  c3 f5 a8 be f6 90 9d 44 e2 9a 00 00 00 00 00 00   .......D........
+01c0  2c 00 00 00 15 00 00 00 d7 b4 8f 46 e0 01 01 00   ,..........F....
+01d0  02 00 01 00 f1 ce a4 44 00 00 00 00 49 ac c4 43   .......D....I..C
+01e0  df 85 00 00 00 00 00 00 00 00 00 00 7d 00 00 00   ............}...
+01f0  2c 00 00 00 15 00 00 00 d7 b4 8f 46 e3 01 01 00   ,..........F....
+0200  02 00 01 00 be 1b 8b 44 00 00 00 00 88 97 82 44   .......D.......D
+0210  ad 77 00 00 00 00 00 00 00 00 00 00 7d 00 00 00   .w..........}...
+    Data: 240000001500000029b18f46dd0101000500010000009cc3...
+    [Length: 544]
+
+No.     Time        Source                Destination           Protocol Info
+     87 13.891298   192.168.1.3           192.168.1.2           TCP      45393 > 7910 [RST] Seq=2976 Win=0 Len=0
+
+Frame 87: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+Ethernet II, Src: Usi_14:7f:23 (e0:2a:82:14:7f:23), Dst: Elitegro_f8:d7:51 (00:19:21:f8:d7:51)
+Internet Protocol, Src: 192.168.1.3 (192.168.1.3), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: 45393 (45393), Dst Port: 7910 (7910), Seq: 2976, Len: 0
+    Source port: 45393 (45393)
+    Destination port: 7910 (7910)
+    [Stream index: 0]
+    Sequence number: 2976    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x04 (RST)
+    Window size: 0
+    Checksum: 0x44e5 [validation disabled]

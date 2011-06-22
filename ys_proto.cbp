@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ys_proto" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ys_proto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ys_proto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lpthread" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="check_pt_inc" />
+		</Compiler>
+		<Linker>
+			<Add option="-lpthread" />
+			<Add option="-lm" />
+		</Linker>
+		<Unit filename="check_pt_inc/CheckPoints.h" />
+		<Unit filename="check_pt_inc/Poly.h" />
+		<Unit filename="check_pt_inc/Racer.h" />
+		<Unit filename="check_pt_inc/Vec.h" />
+		<Unit filename="check_pt_inc/readPoly.h" />
+		<Unit filename="check_pt_inc/str.h" />
+		<Unit filename="check_pt_src/CheckPoints.cpp" />
+		<Unit filename="check_pt_src/Poly.cpp" />
+		<Unit filename="check_pt_src/Racer.cpp" />
+		<Unit filename="check_pt_src/Vec.cpp" />
+		<Unit filename="check_pt_src/readPoly.cpp" />
+		<Unit filename="check_pt_src/str.cpp" />
+		<Unit filename="apps/activity_message.cpp" />
+		<Unit filename="apps/activity_message.h" />
+		<Unit filename="apps/apps.cpp" />
+		<Unit filename="apps/apps.h" />
+		<Unit filename="apps/ysclient.cpp" />
+		<Unit filename="apps/ysclient.h" />
+		<Unit filename="apps/ysclientActions.cpp" />
+		<Unit filename="debug.cpp" />
+		<Unit filename="debug.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="serialization/acknowledge.h" />
+		<Unit filename="serialization/ackowledge.cpp" />
+		<Unit filename="serialization/airDisplayOpt.cpp" />
+		<Unit filename="serialization/airDisplayOpt.h" />
+		<Unit filename="serialization/airList.cpp" />
+		<Unit filename="serialization/airList.h" />
+		<Unit filename="serialization/damage.cpp" />
+		<Unit filename="serialization/damage.h" />
+		<Unit filename="serialization/endianess.cpp" />
+		<Unit filename="serialization/flight.cpp" />
+		<Unit filename="serialization/flight.h" />
+		<Unit filename="serialization/ground.cpp" />
+		<Unit filename="serialization/ground.h" />
+		<Unit filename="serialization/header.cpp" />
+		<Unit filename="serialization/header.h" />
+		<Unit filename="serialization/includeAll.cpp" />
+		<Unit filename="serialization/int.cpp" />
+		<Unit filename="serialization/int.h" />
+		<Unit filename="serialization/login.cpp" />
+		<Unit filename="serialization/login.h" />
+		<Unit filename="serialization/map.cpp" />
+		<Unit filename="serialization/map.h" />
+		<Unit filename="serialization/message.cpp" />
+		<Unit filename="serialization/message.h" />
+		<Unit filename="serialization/missileOpt.cpp" />
+		<Unit filename="serialization/missileOpt.h" />
+		<Unit filename="serialization/unpack.cpp" />
+		<Unit filename="serialization/unpack.h" />
+		<Unit filename="serialization/userlist.cpp" />
+		<Unit filename="serialization/userlist.h" />
+		<Unit filename="serialization/weather.cpp" />
+		<Unit filename="serialization/weather.h" />
+		<Unit filename="sockets/linux.cpp" />
+		<Unit filename="sockets/socketYS.cpp" />
+		<Unit filename="sockets/windows.cpp" />
+		<Unit filename="types/includeall.cpp" />
+		<Unit filename="types/stringarray.cpp" />
+		<Unit filename="types/stringarray.h" />
+		<Unit filename="types/ys/includeAll.cpp" />
+		<Unit filename="types/ys/tacknowledge.cpp" />
+		<Unit filename="types/ys/tairDisplayOpt.cpp" />
+		<Unit filename="types/ys/tairList.cpp" />
+		<Unit filename="types/ys/tdamage.cpp" />
+		<Unit filename="types/ys/tflight.cpp" />
+		<Unit filename="types/ys/tground.cpp" />
+		<Unit filename="types/ys/theader.cpp" />
+		<Unit filename="types/ys/tint.cpp" />
+		<Unit filename="types/ys/tleft.cpp" />
+		<Unit filename="types/ys/tlogin.cpp" />
+		<Unit filename="types/ys/tmap.cpp" />
+		<Unit filename="types/ys/tmessage.cpp" />
+		<Unit filename="types/ys/tmissileOpt.cpp" />
+		<Unit filename="types/ys/tuserlist.cpp" />
+		<Unit filename="types/ys/tweather.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
