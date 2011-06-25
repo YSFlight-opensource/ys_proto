@@ -1,3 +1,5 @@
+#ifdef __linux
+
 #include "sockets/linux.h"
 
 using namespace std;
@@ -70,5 +72,6 @@ void Socket::closes()
 {
     close(sock);
 }
+
 
 #endif

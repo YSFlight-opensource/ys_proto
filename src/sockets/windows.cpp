@@ -1,4 +1,4 @@
-
+#ifndef __linux
 #include "sockets/windows.h"
 
 int Socket::connects(char* ip, int port)
@@ -70,3 +70,4 @@ void Socket::closes()
     WSACleanup();
 }
 
+#endif

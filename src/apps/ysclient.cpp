@@ -2,6 +2,7 @@
 #include "serialization/includeAll.h"
 #include "debug.h"
 #include "apps/activity_message.h"
+#include "readPoly.h"
 
 
 
@@ -9,7 +10,7 @@
 
 YSclient::YSclient()
 {
-     cp = read_file((char*)"midohiol.race");
+//     cp = read_file((char*)"midohiol.race");
      //cout << *cp  << std::endl;
 
 

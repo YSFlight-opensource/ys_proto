@@ -18,8 +18,8 @@ class YSclient : public Apps
         void connect();
 
     protected:
-        CheckPoints* cp;
-        map<int, Racer*> racers;
+//        CheckPoints* cp;
+//        map<int, Racer*> racers;
 
     private:
         SocketYS s;

@@ -1297,7 +1297,7 @@
 
 1309033000 /home/vins/Projects/cpp/ys_proto/include/types/ys/theader.h
 
-1309031474 /home/vins/Projects/cpp/ys_proto/include/sockets/socketYS.h
+1309035551 /home/vins/Projects/cpp/ys_proto/include/sockets/socketYS.h
 	"types/ys/theader.h"
 	"serialization/header.h"
 	"linux.h"
@@ -1434,13 +1434,14 @@
 
 1309025715 /home/vins/Projects/cpp/ys_proto/include/serialization/unpack.h
 
-1309033138 source:/home/vins/Projects/cpp/ys_proto/src/apps/ysclient.cpp
+1309036305 source:/home/vins/Projects/cpp/ys_proto/src/apps/ysclient.cpp
 	"apps/ysclient.h"
 	"serialization/includeAll.h"
 	"debug.h"
 	"apps/activity_message.h"
+	"readPoly.h"
 
-1309033124 /home/vins/Projects/cpp/ys_proto/include/apps/ysclient.h
+1309036649 /home/vins/Projects/cpp/ys_proto/include/apps/ysclient.h
 	<map>
 	<iostream>
 	"sockets/socketYS.h"
@@ -1467,8 +1468,283 @@
 	<vector>
 	"Vec.h"
 
-1309010901 /home/vins/Projects/cpp/checkpoint_check/include/Racer.h
+1309034766 /home/vins/Projects/cpp/checkpoint_check/include/Racer.h
 	<string>
 	<time.h>
 	"CheckPoints.h"
+
+1309033159 source:/home/vins/Projects/cpp/ys_proto/src/apps/ysclientActions.cpp
+	"apps/ysclient.h"
+	"serialization/includeAll.h"
+	"debug.h"
+	<math.h>
+	<time.h>
+
+1309025629 source:/home/vins/Projects/cpp/ys_proto/src/debug.cpp
+	<stdio.h>
+	"debug.h"
+
+1309025629 source:/home/vins/Projects/cpp/ys_proto/src/main.cpp
+	<stdio.h>
+	<string.h>
+	"apps/ysclient.h"
+
+1309029966 source:/home/vins/Projects/cpp/ys_proto/src/serialization/ackowledge.cpp
+	"serialization/acknowledge.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309029961 source:/home/vins/Projects/cpp/ys_proto/src/serialization/airDisplayOpt.cpp
+	"serialization/airDisplayOpt.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"debug.h"
+
+1309029988 source:/home/vins/Projects/cpp/ys_proto/src/serialization/airList.cpp
+	"serialization/airList.h"
+	"serialization/header.h"
+	"types/stringarray.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"debug.h"
+
+1309030078 source:/home/vins/Projects/cpp/ys_proto/src/serialization/damage.cpp
+	"serialization/damage.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/serialization/endianess.cpp
+
+1309030078 source:/home/vins/Projects/cpp/ys_proto/src/serialization/flight.cpp
+	"serialization/flight.h"
+	"serialization/header.h"
+	"debug.h"
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1309030078 source:/home/vins/Projects/cpp/ys_proto/src/serialization/ground.cpp
+	"serialization/ground.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309034795 source:/home/vins/Projects/cpp/ys_proto/src/serialization/header.cpp
+	"serialization/header.h"
+	"types/ys/theader.h"
+	<string.h>
+
+1309030031 source:/home/vins/Projects/cpp/ys_proto/src/serialization/includeAll.cpp
+	"serialization/airList.h"
+	"serialization/airDisplayOpt.h"
+	"serialization/header.h"
+	"serialization/login.h"
+	"serialization/map.h"
+	"serialization/int.h"
+	"serialization/acknowledge.h"
+	"serialization/weather.h"
+	"serialization/message.h"
+	"serialization/damage.h"
+	"serialization/flight.h"
+	"serialization/userlist.h"
+	"serialization/ground.h"
+
+1309030036 source:/home/vins/Projects/cpp/ys_proto/src/serialization/int.cpp
+	"serialization/int.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309030039 source:/home/vins/Projects/cpp/ys_proto/src/serialization/left.cpp
+	"serialization/left.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309035359 /home/vins/Projects/cpp/ys_proto/include/serialization/left.h
+	"types/ys/tleft.h"
+	"serialization/left.h"
+	"serialization/header.h"
+
+1309035372 source:/home/vins/Projects/cpp/ys_proto/src/serialization/login.cpp
+	"serialization/login.h"
+	"serialization/header.h"
+	"types/ys/tlogin.h"
+	<stdlib.h>
+	<string.h>
+
+1309035384 source:/home/vins/Projects/cpp/ys_proto/src/serialization/map.cpp
+	"serialization/map.h"
+	"serialization/header.h"
+	"types/ys/tmap.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1309030078 source:/home/vins/Projects/cpp/ys_proto/src/serialization/message.cpp
+	"serialization/message.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"debug.h"
+
+1309030063 source:/home/vins/Projects/cpp/ys_proto/src/serialization/missileOpt.cpp
+	"serialization/missileOpt.h"
+
+1309035393 /home/vins/Projects/cpp/ys_proto/include/serialization/missileOpt.h
+	"types/ys/tmissileOpt.h"
+
+1309025637 /home/vins/Projects/cpp/ys_proto/include/types/ys/tmissileOpt.h
+
+1309030067 source:/home/vins/Projects/cpp/ys_proto/src/serialization/unpack.cpp
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"serialization/unpack.h"
+
+1309030071 source:/home/vins/Projects/cpp/ys_proto/src/serialization/userlist.cpp
+	"serialization/userlist.h"
+	"serialization/header.h"
+	<stdlib.h>
+	<string.h>
+
+1309035399 source:/home/vins/Projects/cpp/ys_proto/src/serialization/weather.cpp
+	"serialization/weather.h"
+	"serialization/header.h"
+	"types/ys/tint.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1309035867 source:/home/vins/Projects/cpp/ys_proto/src/sockets/linux.cpp
+	"sockets/linux.h"
+
+1309035779 source:/home/vins/Projects/cpp/ys_proto/src/sockets/socketYS.cpp
+	"sockets/socketYS.h"
+
+1309035845 source:/home/vins/Projects/cpp/ys_proto/src/sockets/windows.cpp
+	"sockets/windows.h"
+
+1309025629 source:/home/vins/Projects/cpp/ys_proto/src/stringarray.cpp
+	<string.h>
+	<stdio.h>
+
+1309035937 source:/home/vins/Projects/cpp/ys_proto/src/test.cpp
+
+1309035886 source:/home/vins/Projects/cpp/ys_proto/src/tests.cpp
+
+1309035904 source:/home/vins/Projects/cpp/ys_proto/src/types/includeall.cpp
+	"types/stringarray.h"
+	"ys/includeAll.cpp"
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/includeAll.cpp
+	"tairList.cpp"
+	"tairDisplayOpt.cpp"
+	"theader.cpp"
+	"tlogin.cpp"
+	"tmap.cpp"
+	"tint.cpp"
+	"tacknowledge.cpp"
+	"tmessage.cpp"
+	"tflight.cpp"
+	"tweather.cpp"
+	"tdamage.cpp"
+	"tuserlist.cpp"
+	"tground.cpp"
+	"tleft.cpp"
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tairList.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tairDisplayOpt.cpp
+
+1309031725 /home/vins/Projects/cpp/ys_proto/src/types/ys/theader.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tlogin.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tmap.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tint.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tacknowledge.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tmessage.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tflight.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tweather.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tdamage.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tuserlist.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tground.cpp
+
+1309025637 /home/vins/Projects/cpp/ys_proto/src/types/ys/tleft.cpp
+
+1309035926 source:/home/vins/Projects/cpp/ys_proto/src/types/stringarray.cpp
+	<string.h>
+	"types/stringarray.h"
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/airList.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/includeAll.cpp
+	"tairList.cpp"
+	"tairDisplayOpt.cpp"
+	"theader.cpp"
+	"tlogin.cpp"
+	"tmap.cpp"
+	"tint.cpp"
+	"tacknowledge.cpp"
+	"tmessage.cpp"
+	"tflight.cpp"
+	"tweather.cpp"
+	"tdamage.cpp"
+	"tuserlist.cpp"
+	"tground.cpp"
+	"tleft.cpp"
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/login.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/map.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/missileOpt.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tacknowledge.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tairDisplayOpt.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tairList.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tdamage.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tflight.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tgound.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tground.cpp
+
+1309031725 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/theader.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tint.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tleft.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tlogin.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tmap.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tmessage.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tmissileOpt.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tuserlist.cpp
+
+1309025637 source:/home/vins/Projects/cpp/ys_proto/src/types/ys/tweather.cpp
 

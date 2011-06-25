@@ -1,5 +1,5 @@
 #include "serialization/header.h"
-#include "types/ys/theader.cpp"
+#include "types/ys/theader.h"
 #include <string.h>
 
 /* I don't put thin function in the struct

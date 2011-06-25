@@ -1,6 +1,6 @@
 #include "sockets/socketYS.h"
 
-int SocketYS::sendsYS(char* buffer, int freebuffer=1)
+int SocketYS::sendsYS(char* buffer, int freebuffer)
 {
     int size;
     memcpy((char*)&size, buffer, 4);
