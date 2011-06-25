@@ -1,9 +1,9 @@
 #ifndef HEADER
 #define HEADER
 
-#include "../types/ys/theader.cpp"
+#include "types/ys/theader.h"
 
 void packtheader(int size, int kind, char* buffer);
-theader unpacktheader(char* buffer);
+struct theader unpacktheader(char* buffer);
 
 #endif

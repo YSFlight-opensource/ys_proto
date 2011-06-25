@@ -1,6 +1,6 @@
-#include "flight.h"
-#include "header.h"
-#include "../debug.h"
+#include "serialization/flight.h"
+#include "serialization/header.h"
+#include "debug.h"
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h> // malloc

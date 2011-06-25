@@ -1,10 +1,10 @@
-#include "apps.h"
-#include "../serialization/includeAll.cpp"
+#include "apps/apps.h"
+#include "serialization/includeAll.h"
 
 #include <string.h>
 //#include <stdio.h>
-#include "../debug.h"
-#include "../serialization/unpack.h"
+#include "debug.h"
+#include "serialization/unpack.h"
 #include <pthread.h>
 
 //TODO: WEATHER

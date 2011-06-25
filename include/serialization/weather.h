@@ -1,7 +1,7 @@
 #ifndef WEATHER
 #define WEATHER
 
-#include "../types/ys/tweather.cpp"
+#include "types/ys/tweather.h"
 
 char* packaskweather();
 char* packtweather(tweather* weather);

@@ -4,7 +4,7 @@
 #include <map>
 #include <iostream>
 
-#include "../sockets/socketYS.cpp"
+#include "sockets/socketYS.h"
 #include "apps.h"
 
 #include "Vec.h"

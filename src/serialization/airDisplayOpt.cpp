@@ -1,10 +1,10 @@
-#include "airDisplayOpt.h"
-#include "header.h"
+#include "serialization/airDisplayOpt.h"
+#include "serialization/header.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#include "../debug.h"
+#include "debug.h"
 
 // RADAR ALT and THIRD VIEW
 char* packtairDisplayOpt(tairDisplayOpt* airDisplayOpt)

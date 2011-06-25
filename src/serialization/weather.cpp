@@ -1,6 +1,6 @@
-#include "weather.h"
-#include "header.h"
-#include "../types/ys/tint.cpp"
+#include "serialization/weather.h"
+#include "serialization/header.h"
+#include "types/ys/tint.cpp"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

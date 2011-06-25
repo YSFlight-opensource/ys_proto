@@ -1,10 +1,10 @@
-#include "message.h"
-#include "header.h"
+#include "serialization/message.h"
+#include "serialization/header.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#include "../debug.h"
+#include "debug.h"
 
 
 char* packtmessage(tmessage* message)

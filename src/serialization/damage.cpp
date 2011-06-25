@@ -1,5 +1,5 @@
-#include "damage.h"
-#include "header.h"
+#include "serialization/damage.h"
+#include "serialization/header.h"
 #include <stdlib.h> // malloc
 #include <string.h> //memcpy
 

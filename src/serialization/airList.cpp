@@ -1,11 +1,11 @@
-#include "airList.h"
-#include "header.h"
-#include "../types/stringarray.h"
+#include "serialization/airList.h"
+#include "serialization/header.h"
+#include "types/stringarray.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-#include "../debug.h"
+#include "debug.h"
 
 char* packtairList(tairList* airList)
 {

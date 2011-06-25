@@ -1,7 +1,7 @@
-#include "ysclient.h"
-#include "../serialization/includeAll.cpp"
-#include "../debug.h"
-#include "activity_message.h"
+#include "apps/ysclient.h"
+#include "serialization/includeAll.h"
+#include "debug.h"
+#include "apps/activity_message.h"
 
 
 

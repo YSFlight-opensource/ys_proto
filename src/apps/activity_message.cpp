@@ -1,6 +1,6 @@
-#include "activity_message.h"
-#include "../serialization/header.h"
-#include "../sockets/socketYS.cpp"
+#include "apps/activity_message.h"
+#include "serialization/header.h"
+#include "sockets/socketYS.h"
 
 
 void * send_activity_message(void * p_data)

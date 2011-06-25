@@ -1,7 +1,7 @@
 
 
 #include <string.h>
-#include "stringarray.h"
+#include "types/ys/stringarray.h"
 
 // return the char length (size) of an YS_string_array (aircraft list) "s" which cointains "elements" elements (number of aircraft)
 int sizeofsarray(char* array, int elements)

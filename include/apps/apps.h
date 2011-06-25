@@ -1,7 +1,7 @@
 #ifndef APPS
 #define APPS
 
-#include "../types/includeall.cpp"
+#include "types/includeAll.h"
 
 class Apps
 {

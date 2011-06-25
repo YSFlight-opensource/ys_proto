@@ -1,6 +1,6 @@
-#include "login.h"
-#include "header.h"
-#include "../types/ys/tlogin.cpp"
+#include "serialization/login.h"
+#include "serialization/header.h"
+#include "types/ys/tlogin.cpp"
 #include <stdlib.h> // malloc
 #include <string.h> //memcpy
 

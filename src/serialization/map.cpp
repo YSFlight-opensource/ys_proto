@@ -1,6 +1,6 @@
-#include "map.h"
-#include "header.h"
-#include "../types/ys/tmap.cpp"
+#include "serialization/map.h"
+#include "serialization/header.h"
+#include "types/ys/tmap.cpp"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
