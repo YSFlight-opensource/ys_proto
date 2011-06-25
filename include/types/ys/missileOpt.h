@@ -1,0 +1,4 @@
+struct tmissileOpt
+{
+    int  missileOn;
+};
