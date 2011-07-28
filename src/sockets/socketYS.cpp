@@ -1,4 +1,4 @@
-#include "sockets/socketYS.h"
+#include "ys_proto/sockets/socketYS.h"
 
 int SocketYS::sendsYS(char* buffer, int freebuffer)
 {

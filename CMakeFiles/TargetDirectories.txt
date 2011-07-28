@@ -1,0 +1,1 @@
+/home/vins/Projects/cpp/ys_proto/CMakeFiles/ys_proto.dir

@@ -1,0 +1,24 @@
+# output executable name
+EXEC = ys_proto
+# source files
+CXX = g++
+CXXFLAGS = -W -Wall -Iinclude/ -I$(YS_PROTO)/include/ -I$(CHK_PT)/include
+LDFLAGS = -lpthread
+SRCS = $(wildcard src/*.cpp) $(wildcard $(YS_PROTO)/src/sockets/*.cpp) $(wildcard $(YS_PROTO)/src/serialization/*.cpp) $(wildcard $(YS_PROTO)/src/output/*.cpp) $(wildcard $(YS_PROTO)/src/apps/*.cpp) $(wildcard $(YS_PROTO)/src/types/*.cpp) $(wildcard $(YS_PROTO)/src/types/ys/*.cpp)
+INCS = $(wildcard include/*.h)
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(EXEC)
+
+$(EXEC) : $(OBJS)
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+%.o : %.cpp
+	$(CXX) -o $@ -c $< $(CXXFLAGS)
+
+clean :
+	rm -rf $(OBJS)
+
+doc : $(SRCS) $(INCS)
+	doxygen doc/Doxyfile
+

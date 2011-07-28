@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "debug.h"
+#include "ys_proto/debug.h"
 
 void debugHex(const char* buffer, int end=0)
 {

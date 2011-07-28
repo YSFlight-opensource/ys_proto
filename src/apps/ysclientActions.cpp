@@ -1,9 +1,12 @@
 #include "apps/ysclient.h"
 #include "serialization/includeAll.h"
+
 #include "debug.h"
 #include <math.h>
 
 #include <time.h>
+
+using namespace std;
 
 
 // IDEA ---------
@@ -18,6 +21,7 @@ int YSclient::alogin(tlogin* login)
 int YSclient::amap(tmap* map)
 {
     printf("Map: %s\n",map->map);
+    //xmlLog->log() << "<map>" << map->map << "</map>" << endl;;
     int res1 = s.sendsYS(packaskweather());
     return s.sendsYS(packtmap(*map)) * res1;
     // put a free...
@@ -64,6 +68,7 @@ int YSclient::aweather(tweather* weather)
 {
     printf("Weather:\n");
     printf("day: %d\noptions: %d\nvisib: %f\nwind: %f %f %f\n", weather->day, weather->options, weather->visibility, weather->windX, weather->windY, weather->windZ);
+    //xmlLog->log() << "<weather day='" << weather->day << "' visibility='" << weather->visibility << "' windX='" << weather->windX << "' windY=" <<  weather->windY << "' windZ='" <<  weather->windZ << "' />" << endl;
     tacknowledge ack;
     ack.id = 4;
     ack.info = 0;
@@ -96,6 +101,8 @@ int YSclient::aairDisplayOption(tairDisplayOpt* airDisplayOpt)
 int YSclient::amessage(tmessage* message)
 {
     printf("Message: %s\n", message->message);
+    //xmlLog->log() << "<message>" << message->message << "</message>" << endl;
+    //xmlLog->flush();
     return 1;
 }
 
@@ -134,6 +141,7 @@ int YSclient::aflight(tflight* flight)
 int YSclient::adamage(tdamage* damage)
 {
     printf("DAMAGE: killer: (%d,%d)  victim: (%d,%d) power: %d weapon: %d shot: %d, u1: %d, u2: %d\n", damage->killer, damage->killerID, damage->victim, damage->victimID, damage->power, damage->weapon, damage->shot, damage->u1, damage->u2);
+    //xmlLog->log() << "<damage killer_id='" << damage->killer << "' killer_type='" << damage->killerID << "' victim_id='" << damage->victim << "' victim_type='" << damage->victimID << "' power='" << damage->power << "' weapon='" << damage->weapon << "' shot='" << damage->shot << "' />"<<endl;
     return 1;
 }
 
@@ -148,12 +156,15 @@ int YSclient::aground(tground* ground)
     tacknowledge ack;
     if (ground->type == 65537)
     {
-        printf("GROUNDJOIN %s %s type: %d iff: %d id:%d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id);
+        printf("GROUNDJOIN %s %s type: %d iff: %d id:%d gro_id %d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id, ground->gro_id);
+        //xmlLog->log() << "<groundjoin id='"<< ground->id << "' name='" << ground->name << "' name2='" <<  ground->name2 << "' iff='" << ground->iff << "' groID='" << ground->gro_id << "' />" << endl;
         ack.id = 1;
+        //debugHex((char*)&ground, 180);
     }
     else
     {
         printf("PLAYERJOIN %s %s type: %d iff: %d id:%d\n", ground->name2, ground->name, ground->type, ground->iff, ground->id);
+        //xmlLog->log() << "<pilotjoin id='"<< ground->id << "' name='" << ground->name << "' name2='" <<  ground->name2 << "' iff='" << ground->iff << "' />" << endl;
         ack.id=0;
 //        racers[ground->id] = new Racer(ground->name2, ground->name, 1, cp);
     }
@@ -169,11 +180,13 @@ int YSclient::aleft(tleft* left, int is_ground=0)
     {
         ack.id = 3;
         printf("GROUNDLEFT: %d has left %d.\n", left->id, left->u);
+        //xmlLog->log() << "<groundLeft id='"<< left->id <<"' />" << endl;
     }
     else
     {
         ack.id = 2;
         printf("PLAYERLEFT: %d has left %d.\n", left->id, left->u);
+        //xmlLog->log() << "<pilotLeft id='"<< left->id <<"' />" << endl;
 //        racers.erase(left->id);
     }
     ack.info = left->id;

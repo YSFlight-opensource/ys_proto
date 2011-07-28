@@ -1,5 +1,5 @@
 #ifndef __linux
-#include "sockets/windows.h"
+#include "ys_proto/sockets/windows.h"
 
 int Socket::connects(char* ip, int port)
 {

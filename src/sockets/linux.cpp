@@ -1,6 +1,6 @@
 #ifdef __linux
 
-#include "sockets/linux.h"
+#include "ys_proto/sockets/linux.h"
 
 using namespace std;
 

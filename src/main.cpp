@@ -6,7 +6,7 @@
 //#include <iostream>
 //#include <time.h>
 
-#include "apps/ysclient.h"
+#include "ys_proto/apps/ysclient.h"
 
 
 //active certains outils de debuggage (macros TRACE, etc).
