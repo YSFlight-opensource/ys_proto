@@ -4,8 +4,7 @@ cmake_minimum_required(VERSION 2.6)
 project(ys_proto)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BUILD_TYPE})
 
-#find_package(pthread)
-#find_package (Threads)
+find_package (Threads)
 
 include_directories(include)
 
@@ -23,6 +22,4 @@ add_executable(
 	${source_files}
 )
 
-TARGET_LINK_LIBRARIES(
-pthread
-)
+TARGET_LINK_LIBRARIES(ys_proto pthread)

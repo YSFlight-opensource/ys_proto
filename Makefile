@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vins/Projects/cpp/ys_proto
+CMAKE_SOURCE_DIR = /home/vins/Projects/cpp/ys_proto3/ys_proto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vins/Projects/cpp/ys_proto
+CMAKE_BINARY_DIR = /home/vins/Projects/cpp/ys_proto3/ys_proto
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto/CMakeFiles /home/vins/Projects/cpp/ys_proto/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -855,30 +855,6 @@ src/tests.cpp.s:
 	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/src/tests.cpp.s
 .PHONY : src/tests.cpp.s
 
-src/types/includeall.o: src/types/includeall.cpp.o
-.PHONY : src/types/includeall.o
-
-# target to build an object file
-src/types/includeall.cpp.o:
-	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/src/types/includeall.cpp.o
-.PHONY : src/types/includeall.cpp.o
-
-src/types/includeall.i: src/types/includeall.cpp.i
-.PHONY : src/types/includeall.i
-
-# target to preprocess a source file
-src/types/includeall.cpp.i:
-	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/src/types/includeall.cpp.i
-.PHONY : src/types/includeall.cpp.i
-
-src/types/includeall.s: src/types/includeall.cpp.s
-.PHONY : src/types/includeall.s
-
-# target to generate assembly for a file
-src/types/includeall.cpp.s:
-	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/src/types/includeall.cpp.s
-.PHONY : src/types/includeall.cpp.s
-
 src/types/stringarray.o: src/types/stringarray.cpp.o
 .PHONY : src/types/stringarray.o
 
@@ -1509,9 +1485,6 @@ help:
 	@echo "... src/tests.o"
 	@echo "... src/tests.i"
 	@echo "... src/tests.s"
-	@echo "... src/types/includeall.o"
-	@echo "... src/types/includeall.i"
-	@echo "... src/types/includeall.s"
 	@echo "... src/types/stringarray.o"
 	@echo "... src/types/stringarray.i"
 	@echo "... src/types/stringarray.s"

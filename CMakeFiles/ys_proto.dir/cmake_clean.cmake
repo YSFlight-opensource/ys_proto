@@ -1,5 +1,4 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/ys_proto.dir/src/types/includeall.cpp.o"
   "CMakeFiles/ys_proto.dir/src/types/ys/map.cpp.o"
   "CMakeFiles/ys_proto.dir/src/types/ys/theader.cpp.o"
   "CMakeFiles/ys_proto.dir/src/types/ys/tmap.cpp.o"

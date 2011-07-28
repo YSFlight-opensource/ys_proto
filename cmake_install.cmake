@@ -1,4 +1,4 @@
-# Install script for directory: /home/vins/Projects/cpp/ys_proto
+# Install script for directory: /home/vins/Projects/cpp/ys_proto3/ys_proto
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/vins/Projects/cpp/ys_proto/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/vins/Projects/cpp/ys_proto3/ys_proto/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/vins/Projects/cpp/ys_proto/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/vins/Projects/cpp/ys_proto3/ys_proto/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

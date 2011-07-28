@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vins/Projects/cpp/ys_proto
+CMAKE_SOURCE_DIR = /home/vins/Projects/cpp/ys_proto3/ys_proto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vins/Projects/cpp/ys_proto
+CMAKE_BINARY_DIR = /home/vins/Projects/cpp/ys_proto3/ys_proto
 
 #=============================================================================
 # Target rules for target CMakeFiles/ys_proto.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vins/Projects/cpp/ys_proto
 CMakeFiles/ys_proto.dir/all:
 	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/depend
 	$(MAKE) -f CMakeFiles/ys_proto.dir/build.make CMakeFiles/ys_proto.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vins/Projects/cpp/ys_proto/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
 	@echo "Built target ys_proto"
 .PHONY : CMakeFiles/ys_proto.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/ys_proto.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ys_proto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles 53
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ys_proto.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vins/Projects/cpp/ys_proto3/ys_proto/CMakeFiles 0
 .PHONY : CMakeFiles/ys_proto.dir/rule
 
 # Convenience name for target.

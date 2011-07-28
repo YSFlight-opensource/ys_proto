@@ -1,4 +1,0 @@
-struct tmissileOpt
-{
-    int  missileOn;
-};
