@@ -1,7 +1,7 @@
-#include "apps/ysclient.h"
-#include "serialization/includeAll.h"
+#include "ys_proto/apps/ysclient.h"
+#include "ys_proto/serialization/includeAll.h"
 
-#include "debug.h"
+#include "ys_proto/debug.h"
 #include <math.h>
 
 #include <time.h>

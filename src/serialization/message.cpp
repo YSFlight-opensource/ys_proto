@@ -1,10 +1,10 @@
-#include "serialization/message.h"
-#include "serialization/header.h"
+#include "ys_proto/serialization/message.h"
+#include "ys_proto/serialization/header.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#include "debug.h"
+#include "ys_proto/debug.h"
 
 
 char* packtmessage(tmessage* message)

@@ -1,11 +1,11 @@
-#include "serialization/airList.h"
-#include "serialization/header.h"
-#include "types/stringarray.h"
+#include "ys_proto/serialization/airList.h"
+#include "ys_proto/serialization/header.h"
+#include "ys_proto/types/stringarray.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-#include "debug.h"
+#include "ys_proto/debug.h"
 
 char* packtairList(tairList* airList)
 {

@@ -1,7 +1,7 @@
 #ifndef MESSAGE
 #define MESSAGE
 
-#include "types/ys/tmessage.h"
+#include "ys_proto/types/ys/tmessage.h"
 
 char* packtmessage(tmessage* message);
 

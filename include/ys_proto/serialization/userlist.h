@@ -1,7 +1,7 @@
 #ifndef USERLIST
 #define USERLIST
 
-#include "types/ys/tuserlist.h"
+#include "ys_proto/types/ys/tuserlist.h"
 
 char* packtuserlist(tuserlist* userlist);
 

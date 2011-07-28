@@ -1,10 +1,10 @@
 #ifndef SOCKET_YS
 #define SOCKET_YS
 
-#include "types/ys/theader.h"
-#include "serialization/header.h"
-#include "linux.h"
-#include "windows.h"
+#include "ys_proto/types/ys/theader.h"
+#include "ys_proto/serialization/header.h"
+#include "ys_proto/sockets/linux.h"
+#include "ys_proto/sockets/windows.h"
 #include <stdlib.h>
 
 class SocketYS: public Socket

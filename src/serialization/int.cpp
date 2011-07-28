@@ -1,5 +1,5 @@
-#include "serialization/int.h"
-#include "serialization/header.h"
+#include "ys_proto/serialization/int.h"
+#include "ys_proto/serialization/header.h"
 #include <stdlib.h>
 #include <string.h>
 

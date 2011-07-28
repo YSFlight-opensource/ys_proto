@@ -1,9 +1,9 @@
 #ifndef LEFT
 #define LEFT
 
-#include "types/ys/tleft.h"
-#include "serialization/left.h"
-#include "serialization/header.h"
+#include "ys_proto/types/ys/tleft.h"
+#include "ys_proto/serialization/left.h"
+#include "ys_proto/serialization/header.h"
 
 
 char* packtleft(tleft* left);

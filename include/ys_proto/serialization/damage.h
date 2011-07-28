@@ -1,7 +1,7 @@
 #ifndef DAMAGE
 #define DAMAGE
 
-#include "types/ys/tdamage.h"
+#include "ys_proto/types/ys/tdamage.h"
 
 char* packtdamage(tdamage* damage);
 

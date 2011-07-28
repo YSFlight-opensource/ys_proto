@@ -1,7 +1,7 @@
 #ifndef GROUND
 #define GROUND
 
-#include "types/ys/tground.h"
+#include "ys_proto/types/ys/tground.h"
 
 char* packtground(tground* ground);
 

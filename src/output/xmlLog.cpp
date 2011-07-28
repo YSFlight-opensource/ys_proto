@@ -1,4 +1,4 @@
-#include "output/xmlLog.h"
+#include "ys_proto/output/xmlLog.h"
 
 using namespace std;
 

@@ -1,10 +1,10 @@
-#include "apps/apps.h"
-#include "serialization/includeAll.h"
+#include "ys_proto/apps/apps.h"
+#include "ys_proto/serialization/includeAll.h"
 
 #include <string.h>
 //#include <stdio.h>
-#include "debug.h"
-#include "serialization/unpack.h"
+#include "ys_proto/debug.h"
+#include "ys_proto/serialization/unpack.h"
 #include <pthread.h>
 
 //TODO: WEATHER

@@ -1,6 +1,6 @@
 #ifndef MISSILEOPT
 #define MISSILEOPT
 
-#include "types/ys/tmissileOpt.h"
+#include "ys_proto/types/ys/tmissileOpt.h"
 
 #endif

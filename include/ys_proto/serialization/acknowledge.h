@@ -1,7 +1,7 @@
 #ifndef ACKNOWLEDGE
 #define ACKNOWLEDGE
 
-#include "types/ys/tacknowledge.h"
+#include "ys_proto/types/ys/tacknowledge.h"
 
 char* packtacknowledge(tacknowledge* ack);
 void unpacktacknowledge(char* buffer, int size, tacknowledge* acknowledge);

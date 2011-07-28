@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "types/ys/includeAll.h"
+#include "ys_proto/types/ys/includeAll.h"
 
 using namespace std;
 

@@ -1,6 +1,6 @@
-#include "serialization/flight.h"
-#include "serialization/header.h"
-#include "debug.h"
+#include "ys_proto/serialization/flight.h"
+#include "ys_proto/serialization/header.h"
+#include "ys_proto/debug.h"
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h> // malloc

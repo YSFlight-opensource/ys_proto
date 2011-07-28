@@ -4,8 +4,8 @@
 #include <map>
 #include <iostream>
 
-#include "sockets/socketYS.h"
-#include "apps.h"
+#include "ys_proto/sockets/socketYS.h"
+#include "ys_proto/apps/apps.h"
 //#include "output/xmlLog.h"
 //#include "Vec.h"
 //#include "readPoly.h"

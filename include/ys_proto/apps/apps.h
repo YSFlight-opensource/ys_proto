@@ -1,7 +1,7 @@
 #ifndef APPS
 #define APPS
 
-#include "types/includeAll.h"
+#include "ys_proto/types/includeAll.h"
 
 class Apps
 {

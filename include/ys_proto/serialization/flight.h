@@ -1,7 +1,7 @@
 #ifndef FLIGHT
 #define FLIGHT
 
-#include "types/ys/tflight.h"
+#include "ys_proto/types/ys/tflight.h"
 
 char* packtflight(tflight* flight);
 
