@@ -148,9 +148,6 @@
 	<File name="src/sockets/windows.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="36" topLine="0" />
 	</File>
-	<File name="src/types/includeall.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="51" topLine="0" />
-	</File>
 	<File name="src/types/stringarray.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="44" topLine="0" />
 	</File>

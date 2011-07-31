@@ -19,7 +19,7 @@ public:
 
     int connects(char* ip, int port);
 
-
+    int recvs(char* buffer, int size);
 
     int sends(char* buffer, int size);
 

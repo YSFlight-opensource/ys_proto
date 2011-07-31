@@ -6,7 +6,7 @@
 //#include <iostream>
 //#include <time.h>
 
-#include "ys_proto/apps/ysclient.h"
+//#include "ys_proto/apps/ysclient.h"
 
 
 //active certains outils de debuggage (macros TRACE, etc).
@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
 
 
 
-    YSclient ysc;
-    ysc.connect();
+    //YSclient ysc;
+    //ysc.connect();
 
 
     return 0;

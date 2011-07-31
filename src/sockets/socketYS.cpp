@@ -22,6 +22,7 @@ int SocketYS::recvsn(char* buffer, int size)
     }
     while (recv_size != size)
     {
+        perror("Expected a longer packet!");
         recv_size2 = recvs(buffer+recv_size, size-recv_size);
         if (recv_size2 < 0)
         {

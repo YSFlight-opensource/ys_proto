@@ -24,7 +24,7 @@ int Socket::connects(char* ip, int port)
   int tempo=1;
   int erreur=setsockopt(sock,IPPROTO_TCP,TCP_NODELAY,(char *)&tempo,sizeof(tempo));
   if (erreur!=0)
-        printf("\nDesole, je ne peux pas configurer cette options du à l'erreur : %d %d",erreur,WSAGetLastError());
+        printf("Sorry, I cannot use this conf because of : %d %d",erreur,WSAGetLastError());
   else
         printf("\nsetsockopt  : OK\n");
 
@@ -55,13 +55,25 @@ int Socket::sends(char* buffer, int size)
 
 int Socket::recvs(char* buffer, int size)
 {
-    if (recv(sock, buffer, size, 0) < 0)// blocking
+    int recv_size = recv(sock, buffer, size, 0);
+    if (recv_size != size)
+    {
+        printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\nWarning only received %d bytes instead of %d\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n", recv_size, size);
+        if (recv_size==0)
+        {// occurs after inactivity -> YS seems to send a void packet
+            int i;
+            printf("Press ENTER\n");
+            scanf("%d",&i);
+            return -1;
+        }
+    }
+    if (recv_size < 0)// blocking
     {
         perror("Failed to receive data from the server.\n");
-        return 0;// make exception
+        return recv_size;// make exception
     }
     else
-        return 1;
+        return recv_size;
 }
 
 void Socket::closes()
