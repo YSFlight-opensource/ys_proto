@@ -2,35 +2,38 @@
 #include "ys_proto/serialization/header.h"
 #include "ys_proto/debug.h"
 #include <stdio.h>
-#include <iostream>
 #include <stdlib.h> // malloc
 #include <string.h> //memcpy
 
 
 
 
-struct ttflight
-{
-    float x;
-    float z;
-    float y;
-};
-
-char* packtflight(tflight* flight)
+char* packtflight(tflight* flight, tflight2* flight2)
 {
     char* buffer = (char*)malloc(93);
     packtheader(74, 11, buffer);
-    memcpy(buffer+8, (char *)flight, 69);
+    memcpy(buffer+8, (char *)flight, 10);
+    if (flight->i1 == 5)
+        memcpy(buffer+18, (char *)flight2, 59);
+    else if (flight->i1 == 3)
+        memcpy(buffer+20, (char *)flight2, 59);
     return buffer;
 }
 
 
-void unpacktflight(char* buffer, int size, tflight* flight)
+void unpacktflight(char* buffer, int size, tflight* flight, tflight2* flight2)
 {
 //    std::cout << "....................."<< std::endl;
-    memcpy((char*)flight, buffer, 69);//69
-    struct ttflight tf;
-    memcpy((char*)&tf, buffer+10, 12);
+//    memcpy((char*)flight, buffer, 69);
+    memcpy((char*)flight,  buffer, 10);
+    if (flight->i1 == 5)
+        memcpy((char*)flight2, buffer+10, 59);
+    else if (flight->i1 == 3)
+        memcpy((char*)flight2, buffer+12, 59);
+    else
+        printf("Unknown i1 %d \n", flight->i1);
+//    struct ttflight tf;
+//    memcpy((char*)&tf, buffer+10, 12);
 //    debugHex((char*)&tf.x,4);
 //    debugHex((char*)&tf.y,4);
 //    debugHex((char*)&tf.z,4);

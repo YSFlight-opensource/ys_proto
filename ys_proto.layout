@@ -70,7 +70,7 @@
 	<File name="src/apps/activity_message.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="106" topLine="0" />
 	</File>
-	<File name="src/apps/apps.cpp" open="1" top="1" tabpos="0">
+	<File name="src/apps/apps.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="196" topLine="0" />
 	</File>
 	<File name="src/apps/ysclient.cpp" open="0" top="0" tabpos="0">
@@ -139,14 +139,14 @@
 	<File name="src/serialization/weather.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="108" topLine="0" />
 	</File>
-	<File name="src/sockets/linux.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="35" topLine="0" />
+	<File name="src/sockets/linux.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="1646" topLine="40" />
 	</File>
-	<File name="src/sockets/socketYS.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="19" topLine="0" />
+	<File name="src/sockets/socketYS.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="792" topLine="0" />
 	</File>
-	<File name="src/sockets/windows.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="36" topLine="0" />
+	<File name="src/sockets/windows.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="788" topLine="15" />
 	</File>
 	<File name="src/types/stringarray.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="44" topLine="0" />

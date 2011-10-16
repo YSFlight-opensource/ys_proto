@@ -7,6 +7,7 @@
 #include "tacknowledge.h"
 #include "tmessage.h"
 #include "tflight.h"
+#include "tflight2.h"
 #include "tweather.h"
 #include "tdamage.h"
 #include "tuserlist.h"

@@ -8,7 +8,7 @@ struct tflight
 {
     int stopWatch; // float ??
     int ID;
-    short i1;
+    short i1; // OK si i1==5, sinon décaler de 2 vers droite (i1=int) si i1==3
     float x;
     float z;
     float y;
