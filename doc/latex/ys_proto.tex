@@ -2,62 +2,14 @@
 
 
 \usepackage{graphics}
-% charge le package francais
-\usepackage[french]{babel}
-% charge le package des lettres accentuées
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage{tabularx,colortbl}
+\usepackage{hyperref}
 
 
-
-
-\usepackage{listingsutf8}
-\usepackage{color} 
-\usepackage{amssymb,amsmath,amsfonts}
-\usepackage{mathrsfs}
-\usepackage{lmodern}
-\usepackage{eurosym}
 
 \newcommand{\gray}{\rowcolor[gray]{.92}}
-
-
-\lstdefinelanguage{LAA} {
-morekeywords={fonction, procedure, tq, faire, ftq, pour, fpour, si, alors,
-sinon, sinonsi, fsi, ou, et, non, renvoyer},
-sensitive=false,
-morecomment=[s][\emph]{(*}{*)},
-morestring=[b][\emph]"
-}
-
-\definecolor{colKeys}{rgb}{0,0,1} 
-\definecolor{colIdentifier}{rgb}{0,0,0} 
-\definecolor{colComments}{rgb}{0,0.5,1} 
-\definecolor{colString}{rgb}{0.6,0.1,0.1} 
-\lstset{language=LAA,
-inputencoding=utf8/latin1,
-basicstyle=\ttfamily\small, % 
-identifierstyle=\color{colIdentifier}, % 
-keywordstyle=\color{colKeys}, % 
-stringstyle=\color{colString}, % 
-commentstyle=\color{colComments},
-extendedchars = true,
-numbers=left,rulesepcolor=\color{blue},  numberstyle=\footnotesize 
-} 
-
-
-
-\usepackage{vmargin}   % pour modifier les marges valeurs ci-dessous
-\setpapersize{A4}
-\setmarginsrb   %default values
-{25mm}  % leftmargin : 30mm
-{20mm}  % topmargin
-{25mm}  % rightmargin
-{20mm}  % bottommargin : 25mm
-{12pt}  % headheight
-{5mm}   % headsep
-{12pt}  % footheight
-{10mm}  % footskip
 
 
 
@@ -99,12 +51,60 @@ In the OSI model, the YS protocol belongs to the application layer, just above T
     \item if a packet was lost, TCP waits for the server server to send it again although the following packets were successfully received which leads to phenomenons were you see your opponent flying backward during a network play.
     \item necessity of separating the YS messages since contrary to the UDP protocol, TCP concatenate all the messages to send in its buffer and send them when the buffer is full enough or old enough. That is why all the YS messages start with an integer giving the size of the message. This issue can be avoided by the use of the TCP PUSH flag.
     \item the OS implementation of the TCP keep-alive is not mandatory, that is why it is done in the application layer.
-    \item you are certain all you messages were received, however the YS protocol force the client to send a copy of the received message to check it received the same thing, which I think is useless.
+    \item you are certain all you messages were received, however the YS protocol force the client to send a copy of the received message to check it received the same thing, which I think is useless. The flaw is that if you don't reply to those messages, the server keep sending it you!
 \end{itemize}
 
+\clearpage
+
 \section{Prerequisites}
+
 \subsection{Sockets}
-\subsection{Serialisation}
+Available in almost all programming language and operating system.
+
+\subsubsection{C}
+
+\paragraph{Unix family}
+
+\paragraph{Windows family}
+
+\subsubsection{dotNet}
+
+\subsubsection{Perl}
+
+\subsubsection{PHP}
+
+\subsubsection{Python}
+
+\subsection{Serialisation - data representation}
+By serialization  I mean the process of converting human readable data to its computer format.
+
+All data is sent in \href{http://en.wikipedia.org/wiki/Endianness}{little endian}, which is the format used by the most common PC processors. 
+
+Shorts are coded on 2 octets. Eg 258=0x12 will become $02:01$ (little endian)
+
+Integers are coded on 4 octets.
+
+Signed numbers are coded using the \href{http://en.wikipedia.org/wiki/Two\%27s\_complement}{two complement}.
+
+Floats are coded using the \href{http://en.wikipedia.org/wiki/IEEE\_754-1985}{IEEE 754 1985 norm}
+
+String are coded in ASCII, the null character is put at the end of the string to determine/delineate/demarcate it.
+
+
+\subsubsection{C}
+
+\subsubsection{dotNet}
+
+\subsubsection{Perl}
+
+\subsubsection{PHP}
+
+\subsubsection{Python}
+
+
+
+
+\clearpage
 
 \section{The specifications of the YS protocol}
 
@@ -137,27 +137,61 @@ $01:00:00:00$ = (int 1) is the type of the message, 1 means it's a login message
 
 $64:6f:69:6e:67:5f:74:65:73:74:73:00:00:00:00:00:7f:db:32:01$ is the data
 
+
 \subsection{The different types}
+
 
 \subsubsection{Login (type=1, 0x1)}
 
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
  char[16] & the user name (the 16$^e$ bit is the null character)\\
-\gray int & the size\\
+\gray int & the YSFlight version of the client\\
 \end{tabularx}
 
+\vspace{0.3cm}
+In the example above we had:\\
+$64:6f:69:6e:67:5f:74:65:73:74:73:00:00:00:00:00$ = (doing\_tests) the username
+$7f:db:32:01$ = (20010207) the YSFlight version
+
+\vspace{0.4cm}
 \subsubsection{Map (type=4, 0x4)}
 The client must reply the received message.\\
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
  char[60] & the name of the map\\
 \end{tabularx}
 
-
+\vspace{0.4cm}
 \subsubsection{Entity joined (type=5, 0x5)}
 The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int &   type (65537 = ground, 0 = player/pilot)\\
+\gray int &   id\\
+int &   iff\\
+\gray float & x (initial position in meters)\\
+float & z (initial altitude in meters)\\
+\gray float & y (initial position in meters)\\
+float & rotation1\\
+\gray float & rotation2\\
+float & rotation3\\
+\gray char[64] & name of the ground object or name of the aircraft of the player\\
+int &   gro\_id\\
+\gray int &   flag\\
+16 octets &   unknown\\
+\gray char[56] & second name of the ground object or name of the pilot\\
+\end{tabularx}
 
+\vspace{0.2cm}
+The client must answer a packet of type Acknowledge with the data (int 1, int id) in the case of a ground object, (int 0, int id) in the case of a player.
+
+
+\vspace{0.4cm}
 \subsubsection{Acknowledgement (type=6, 0x6)}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & info1\\
+\gray int & info2\\
+\end{tabularx}
 
+\vspace{0.4cm}
 \subsubsection{Flight data (type=11, 0xb)}
 
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
@@ -195,13 +229,36 @@ char & elevator\\
 \gray char & trim\\
 \end{tabularx}
 
+\vspace{0.4cm}
 \subsubsection{Player left (type=13, 0xd)}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & ID of the entity who left\\
+\gray 4 octets & unknown\\
+\end{tabularx}
 
+\vspace{0.2cm}
+The client must answer a packet of type Acknowledge with the data (int 2, int id).
+
+\vspace{0.4cm}
+\subsubsection{Aircraft list transmission end (type=16, 0x10)}
+The client must answer with a packet Acknowledge (int 7, int 0)
+
+\vspace{0.4cm}
 \subsubsection{Keep-alive (type=17, 0x11)}
 Empty message which must be sent from time to time to avoid being disconnected by the server.
 
-\subsubsection{Object left (type=19, 0x13)}
+\vspace{0.4cm}
+\subsubsection{Ground object left (type=19, 0x13)}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & ID of the entity who left\\
+\gray 4 octets & unknown\\
+\end{tabularx}
 
+\vspace{0.2cm}
+The client must answer a packet of type Acknowledge with the data (int 3, int id).
+
+
+\vspace{0.4cm}
 \subsubsection{Damages (type=22, 0x16)}
 
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
@@ -214,23 +271,71 @@ Empty message which must be sent from time to time to avoid being disconnected b
 \gray short & weapon (gun=0, aim9=1, AGM=2, bomb500=3, rocket=4, AIM120=6, bomb250=7, bomb500HD=9, AIM9X=10 ; nothing sent for kamikaze kills!)\\
  4 octects & unknown\\
 \end{tabularx}
+\vspace{0.2cm}
 
+The fault is that anybody can send this message, ie the server will allow client X to send a damage message where Y will be the victim and Z the killer.
+
+\vspace{0.4cm}
 \subsubsection{YSFlight version (type=29, 0x1d)}
+The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & the YSFlight version of the server\\
+\end{tabularx}
 
+\vspace{0.2cm}
+The client must answer with a packet Acknowledge (int 9, int 0)
+
+
+\vspace{0.4cm}
 \subsubsection{Missile allowed option (type=31, 0x1f)}
-
+The client must reply the received message.\\
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
  int & missile option (1=missile allowed by the server).\\
  & This message can be sent to the clients at any moment, allowing a proxy such as YSPS to change options on the fly!\\
 \end{tabularx}
 
+\vspace{0.2cm}
+The client must answer with a packet Acknowledge (int 10, int 0)
+
+
+\vspace{0.4cm}
 \subsubsection{Chat message (type=32, 0x20)}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+8 octets & unknown (they are always equal to zero, they are probably kept for a future feature)\\
+\gray char* & chat message\\
 
+\end{tabularx}
+
+
+\vspace{0.4cm}
 \subsubsection{Weather and server options (type=33, 0x21)}
-The client must reply the received message.
+The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & (1=day, else it is night)\\
+\gray int & options (must be converted in binary, blackout enabled = 2nd bit, collisions enables 4th bit, land everywhere enabled = 6th bit)\\
+float & windX\\
+\gray float & windZ\\
+float & windY\\
+\gray float & visibility (fog)\\
+\end{tabularx}
 
+\vspace{0.2cm}
+The client must answer with a packet Acknowledge (int 4, int 0)
+
+
+\vspace{0.4cm}
 \subsubsection{User data (type=37, 0x25)}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+short & kind of user (2=server not flying, 1=client flying, 0=client not flying, 3=server flying )\\
+\gray  short & iff\\
+int & user ID (if flying)\\
+\gray 4 octets & unknown\\
+ char* & username\\
+\end{tabularx}
 
+
+
+\vspace{0.4cm}
 \subsubsection{Weapon allowed option (type=39, 0x27)}
 The client must reply the received message.\\
 
@@ -239,12 +344,28 @@ The client must reply the received message.\\
  & This message can be sent to the clients at any moment.\\
 \end{tabularx}
 
+\vspace{0.2cm}
+The client must answer with a packet Acknowledge (int 11, int 0)
+
+
+\vspace{0.4cm}
 \subsubsection{Show username option (type=41, 0x29)}
 The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+int & the minimal distance to see the player username\\
+\end{tabularx}
 
+
+\vspace{0.4cm}
 \subsubsection{Other server options (type=43, 0x2b)}
 The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ 4 octets & unknown\\
+\gray  char* & the option (eg RADARALTI 200m = aircraft below 200m of altitude won't appear in the radar, NOEXAIRVW TRUE = F3 disabled\\
+\end{tabularx}
 
+
+\vspace{0.4cm}
 \subsubsection{Aircraft list (type=44, 0x2c)}
 This message is use to send to the client the list of the aircraft installed on the server. The client must reply the received packet.\\
 
@@ -252,11 +373,31 @@ This message is use to send to the client the list of the aircraft installed on 
  1 octet & unknown\\
 \gray  char & Number of aircraft sent\\
 2 octets & unknown\\
-char[][] & The concatenation of the aircraft identifier installed on the server.
+\gray char[][] & The concatenation of the aircraft identifier installed on the server.
 \end{tabularx}
+
+\clearpage
 
 \subsection{Message order}
 
 \section{Filling the holes}
+
+Wireshark
+
+\section{Source code}
+
+(C\#) YSPS
+
+(C++) ys\_proto
+
+(C++) ys-net-tools
+
+(Python) YSChat
+
+(Python) YSRadarServer
+
+(Python) lib of the servers list
+
+(PHP) lib of the servers list
 
 \end{document}
