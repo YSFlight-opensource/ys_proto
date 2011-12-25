@@ -1,0 +1,262 @@
+\documentclass{article}
+
+
+\usepackage{graphics}
+% charge le package francais
+\usepackage[french]{babel}
+% charge le package des lettres accentuées
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{tabularx,colortbl}
+
+
+
+
+\usepackage{listingsutf8}
+\usepackage{color} 
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{mathrsfs}
+\usepackage{lmodern}
+\usepackage{eurosym}
+
+\newcommand{\gray}{\rowcolor[gray]{.92}}
+
+
+\lstdefinelanguage{LAA} {
+morekeywords={fonction, procedure, tq, faire, ftq, pour, fpour, si, alors,
+sinon, sinonsi, fsi, ou, et, non, renvoyer},
+sensitive=false,
+morecomment=[s][\emph]{(*}{*)},
+morestring=[b][\emph]"
+}
+
+\definecolor{colKeys}{rgb}{0,0,1} 
+\definecolor{colIdentifier}{rgb}{0,0,0} 
+\definecolor{colComments}{rgb}{0,0.5,1} 
+\definecolor{colString}{rgb}{0.6,0.1,0.1} 
+\lstset{language=LAA,
+inputencoding=utf8/latin1,
+basicstyle=\ttfamily\small, % 
+identifierstyle=\color{colIdentifier}, % 
+keywordstyle=\color{colKeys}, % 
+stringstyle=\color{colString}, % 
+commentstyle=\color{colComments},
+extendedchars = true,
+numbers=left,rulesepcolor=\color{blue},  numberstyle=\footnotesize 
+} 
+
+
+
+\usepackage{vmargin}   % pour modifier les marges valeurs ci-dessous
+\setpapersize{A4}
+\setmarginsrb   %default values
+{25mm}  % leftmargin : 30mm
+{20mm}  % topmargin
+{25mm}  % rightmargin
+{20mm}  % bottommargin : 25mm
+{12pt}  % headheight
+{5mm}   % headsep
+{12pt}  % footheight
+{10mm}  % footskip
+
+
+
+\title{The YS protocol}
+
+\author{Vincent \textsc{A.}\\ vincentweb31@gmail.com}
+
+\begin{document}
+
+
+
+\maketitle
+
+
+
+\thispagestyle{empty}
+
+\newpage
+
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+
+
+\section{Introduction}
+
+When I started hacking with the YS protocol, I knew nothing about sockets, internet protocols, and serialization, but I had great ambitions. The quest was huge for the ignorant knight I was. After years of patience, reading, experimenting, asking questions, sharing code, ... I ended up to get a "little" idea of the YS protocol. But even with this knowledge, the quest will be huge for you.
+
+
+\section{The YS protocol and its links with TCP}
+
+In the OSI model, the YS protocol belongs to the application layer, just above TCP. The choice made by Soji Yamakawa of choosing TCP in the transport layer has the following connections :
+\begin{itemize}
+    \item more data is sent since the TCP header is quite big compared to other protocols of the transport layer
+    \item if a packet was lost, TCP waits for the server server to send it again although the following packets were successfully received which leads to phenomenons were you see your opponent flying backward during a network play.
+    \item necessity of separating the YS messages since contrary to the UDP protocol, TCP concatenate all the messages to send in its buffer and send them when the buffer is full enough or old enough. That is why all the YS messages start with an integer giving the size of the message. This issue can be avoided by the use of the TCP PUSH flag.
+    \item the OS implementation of the TCP keep-alive is not mandatory, that is why it is done in the application layer.
+    \item you are certain all you messages were received, however the YS protocol force the client to send a copy of the received message to check it received the same thing, which I think is useless.
+\end{itemize}
+
+\section{Prerequisites}
+\subsection{Sockets}
+\subsection{Serialisation}
+
+\section{The specifications of the YS protocol}
+
+\subsection{The header}
+
+The YS messages have the following shape: \\
+
+\begin{tabularx}{8cm}{|X|X|X|}
+\hline
+Length (int) & Type (int) & Data \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+Every YS message start with:
+\begin{itemize}
+    \item a length information = data size + type size = data size + 4
+    \item the type of the packet (the purpose of its content)
+\end{itemize}
+
+\vspace{0.3cm}
+For example let's decode the following message:
+\begin{verbatim}
+18:00:00:00:01:00:00:00:64:6f:69:6e:67:5f:74:65:73:74:73:00:00:00:00:00:7f:db:32:01
+\end{verbatim}
+
+$18:00:00:00$ = (int 24) is the size of the message
+
+$01:00:00:00$ = (int 1) is the type of the message, 1 means it's a login message
+
+$64:6f:69:6e:67:5f:74:65:73:74:73:00:00:00:00:00:7f:db:32:01$ is the data
+
+\subsection{The different types}
+
+\subsubsection{Login (type=1, 0x1)}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ char[16] & the user name (the 16$^e$ bit is the null character)\\
+\gray int & the size\\
+\end{tabularx}
+
+\subsubsection{Map (type=4, 0x4)}
+The client must reply the received message.\\
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ char[60] & the name of the map\\
+\end{tabularx}
+
+
+\subsubsection{Entity joined (type=5, 0x5)}
+The client must reply the received message.\\
+
+\subsubsection{Acknowledgement (type=6, 0x6)}
+
+\subsubsection{Flight data (type=11, 0xb)}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ int & timer which is incremented in an odd way\\
+\gray int & ID of the pilot flying\\
+short & info1 (5=the lives of the player are coded on 1 char (strength < 256 most of the cases), 3=the lives are coded on a short)\\
+\gray 2 octets & unknown (WARNING: these two octets are only present when info1=3) \\
+float & x position of the aircraft in meters\\
+\gray float & z altitude of the aircraft in meters (y axis of scenedit)\\
+float & y position of the aircraft in meters (z axis of scenedit)\\
+\gray short & heading\\
+short & AOA\\
+\gray short & bank\\
+short & xSpeed\\
+\gray short & ySpeed\\
+short & zSpeed\\
+\gray 8 octets & unknown\\
+short & fuel\\
+\gray 6 octets & unknown\\
+char & spoilerBrake\\
+\gray char & flapsGear\\
+char & afterburnerSmokeTrailsGunfire (convert in binary)\\
+\gray 4 octets & unknown\\
+short & gunAmmo\\
+\gray char & rockets\\
+char & unknown\\
+\gray char & AAM\\
+char & AGM\\
+\gray char & bombs\\
+char/short & lives\\
+\gray 2 octets & unknown\\
+char & elevator\\
+\gray char & aileron\\
+2 octets & unknown\\
+\gray char & trim\\
+\end{tabularx}
+
+\subsubsection{Player left (type=13, 0xd)}
+
+\subsubsection{Keep-alive (type=17, 0x11)}
+Empty message which must be sent from time to time to avoid being disconnected by the server.
+
+\subsubsection{Object left (type=19, 0x13)}
+
+\subsubsection{Damages (type=22, 0x16)}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ int & kind of victim entity (0=the victim is ground object, 1=the victim is a player)\\
+\gray int & victim ID, (you get the ID of an entity with the messages of type 5)\\
+ int & kind of killer entity (0=the killer is ground object, 1=the killer is a player)\\
+\gray short & power of the damage\\
+ & If you want to kill an object of strength 3 in one shot, this value must be 3.\\
+ short & shot (10=missile/rocket hit its target, 11 gun bullet/bomb hit its target, 12 bomb/rocket explosion (not hit directly))\\
+\gray short & weapon (gun=0, aim9=1, AGM=2, bomb500=3, rocket=4, AIM120=6, bomb250=7, bomb500HD=9, AIM9X=10 ; nothing sent for kamikaze kills!)\\
+ 4 octects & unknown\\
+\end{tabularx}
+
+\subsubsection{YSFlight version (type=29, 0x1d)}
+
+\subsubsection{Missile allowed option (type=31, 0x1f)}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ int & missile option (1=missile allowed by the server).\\
+ & This message can be sent to the clients at any moment, allowing a proxy such as YSPS to change options on the fly!\\
+\end{tabularx}
+
+\subsubsection{Chat message (type=32, 0x20)}
+
+\subsubsection{Weather and server options (type=33, 0x21)}
+The client must reply the received message.
+
+\subsubsection{User data (type=37, 0x25)}
+
+\subsubsection{Weapon allowed option (type=39, 0x27)}
+The client must reply the received message.\\
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ int & weapon option (1=weapons allowed by the server).\\
+ & This message can be sent to the clients at any moment.\\
+\end{tabularx}
+
+\subsubsection{Show username option (type=41, 0x29)}
+The client must reply the received message.\\
+
+\subsubsection{Other server options (type=43, 0x2b)}
+The client must reply the received message.\\
+
+\subsubsection{Aircraft list (type=44, 0x2c)}
+This message is use to send to the client the list of the aircraft installed on the server. The client must reply the received packet.\\
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
+ 1 octet & unknown\\
+\gray  char & Number of aircraft sent\\
+2 octets & unknown\\
+char[][] & The concatenation of the aircraft identifier installed on the server.
+\end{tabularx}
+
+\subsection{Message order}
+
+\section{Filling the holes}
+
+\end{document}
