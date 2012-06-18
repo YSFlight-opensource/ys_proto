@@ -1,0 +1,12 @@
+syntax:glob
+.svn
+*.orig
+*.swp
+*~
+.DS_Store
+*.o
+*.obj
+*.exe
+*.cbp
+*.depend
+*.layout

@@ -6,7 +6,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{tabularx,colortbl}
 \usepackage{hyperref}
-
+\usepackage{minted}
 
 
 \newcommand{\gray}{\rowcolor[gray]{.92}}
@@ -23,7 +23,9 @@
 
 \maketitle
 
+\vfill
 
+The sources of this document can be found on this repository\\ \url{https://bitbucket.org/vincentweb/ys_proto/src}.
 
 \thispagestyle{empty}
 
@@ -61,21 +63,10 @@ In the OSI model, the YS protocol belongs to the application layer, just above T
 \subsection{Sockets}
 Available in almost all programming language and operating system.
 
-\subsubsection{C}
-
-\paragraph{Unix family}
-
-\paragraph{Windows family}
-
-\subsubsection{dotNet}
-
-\subsubsection{Perl}
-
-\subsubsection{PHP}
-
-\subsubsection{Python}
-
 \subsection{Serialisation - data representation}
+
+\subsubsection{Norms}
+
 By serialization  I mean the process of converting human readable data to its computer format.
 
 All data is sent in \href{http://en.wikipedia.org/wiki/Endianness}{little endian}, which is the format used by the most common PC processors. 
@@ -90,16 +81,64 @@ Floats are coded using the \href{http://en.wikipedia.org/wiki/IEEE\_754-1985}{IE
 
 String are coded in ASCII, the null character is put at the end of the string to determine/delineate/demarcate it.
 
+\subsubsection{Exemples}
 
-\subsubsection{C}
+\paragraph{C}
 
-\subsubsection{dotNet}
+\begin{minted}[mathescape]{c}
+#include <string.h>
 
-\subsubsection{Perl}
+struct info {
+	short        var1;
+	unsigned int var2;
+	float        var3;
+	long         var4;
+	char         var5[6];
+};
 
-\subsubsection{PHP}
+// We encode the data
+struct info info2send;
+info2send.var1 = 42;
+info2send.var2 = 55555;
+info2send.var3 = 3.14;
+info2send.var4 = 7777777;
+strcpy(info2send.var5, "hello");
+memcpy(buffer, (char *)&myInfo, 24);
 
-\subsubsection{Python}
+// We decode the data
+struct info info2recv
+memcpy((char *)&info2recv, buffer, 24);
+
+\end{minted}
+
+\paragraph{Perl}
+
+\begin{minted}[mathescape]{python}
+$buffer = pack("hIfla5",42,55555,3.14,7777777,"hello");
+$data = unpack("hIfla5", buffer);
+\end{minted}
+
+\paragraph{PHP}
+
+\begin{minted}[mathescape]{python}
+// Returns a string
+$buffer = pack("hIfla5",42,55555,3.14,7777777,"hello");
+
+// Returns an array
+$data = unpack("hIfla5", buffer);
+\end{minted}
+
+\paragraph{Python}
+
+\begin{minted}{python}	
+import struct
+
+# pack will return you the string of the serialized information
+buffer = struct.pack("hIfl6s",42,55555,3.14,7777777,"hello")
+
+# unpack will return you the tuple of the unserialized information
+data = struct.unpack("hIfl6s", buffer)
+\end{minted}
 
 
 
@@ -137,6 +176,30 @@ $01:00:00:00$ = (int 1) is the type of the message, 1 means it's a login message
 
 $64:6f:69:6e:67:5f:74:65:73:74:73:00:00:00:00:00:7f:db:32:01$ is the data
 
+\vspace{0.3cm}
+Here is a Python piece of code to cope with the previous example.
+
+\begin{minted}{python}	
+import struct, socket, sys
+
+s = socket.socket()
+s.connect(('127.0.0.1', 7915))
+
+# ...
+try:
+    size = unpack("I",s.recv(4))[0]
+    type = unpack("I",s.recv(4))[0]
+    data = s.recv(size-4)
+except:
+    print "Reception failure."
+    sys.exit(-1)
+    
+if type == 1:
+	(username, ysVersion) = struct.unpack("16sI", data)
+	# ...
+elif type == 2:
+	# ...
+\end{minted}
 
 \subsection{The different types}
 
@@ -277,7 +340,6 @@ The fault is that anybody can send this message, ie the server will allow client
 
 \vspace{0.4cm}
 \subsubsection{YSFlight version (type=29, 0x1d)}
-The client must reply the received message.\\
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
 int & the YSFlight version of the server\\
 \end{tabularx}
@@ -288,7 +350,6 @@ The client must answer with a packet Acknowledge (int 9, int 0)
 
 \vspace{0.4cm}
 \subsubsection{Missile allowed option (type=31, 0x1f)}
-The client must reply the received message.\\
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
  int & missile option (1=missile allowed by the server).\\
  & This message can be sent to the clients at any moment, allowing a proxy such as YSPS to change options on the fly!\\
@@ -309,7 +370,6 @@ The client must answer with a packet Acknowledge (int 10, int 0)
 
 \vspace{0.4cm}
 \subsubsection{Weather and server options (type=33, 0x21)}
-The client must reply the received message.\\
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
 int & (1=day, else it is night)\\
 \gray int & options (must be converted in binary, blackout enabled = 2nd bit, collisions enables 4th bit, land everywhere enabled = 6th bit)\\
@@ -337,8 +397,6 @@ int & user ID (if flying)\\
 
 \vspace{0.4cm}
 \subsubsection{Weapon allowed option (type=39, 0x27)}
-The client must reply the received message.\\
-
 \begin{tabularx}{\linewidth}{>{\raggedleft\scshape\small}p{2.5cm}X}
  int & weapon option (1=weapons allowed by the server).\\
  & This message can be sent to the clients at any moment.\\
@@ -378,26 +436,23 @@ This message is use to send to the client the list of the aircraft installed on 
 
 \clearpage
 
-\subsection{Message order}
-
 \section{Filling the holes}
 
 Wireshark
 
 \section{Source code}
 
-(C\#) YSPS
 
-(C++) ys\_proto
+\href{http://marcjeanmougin.free.fr/ys\_servers/fps_z6reg4z6g73qehyns28z5fyi5/Projects/MonoYSPS/}{(C\#) YSPS  v1 (outdated)} \href{http://marcjeanmougin.free.fr/ys\_servers/fps_z6reg4z6g73qehyns28z5fyi5/Projects/fps/}{YSPS v2 (outdated)}
 
-(C++) ys-net-tools
+\href{https://bitbucket.org/vincentweb/ys\_proto/src}{(C++) ys\_proto}
 
-(Python) YSChat
+\href{https://github.com/vins31/ys-net-tools}{(C++) ys-net-tools} (use the library above)
 
-(Python) YSRadarServer
+\href{http://www.yspilots.com/shadowhunters/index.php?page=yschat.php}{(Python) YSChat} (outdated)
 
-(Python) lib of the servers list
+\href{https://bitbucket.org/vincentweb/ysf/src/}{(Python) library of the servers list (v2)}
 
-(PHP) lib of the servers list
+\href{http://pastebin.com/2TFqyjpU}{(PHP) library of the servers list}
 
 \end{document}
