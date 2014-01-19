@@ -1,8 +1,4 @@
-rm -r lib
-rm Makefile  
-rm makedebug      
-rm make                    
-rm cmake_install.cmake     
-rm -r CMakeFiles    
-rm CMakeCache.txt   
-hg rm "glob:**.o"
+rm -r CMakeFiles
+rm CMakeCache.txt
+rm Makefile
+rm cmake_install.cmake
